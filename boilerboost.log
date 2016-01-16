@@ -1,0 +1,1711 @@
+
+
+2015-12-25 09:45:21,831 INFO -------- ODR Initiated --------
+
+
+2015-12-25 09:46:20,959 INFO -------- ODR Initiated --------
+
+
+2015-12-25 09:46:45,974 INFO -------- ODR Initiated --------
+
+
+2015-12-25 09:46:48,042 WARNING [*** Temperature Differential Detected But No Call For HEAT ***]
+2015-12-25 09:46:48,042 WARNING 	Requesting_Thermostat    : master bedroom
+2015-12-25 09:46:48,042 WARNING 	Temp_Differential        : -1.458
+2015-12-25 09:46:48,042 WARNING 	Temp_Room                : 66.542
+2015-12-25 09:46:48,042 WARNING 	Temp_Target               : 68.0
+
+
+2015-12-25 09:47:18,013 INFO -------- ODR Initiated --------
+
+
+2015-12-25 09:47:20,871 INFO ******** [ODR Override Initiated] ********
+2015-12-25 09:47:20,871 INFO 	Requesting_Thermostat    : master bedroom
+2015-12-25 09:47:20,872 INFO 	Temp_Differential        : -2.4588
+2015-12-25 09:47:20,872 INFO 	Temp_Room                : 66.542
+2015-12-25 09:47:20,874 INFO 	Temp_Target               : 69.0008
+2015-12-25 09:47:21,012 INFO 	-- Stage 1 engaged --
+2015-12-25 09:49:22,443 INFO *** Boost call for Device: master bedroom ended after 0:02:04  H:MM:SS ***
+2015-12-25 09:49:22,453 INFO **** ODR Override Cycle Complete *****
+2015-12-25 09:49:22,453 INFO **** Total duration:  0:02:04  H:MM:SS ***
+
+
+2015-12-25 09:50:13,200 INFO -------- ODR Initiated --------
+
+2015-12-25 09:55:49,062 INFO -------- ODR Check Started --------
+
+2015-12-25 09:56:00,335 INFO -------- ODR Check Started --------
+
+2015-12-25 09:56:33,533 INFO -------- ODR Check Started --------
+
+
+2015-12-25 09:56:35,585 INFO ******** [ODR Override Initiated] ********
+2015-12-25 09:56:35,585 INFO 	Requesting_Thermostat    : master bedroom
+2015-12-25 09:56:35,585 INFO 	Temp_Differential        : -1.458
+2015-12-25 09:56:35,585 INFO 	Temp_Room                : 66.542
+2015-12-25 09:56:35,585 INFO 	Temp_Target               : 68.0
+2015-12-25 09:56:35,710 INFO 	-- Stage 1 engaged --
+2015-12-25 09:58:37,158 INFO *** Boost call for Device: master bedroom ended after 0:02:03  H:MM:SS ***
+2015-12-25 09:58:37,167 INFO **** ODR Override Cycle Complete *****
+2015-12-25 09:58:37,167 INFO **** Total duration:  0:02:03  H:MM:SS ***
+
+2015-12-25 10:02:18,663 INFO -------- ODR Check Started --------
+
+2015-12-25 10:02:20,628 INFO ******** [ODR Override Initiated] ********
+2015-12-25 10:02:20,628 INFO 	Requesting_Thermostat    : master bedroom
+2015-12-25 10:02:20,630 INFO 	Temp_Differential        : -1.458
+2015-12-25 10:02:20,630 INFO 	Temp_Room                : 66.542
+2015-12-25 10:02:20,630 INFO 	Temp_Target               : 68.0
+2015-12-25 10:02:20,677 INFO 	-- Stage 1 engaged --
+2015-12-25 10:22:20,680 INFO --Stage 2 Boost engaged--
+2015-12-25 10:42:20,680 INFO --Stage 3 Boost engaged--
+
+2015-12-25 10:56:43,993 INFO -------- ODR Check Started --------
+
+2015-12-30 08:18:28,118 INFO -------- ODR Check Started --------
+
+2015-12-30 08:18:29,681 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 08:18:29,683 WARNING 	Requesting_Thermostat    : living room
+2015-12-30 08:18:29,683 WARNING 	Temp_Differential        : -9.774
+2015-12-30 08:18:29,683 WARNING 	Temp_Room                : 56.426
+2015-12-30 08:18:29,683 WARNING 	Temp_Target               : 66.2
+
+2015-12-30 08:18:29,711 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 08:18:29,711 WARNING 	Requesting_Thermostat    : master bedroom
+2015-12-30 08:18:29,711 WARNING 	Temp_Differential        : -10.8288
+2015-12-30 08:18:29,711 WARNING 	Temp_Room                : 55.472
+2015-12-30 08:18:29,713 WARNING 	Temp_Target               : 66.3008
+
+2015-12-30 08:18:29,730 INFO ******** [ODR Override Initiated] ********
+2015-12-30 08:18:29,730 INFO 	Requesting_Thermostat    : downstairs
+2015-12-30 08:18:29,730 INFO 	Temp_Differential        : -3.5604
+2015-12-30 08:18:29,730 INFO 	Temp_Room                : 64.472
+2015-12-30 08:18:29,730 INFO 	Temp_Target               : 68.0324
+2015-12-30 08:18:29,750 INFO 	-- Stage 1 engaged --
+
+2015-12-30 08:20:30,907 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 08:20:30,907 WARNING 	Requesting_Thermostat    : living room
+2015-12-30 08:20:30,907 WARNING 	Temp_Differential        : -9.774
+2015-12-30 08:20:30,908 WARNING 	Temp_Room                : 56.426
+2015-12-30 08:20:30,908 WARNING 	Temp_Target               : 66.2
+
+2015-12-30 08:20:30,931 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 08:20:30,931 WARNING 	Requesting_Thermostat    : master bedroom
+2015-12-30 08:20:30,931 WARNING 	Temp_Differential        : -10.8288
+2015-12-30 08:20:30,931 WARNING 	Temp_Room                : 55.472
+2015-12-30 08:20:30,931 WARNING 	Temp_Target               : 66.3008
+
+2015-12-30 08:22:32,283 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 08:22:32,285 WARNING 	Requesting_Thermostat    : living room
+2015-12-30 08:22:32,285 WARNING 	Temp_Differential        : -9.774
+2015-12-30 08:22:32,285 WARNING 	Temp_Room                : 56.426
+2015-12-30 08:22:32,286 WARNING 	Temp_Target               : 66.2
+
+2015-12-30 08:22:32,394 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 08:22:32,394 WARNING 	Requesting_Thermostat    : master bedroom
+2015-12-30 08:22:32,394 WARNING 	Temp_Differential        : -10.8288
+2015-12-30 08:22:32,394 WARNING 	Temp_Room                : 55.472
+2015-12-30 08:22:32,394 WARNING 	Temp_Target               : 66.3008
+
+2015-12-30 08:24:33,796 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 08:24:33,796 WARNING 	Requesting_Thermostat    : living room
+2015-12-30 08:24:33,796 WARNING 	Temp_Differential        : -9.774
+2015-12-30 08:24:33,796 WARNING 	Temp_Room                : 56.426
+2015-12-30 08:24:33,796 WARNING 	Temp_Target               : 66.2
+
+2015-12-30 08:24:33,928 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 08:24:33,928 WARNING 	Requesting_Thermostat    : master bedroom
+2015-12-30 08:24:33,928 WARNING 	Temp_Differential        : -10.8288
+2015-12-30 08:24:33,928 WARNING 	Temp_Room                : 55.472
+2015-12-30 08:24:33,930 WARNING 	Temp_Target               : 66.3008
+
+2015-12-30 08:26:35,286 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 08:26:35,286 WARNING 	Requesting_Thermostat    : living room
+2015-12-30 08:26:35,286 WARNING 	Temp_Differential        : -9.774
+2015-12-30 08:26:35,286 WARNING 	Temp_Room                : 56.426
+2015-12-30 08:26:35,286 WARNING 	Temp_Target               : 66.2
+2015-12-30 08:38:29,753 INFO 	-- Stage 2 Boost engaged --
+
+2015-12-30 08:38:49,121 INFO -------- ODR Check Started --------
+
+2015-12-30 08:41:45,157 INFO -------- ODR Check Started --------
+
+2015-12-30 08:41:46,634 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 08:41:46,634 WARNING 	Requesting_Thermostat    : living room
+2015-12-30 08:41:46,634 WARNING 	Temp_Differential        : -9.774
+2015-12-30 08:41:46,634 WARNING 	Temp_Room                : 56.426
+2015-12-30 08:41:46,634 WARNING 	Temp_Target               : 66.2
+
+2015-12-30 08:43:17,927 INFO -------- ODR Check Started --------
+
+2015-12-30 08:43:19,354 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 08:43:19,355 WARNING 	Requesting_Thermostat    : living room
+2015-12-30 08:43:19,355 WARNING 	Temp_Differential        : -9.774
+2015-12-30 08:43:19,355 WARNING 	Temp_Room                : 56.426
+2015-12-30 08:43:19,355 WARNING 	Temp_Target               : 66.2
+
+2015-12-30 08:43:19,381 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 08:43:19,382 WARNING 	Requesting_Thermostat    : master bedroom
+2015-12-30 08:43:19,382 WARNING 	Temp_Differential        : -10.8288
+2015-12-30 08:43:19,382 WARNING 	Temp_Room                : 55.472
+2015-12-30 08:43:19,382 WARNING 	Temp_Target               : 66.3008
+
+2015-12-30 08:43:19,410 INFO ******** [ODR Override Initiated] ********
+2015-12-30 08:43:19,410 INFO 	Requesting_Thermostat    : downstairs
+2015-12-30 08:43:19,410 INFO 	Temp_Differential        : -3.5604
+2015-12-30 08:43:19,410 INFO 	Temp_Room                : 64.472
+2015-12-30 08:43:19,410 INFO 	Temp_Target               : 68.0324
+2015-12-30 08:43:19,440 INFO 	-- Stage 1 engaged --
+
+2015-12-30 08:47:35,233 INFO -------- ODR Check Started --------
+
+2015-12-30 08:56:58,190 INFO -------- ODR Check Started --------
+
+2015-12-30 08:57:33,323 INFO -------- ODR Check Started --------
+
+2015-12-30 08:57:34,846 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 08:57:34,846 WARNING 	Requesting_Thermostat    : living room
+2015-12-30 08:57:34,848 WARNING 	Temp_Differential        : -9.774
+2015-12-30 08:57:34,848 WARNING 	Temp_Room                : 56.426
+2015-12-30 08:57:34,848 WARNING 	Temp_Target               : 66.2
+
+2015-12-30 08:57:34,914 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 08:57:34,914 WARNING 	Requesting_Thermostat    : master bedroom
+2015-12-30 08:57:34,914 WARNING 	Temp_Differential        : -10.8288
+2015-12-30 08:57:34,914 WARNING 	Temp_Room                : 55.472
+2015-12-30 08:57:34,914 WARNING 	Temp_Target               : 66.3008
+
+2015-12-30 08:57:34,969 INFO ******** [ODR Override Initiated] ********
+2015-12-30 08:57:34,970 INFO 	Requesting_Thermostat    : downstairs
+2015-12-30 08:57:34,970 INFO 	Temp_Differential        : -3.5604
+2015-12-30 08:57:34,970 INFO 	Temp_Room                : 64.472
+2015-12-30 08:57:34,970 INFO 	Temp_Target               : 68.0324
+2015-12-30 08:57:35,009 INFO 	-- Stage 1 engaged --
+
+2015-12-30 08:59:36,408 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 08:59:36,408 WARNING 	Requesting_Thermostat    : living room
+2015-12-30 08:59:36,408 WARNING 	Temp_Differential        : -9.774
+2015-12-30 08:59:36,408 WARNING 	Temp_Room                : 56.426
+2015-12-30 08:59:36,410 WARNING 	Temp_Target               : 66.2
+
+2015-12-30 08:59:36,450 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 08:59:36,450 WARNING 	Requesting_Thermostat    : master bedroom
+2015-12-30 08:59:36,450 WARNING 	Temp_Differential        : -10.8288
+2015-12-30 08:59:36,450 WARNING 	Temp_Room                : 55.472
+2015-12-30 08:59:36,450 WARNING 	Temp_Target               : 66.3008
+
+2015-12-30 09:01:37,842 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 09:01:37,842 WARNING 	Requesting_Thermostat    : living room
+2015-12-30 09:01:37,842 WARNING 	Temp_Differential        : -9.774
+2015-12-30 09:01:37,842 WARNING 	Temp_Room                : 56.426
+2015-12-30 09:01:37,844 WARNING 	Temp_Target               : 66.2
+
+2015-12-30 09:01:37,901 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 09:01:37,901 WARNING 	Requesting_Thermostat    : master bedroom
+2015-12-30 09:01:37,901 WARNING 	Temp_Differential        : -10.8288
+2015-12-30 09:01:37,901 WARNING 	Temp_Room                : 55.472
+2015-12-30 09:01:37,901 WARNING 	Temp_Target               : 66.3008
+
+2015-12-30 09:03:39,167 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 09:03:39,168 WARNING 	Requesting_Thermostat    : living room
+2015-12-30 09:03:39,168 WARNING 	Temp_Differential        : -9.774
+2015-12-30 09:03:39,168 WARNING 	Temp_Room                : 56.426
+2015-12-30 09:03:39,168 WARNING 	Temp_Target               : 66.2
+
+2015-12-30 09:03:39,207 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 09:03:39,207 WARNING 	Requesting_Thermostat    : master bedroom
+2015-12-30 09:03:39,207 WARNING 	Temp_Differential        : -10.8288
+2015-12-30 09:03:39,207 WARNING 	Temp_Room                : 55.472
+2015-12-30 09:03:39,207 WARNING 	Temp_Target               : 66.3008
+
+2015-12-30 09:05:40,532 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 09:05:40,532 WARNING 	Requesting_Thermostat    : living room
+2015-12-30 09:05:40,532 WARNING 	Temp_Differential        : -9.774
+2015-12-30 09:05:40,532 WARNING 	Temp_Room                : 56.426
+2015-12-30 09:05:40,532 WARNING 	Temp_Target               : 66.2
+
+2015-12-30 09:05:40,558 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 09:05:40,559 WARNING 	Requesting_Thermostat    : master bedroom
+2015-12-30 09:05:40,559 WARNING 	Temp_Differential        : -10.8288
+2015-12-30 09:05:40,559 WARNING 	Temp_Room                : 55.472
+2015-12-30 09:05:40,559 WARNING 	Temp_Target               : 66.3008
+
+2015-12-30 09:07:41,926 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 09:07:41,926 WARNING 	Requesting_Thermostat    : living room
+2015-12-30 09:07:41,926 WARNING 	Temp_Differential        : -9.774
+2015-12-30 09:07:41,926 WARNING 	Temp_Room                : 56.426
+2015-12-30 09:07:41,926 WARNING 	Temp_Target               : 66.2
+
+2015-12-30 09:07:41,948 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 09:07:41,948 WARNING 	Requesting_Thermostat    : master bedroom
+2015-12-30 09:07:41,948 WARNING 	Temp_Differential        : -10.8288
+2015-12-30 09:07:41,950 WARNING 	Temp_Room                : 55.472
+2015-12-30 09:07:41,950 WARNING 	Temp_Target               : 66.3008
+
+2015-12-30 09:09:43,216 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 09:09:43,216 WARNING 	Requesting_Thermostat    : living room
+2015-12-30 09:09:43,216 WARNING 	Temp_Differential        : -9.774
+2015-12-30 09:09:43,216 WARNING 	Temp_Room                : 56.426
+2015-12-30 09:09:43,217 WARNING 	Temp_Target               : 66.2
+
+2015-12-30 09:09:43,246 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 09:09:43,246 WARNING 	Requesting_Thermostat    : master bedroom
+2015-12-30 09:09:43,246 WARNING 	Temp_Differential        : -10.8288
+2015-12-30 09:09:43,246 WARNING 	Temp_Room                : 55.472
+2015-12-30 09:09:43,246 WARNING 	Temp_Target               : 66.3008
+
+2015-12-30 09:11:44,423 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 09:11:44,423 WARNING 	Requesting_Thermostat    : living room
+2015-12-30 09:11:44,423 WARNING 	Temp_Differential        : -9.774
+2015-12-30 09:11:44,423 WARNING 	Temp_Room                : 56.426
+2015-12-30 09:11:44,423 WARNING 	Temp_Target               : 66.2
+
+2015-12-30 09:11:44,446 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 09:11:44,446 WARNING 	Requesting_Thermostat    : master bedroom
+2015-12-30 09:11:44,446 WARNING 	Temp_Differential        : -10.8288
+2015-12-30 09:11:44,446 WARNING 	Temp_Room                : 55.472
+2015-12-30 09:11:44,446 WARNING 	Temp_Target               : 66.3008
+
+2015-12-30 09:13:45,773 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 09:13:45,773 WARNING 	Requesting_Thermostat    : living room
+2015-12-30 09:13:45,773 WARNING 	Temp_Differential        : -9.774
+2015-12-30 09:13:45,773 WARNING 	Temp_Room                : 56.426
+2015-12-30 09:13:45,775 WARNING 	Temp_Target               : 66.2
+
+2015-12-30 09:13:45,811 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 09:13:45,811 WARNING 	Requesting_Thermostat    : master bedroom
+2015-12-30 09:13:45,811 WARNING 	Temp_Differential        : -10.8288
+2015-12-30 09:13:45,811 WARNING 	Temp_Room                : 55.472
+2015-12-30 09:13:45,811 WARNING 	Temp_Target               : 66.3008
+
+2015-12-30 09:15:47,168 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 09:15:47,168 WARNING 	Requesting_Thermostat    : living room
+2015-12-30 09:15:47,168 WARNING 	Temp_Differential        : -9.774
+2015-12-30 09:15:47,168 WARNING 	Temp_Room                : 56.426
+2015-12-30 09:15:47,168 WARNING 	Temp_Target               : 66.2
+
+2015-12-30 09:15:47,188 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 09:15:47,190 WARNING 	Requesting_Thermostat    : master bedroom
+2015-12-30 09:15:47,190 WARNING 	Temp_Differential        : -12.528
+2015-12-30 09:15:47,190 WARNING 	Temp_Room                : 55.472
+2015-12-30 09:15:47,190 WARNING 	Temp_Target               : 68.0
+2015-12-30 09:17:35,013 INFO 	-- Stage 2 Boost engaged --
+
+2015-12-30 09:17:48,411 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 09:17:48,411 WARNING 	Requesting_Thermostat    : living room
+2015-12-30 09:17:48,411 WARNING 	Temp_Differential        : -9.774
+2015-12-30 09:17:48,411 WARNING 	Temp_Room                : 56.426
+2015-12-30 09:17:48,411 WARNING 	Temp_Target               : 66.2
+
+2015-12-30 09:17:48,463 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 09:17:48,463 WARNING 	Requesting_Thermostat    : master bedroom
+2015-12-30 09:17:48,463 WARNING 	Temp_Differential        : -12.528
+2015-12-30 09:17:48,463 WARNING 	Temp_Room                : 55.472
+2015-12-30 09:17:48,463 WARNING 	Temp_Target               : 68.0
+
+2015-12-30 09:20:17,292 INFO -------- ODR Check Started --------
+2015-12-30 09:20:18,811 INFO Away Status is True. ODR Override check is terminated
+
+2015-12-30 09:24:33,553 INFO -------- ODR Check Started --------
+2015-12-30 09:24:34,913 INFO -- Home Away Status is On. ODR Override check is terminated --
+
+2015-12-30 09:43:18,951 INFO -------- ODR Check Started --------
+2015-12-30 09:43:20,917 INFO Away Status is True. ODR Override check is terminated
+
+2015-12-30 09:45:13,760 INFO -------- ODR Check Started --------
+2015-12-30 09:45:15,312 INFO Away Status is True. ODR Override check is terminated
+
+2015-12-30 10:37:10,687 INFO -------- ODR Check Started --------
+
+2015-12-30 10:37:12,835 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 10:37:12,835 WARNING 	Requesting_Thermostat    : living room
+2015-12-30 10:37:12,835 WARNING 	Temp_Differential        : -9.774
+2015-12-30 10:37:12,835 WARNING 	Temp_Room                : 56.426
+2015-12-30 10:37:12,835 WARNING 	Temp_Target               : 66.2
+
+2015-12-30 10:37:12,890 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 10:37:12,890 WARNING 	Requesting_Thermostat    : master bedroom
+2015-12-30 10:37:12,890 WARNING 	Temp_Differential        : -12.528
+2015-12-30 10:37:12,890 WARNING 	Temp_Room                : 55.472
+2015-12-30 10:37:12,890 WARNING 	Temp_Target               : 68.0
+
+2015-12-30 10:37:12,907 INFO ******** [ODR Override Initiated] ********
+2015-12-30 10:37:12,907 INFO 	Requesting_Thermostat    : downstairs
+2015-12-30 10:37:12,907 INFO 	Temp_Differential        : -3.3804
+2015-12-30 10:37:12,907 INFO 	Temp_Room                : 64.652
+2015-12-30 10:37:12,908 INFO 	Temp_Target               : 68.0324
+2015-12-30 10:37:12,928 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+
+2015-12-30 10:39:13,999 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 10:39:13,999 WARNING 	Requesting_Thermostat    : living room
+2015-12-30 10:39:13,999 WARNING 	Temp_Differential        : -9.774
+2015-12-30 10:39:13,999 WARNING 	Temp_Room                : 56.426
+2015-12-30 10:39:13,999 WARNING 	Temp_Target               : 66.2
+
+2015-12-30 10:41:34,398 INFO -------- ODR Check Started --------
+
+2015-12-30 10:41:35,832 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 10:41:35,832 WARNING 	Requesting_Thermostat    : living room
+2015-12-30 10:41:35,832 WARNING 	Temp_Differential        : -9.774
+2015-12-30 10:41:35,832 WARNING 	Temp_Room                : 56.426
+2015-12-30 10:41:35,832 WARNING 	Temp_Target               : 66.2
+
+2015-12-30 10:41:35,862 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 10:41:35,862 WARNING 	Requesting_Thermostat    : master bedroom
+2015-12-30 10:41:35,862 WARNING 	Temp_Differential        : -12.528
+2015-12-30 10:41:35,862 WARNING 	Temp_Room                : 55.472
+2015-12-30 10:41:35,862 WARNING 	Temp_Target               : 68.0
+
+2015-12-30 10:41:35,890 INFO ******** [ODR Override Initiated] ********
+2015-12-30 10:41:35,890 INFO 	Requesting_Thermostat    : downstairs
+2015-12-30 10:41:35,890 INFO 	Temp_Differential        : -3.3804
+2015-12-30 10:41:35,890 INFO 	Temp_Room                : 64.652
+2015-12-30 10:41:35,890 INFO 	Temp_Target               : 68.0324
+2015-12-30 10:41:35,921 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+
+2015-12-30 10:43:37,055 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 10:43:37,055 WARNING 	Requesting_Thermostat    : living room
+2015-12-30 10:43:37,055 WARNING 	Temp_Differential        : -9.774
+2015-12-30 10:43:37,055 WARNING 	Temp_Room                : 56.426
+2015-12-30 10:43:37,055 WARNING 	Temp_Target               : 66.2
+
+2015-12-30 11:01:37,286 INFO -------- ODR Check Started --------
+
+2015-12-30 11:01:38,792 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 11:01:38,792 WARNING 	Requesting_Thermostat    : living room
+2015-12-30 11:01:38,792 WARNING 	Temp_Differential        : -9.774
+2015-12-30 11:01:38,793 WARNING 	Temp_Room                : 56.426
+2015-12-30 11:01:38,793 WARNING 	Temp_Target               : 66.2
+
+2015-12-30 11:01:38,960 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 11:01:38,960 WARNING 	Requesting_Thermostat    : master bedroom
+2015-12-30 11:01:38,960 WARNING 	Temp_Differential        : -12.528
+2015-12-30 11:01:38,960 WARNING 	Temp_Room                : 55.472
+2015-12-30 11:01:38,960 WARNING 	Temp_Target               : 68.0
+
+2015-12-30 11:01:38,997 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2015-12-30 11:01:38,997 WARNING 	Requesting_Thermostat    : downstairs
+2015-12-30 11:01:38,999 WARNING 	Temp_Differential        : -3.3804
+2015-12-30 11:01:38,999 WARNING 	Temp_Room                : 64.652
+2015-12-30 11:01:38,999 WARNING 	Temp_Target               : 68.0324
+
+2015-12-30 12:16:47,049 INFO -------- ODR Check Started --------
+2015-12-30 12:16:48,411 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+
+2015-12-30 12:17:23,786 INFO -------- ODR Check Started --------
+2015-12-30 12:17:25,187 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+
+2015-12-30 12:18:10,285 INFO -------- ODR Check Started --------
+2015-12-30 12:18:11,618 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+
+2015-12-30 12:23:47,598 INFO -------- ODR Check Started --------
+2015-12-30 12:23:49,180 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+
+2015-12-30 12:24:05,634 INFO -------- ODR Check Started --------
+2015-12-30 12:24:06,996 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+
+2015-12-30 12:24:42,858 INFO -------- ODR Check Started --------
+2015-12-30 12:24:44,289 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+
+2015-12-30 12:26:46,553 INFO -------- ODR Check Started --------
+2015-12-30 12:26:48,032 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+
+2015-12-30 12:27:14,573 INFO -------- ODR Check Started --------
+2015-12-30 12:27:15,944 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+
+2015-12-30 12:29:56,480 INFO -------- ODR Check Started --------
+2015-12-30 12:29:57,977 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+2015-12-30 12:29:58,009 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+2015-12-30 12:29:58,039 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+
+2015-12-30 12:31:24,125 INFO -------- ODR Check Started --------
+2015-12-30 12:31:25,637 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+2015-12-30 12:31:25,674 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+2015-12-30 12:31:25,709 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+
+2015-12-30 12:33:32,078 INFO -------- ODR Check Started --------
+2015-12-30 12:33:33,499 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+
+2015-12-30 12:34:00,848 INFO -------- ODR Check Started --------
+2015-12-30 12:34:02,220 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+2015-12-30 12:34:02,269 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+2015-12-30 12:34:02,298 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+
+2015-12-30 12:36:16,740 INFO -------- ODR Check Started --------
+2015-12-30 12:36:18,141 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+2015-12-30 12:36:18,187 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+2015-12-30 12:36:18,216 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+
+2015-12-30 12:47:04,667 INFO -------- ODR Check Started --------
+2015-12-30 12:47:06,023 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+2015-12-30 12:47:06,082 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+2015-12-30 12:47:06,118 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+
+2015-12-30 17:40:11,469 INFO -------- ODR Check Started --------
+2015-12-30 17:40:13,220 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+2015-12-30 17:40:13,256 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+2015-12-30 17:40:13,288 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+
+2015-12-30 17:41:37,094 INFO -------- ODR Check Started --------
+2015-12-30 17:41:38,506 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+2015-12-30 17:41:38,536 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+2015-12-30 17:41:38,566 INFO -- Home is in Away mode. Any ODR override requests will be terminated. --
+
+2015-12-30 17:49:26,332 INFO -------- ODR Check Started --------
+2015-12-30 17:49:27,881 INFO -- Home is in Away mode. ODR override requests for living room ignored. --
+2015-12-30 17:49:27,987 INFO -- Home is in Away mode. ODR override requests for master bedroom ignored. --
+2015-12-30 17:49:28,017 INFO -- Home is in Away mode. ODR override requests for downstairs ignored. --
+
+2015-12-30 18:03:36,147 INFO -------- ODR Check Started --------
+2015-12-30 18:03:37,599 INFO -- Home is in Away mode. ODR override requests for living room ignored. --
+2015-12-30 18:03:37,686 INFO -- Home is in Away mode. ODR override requests for master bedroom ignored. --
+2015-12-30 18:03:37,717 INFO -- Home is in Away mode. ODR override requests for downstairs ignored. --
+
+2015-12-30 18:05:51,451 INFO -------- ODR Check Started --------
+2015-12-30 18:05:52,842 INFO -- Home is in Away mode. ODR override requests for living room ignored. --
+2015-12-30 18:05:52,878 INFO -- Home is in Away mode. ODR override requests for master bedroom ignored. --
+2015-12-30 18:05:52,910 INFO -- Home is in Away mode. ODR override requests for downstairs ignored. --
+
+2015-12-30 18:09:22,226 INFO -------- ODR Check Started --------
+2015-12-30 18:09:23,701 INFO -- Home is in Away mode. ODR override requests for living room ignored. --
+2015-12-30 18:09:23,757 INFO -- Home is in Away mode. ODR override requests for master bedroom ignored. --
+2015-12-30 18:09:23,788 INFO -- Home is in Away mode. ODR override requests for downstairs ignored. --
+
+2015-12-30 18:09:46,818 INFO -------- ODR Check Started --------
+2015-12-30 18:09:48,311 INFO -- Home is in Away mode. ODR override requests for living room ignored. --
+2015-12-30 18:09:48,346 INFO -- Home is in Away mode. ODR override requests for master bedroom ignored. --
+2015-12-30 18:09:48,378 INFO -- Home is in Away mode. ODR override requests for downstairs ignored. --
+
+2015-12-30 18:26:50,918 INFO -------- ODR Check Started --------
+2015-12-30 18:26:52,351 INFO -- Home is in Away mode. ODR override requests for living room ignored. --
+2015-12-30 18:26:52,427 INFO -- Home is in Away mode. ODR override requests for master bedroom ignored. --
+2015-12-30 18:26:52,453 INFO -- Home is in Away mode. ODR override requests for downstairs ignored. --
+
+2015-12-30 18:27:11,849 INFO -------- ODR Check Started --------
+2015-12-30 18:27:13,298 INFO -- Home is in Away mode. ODR override requests for living room ignored. --
+2015-12-30 18:27:13,371 INFO -- Home is in Away mode. ODR override requests for master bedroom ignored. --
+2015-12-30 18:27:13,401 INFO -- Home is in Away mode. ODR override requests for downstairs ignored. --
+
+2015-12-31 09:21:27,368 INFO -------- ODR Check Started --------
+2015-12-31 09:21:28,770 INFO -- Home is in Away mode. ODR override requests for living room ignored. --
+2015-12-31 09:21:28,811 INFO -- Home is in Away mode. ODR override requests for master bedroom ignored. --
+2015-12-31 09:21:28,834 INFO -- Home is in Away mode. ODR override requests for downstairs ignored. --
+
+2015-12-31 20:15:11,529 INFO -------- ODR Check Started --------
+2015-12-31 20:15:13,227 INFO -- Home is in Away mode. ODR override request for living room ignored. --
+2015-12-31 20:15:13,308 INFO -- Home is in Away mode. ODR override request for master bedroom ignored. --
+2015-12-31 20:15:13,368 INFO -- Home is in Away mode. ODR override request for downstairs ignored. --
+
+2016-01-02 00:56:29,857 INFO -------- ODR Check Started --------
+
+2016-01-02 00:57:13,565 INFO -------- ODR Check Started --------
+
+2016-01-02 00:58:43,457 INFO -------- ODR Check Started --------
+2016-01-02 00:58:45,029 INFO -- Away mode enabled --
+2016-01-02 00:58:45,115 INFO -- Away mode enabled --
+2016-01-02 00:58:45,164 INFO -- Away mode enabled --
+
+2016-01-02 01:02:44,115 INFO -------- ODR Check Started --------
+2016-01-02 01:02:45,845 INFO -- Away mode enabled --
+2016-01-02 01:02:45,943 INFO -- Away mode enabled --
+2016-01-02 01:02:45,980 INFO -- Away mode enabled --
+
+2016-01-02 01:02:45,987 INFO ******** [ODR Override Initiated] ********
+2016-01-02 01:02:45,989 INFO 	Requesting_Thermostat    : downstairs
+2016-01-02 01:02:45,989 INFO 	Temp_Differential        : -2.93094
+2016-01-02 01:02:45,989 INFO 	Temp_Room                : 62.312
+2016-01-02 01:02:45,989 INFO 	Temp_Target               : 65.24294
+2016-01-02 01:02:46,032 INFO 	-- Stage 1 engaged --
+2016-01-02 01:04:49,309 INFO -- Away mode enabled --
+2016-01-02 01:04:49,420 INFO -- Away mode enabled --
+2016-01-02 01:04:49,506 INFO -- Away mode enabled --
+2016-01-02 01:06:51,029 INFO -- Away mode enabled --
+2016-01-02 01:06:51,107 INFO -- Away mode enabled --
+2016-01-02 01:06:51,187 INFO -- Away mode enabled --
+2016-01-02 08:40:30,737 INFO 	-- Stage 2 Boost engaged --
+2016-01-02 08:40:30,750 INFO 	-- Stage 3 Boost engaged --
+2016-01-02 08:40:31,816 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-02 08:47:37,357 INFO -------- ODR Check Started --------
+2016-01-02 08:47:38,917 INFO -- Away mode enabled --
+2016-01-02 08:47:39,033 INFO -- Away mode enabled --
+2016-01-02 08:47:39,065 INFO -- Away mode enabled --
+
+2016-01-02 08:47:39,066 INFO ******** [ODR Override Initiated] ********
+2016-01-02 08:47:39,066 INFO 	Requesting_Thermostat    : downstairs
+2016-01-02 08:47:39,068 INFO 	Temp_Differential        : -4.65894
+2016-01-02 08:47:39,068 INFO 	Temp_Room                : 60.584
+2016-01-02 08:47:39,068 INFO 	Temp_Target               : 65.24294
+2016-01-02 08:47:39,104 INFO 	-- Stage 1 engaged --
+2016-01-02 08:47:50,371 INFO -- Away mode enabled --
+2016-01-02 08:47:50,493 INFO -- Away mode enabled --
+2016-01-02 08:47:50,522 INFO -- Away mode enabled --
+2016-01-02 08:48:01,920 INFO -- Away mode enabled --
+2016-01-02 08:48:01,964 INFO -- Away mode enabled --
+2016-01-02 08:48:01,996 INFO -- Away mode enabled --
+2016-01-02 08:48:09,108 INFO 	-- Stage 2 Boost engaged --
+2016-01-02 08:48:13,194 INFO -- Away mode enabled --
+2016-01-02 08:48:13,259 INFO -- Away mode enabled --
+2016-01-02 08:48:13,292 INFO -- Away mode enabled --
+2016-01-02 08:48:24,763 INFO -- Away mode enabled --
+2016-01-02 08:48:24,823 INFO -- Away mode enabled --
+2016-01-02 08:48:24,848 INFO -- Away mode enabled --
+2016-01-02 08:48:36,253 INFO -- Away mode enabled --
+2016-01-02 08:48:36,276 INFO -- Away mode enabled --
+2016-01-02 08:48:36,305 INFO -- Away mode enabled --
+2016-01-02 08:48:39,108 INFO 	-- Stage 3 Boost engaged --
+2016-01-02 08:48:47,622 INFO -- Away mode enabled --
+2016-01-02 08:48:47,648 INFO -- Away mode enabled --
+2016-01-02 08:48:47,671 INFO -- Away mode enabled --
+2016-01-02 08:48:58,963 INFO -- Away mode enabled --
+2016-01-02 08:48:59,006 INFO -- Away mode enabled --
+2016-01-02 08:48:59,036 INFO -- Away mode enabled --
+2016-01-02 08:49:10,536 INFO -- Away mode enabled --
+2016-01-02 08:49:10,565 INFO -- Away mode enabled --
+2016-01-02 08:49:10,591 INFO -- Away mode enabled --
+2016-01-02 08:49:22,009 INFO -- Away mode enabled --
+2016-01-02 08:49:22,049 INFO -- Away mode enabled --
+2016-01-02 08:49:22,078 INFO -- Away mode enabled --
+2016-01-02 08:49:32,466 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-02 09:25:44,112 INFO -------- ODR Check Started --------
+2016-01-02 09:25:49,319 INFO -- Away mode enabled --
+2016-01-02 09:25:49,397 INFO -- Away mode enabled --
+2016-01-02 09:25:49,426 INFO -- Away mode enabled --
+
+2016-01-02 09:25:49,427 INFO ******** [ODR Override Initiated] ********
+2016-01-02 09:25:49,428 INFO 	Requesting_Thermostat    : downstairs
+2016-01-02 09:25:49,428 INFO 	Temp_Differential        : -4.65894
+2016-01-02 09:25:49,428 INFO 	Temp_Room                : 60.584
+2016-01-02 09:25:49,428 INFO 	Temp_Target               : 65.24294
+2016-01-02 09:25:49,460 INFO 	-- Stage 1 engaged --
+2016-01-02 09:26:01,930 INFO -- Away mode enabled --
+2016-01-02 09:26:01,970 INFO -- Away mode enabled --
+2016-01-02 09:26:01,997 INFO -- Away mode enabled --
+2016-01-02 09:26:13,220 INFO -- Away mode enabled --
+2016-01-02 09:26:13,283 INFO -- Away mode enabled --
+2016-01-02 09:26:13,311 INFO -- Away mode enabled --
+2016-01-02 09:26:19,463 INFO 	-- Stage 2 Boost engaged --
+2016-01-02 09:26:40,812 INFO -- Away mode enabled --
+2016-01-02 09:26:40,838 INFO -- Away mode enabled --
+2016-01-02 09:26:40,861 INFO -- Away mode enabled --
+2016-01-02 09:26:49,464 INFO 	-- Stage 3 Boost engaged --
+2016-01-02 09:27:05,749 INFO -- Away mode enabled --
+2016-01-02 09:27:05,776 INFO -- Away mode enabled --
+2016-01-02 09:27:05,802 INFO -- Away mode enabled --
+2016-01-02 09:27:17,082 INFO -- Away mode enabled --
+2016-01-02 09:27:17,135 INFO -- Away mode enabled --
+2016-01-02 09:27:17,164 INFO -- Away mode enabled --
+2016-01-02 09:27:28,542 INFO -- Away mode enabled --
+2016-01-02 09:27:28,582 INFO -- Away mode enabled --
+2016-01-02 09:27:28,608 INFO -- Away mode enabled --
+2016-01-02 09:27:39,928 INFO -- Away mode enabled --
+2016-01-02 09:27:40,029 INFO -- Away mode enabled --
+2016-01-02 09:27:40,058 INFO -- Away mode enabled --
+2016-01-02 09:27:51,371 INFO -- Away mode enabled --
+2016-01-02 09:27:51,448 INFO -- Away mode enabled --
+2016-01-02 09:27:51,476 INFO -- Away mode enabled --
+2016-01-02 09:28:02,839 INFO -- Away mode enabled --
+2016-01-02 09:28:02,891 INFO -- Away mode enabled --
+2016-01-02 09:28:02,918 INFO -- Away mode enabled --
+2016-01-02 09:28:13,398 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-02 09:33:17,989 INFO -------- ODR Check Started --------
+2016-01-02 09:33:19,520 INFO -- Away mode enabled --
+2016-01-02 09:33:19,634 INFO -- Away mode enabled --
+2016-01-02 09:33:19,680 INFO -- Away mode enabled --
+
+2016-01-02 09:33:19,686 INFO ******** [ODR Override Initiated] ********
+2016-01-02 09:33:19,686 INFO 	Requesting_Thermostat    : downstairs
+2016-01-02 09:33:19,686 INFO 	Temp_Differential        : -4.65894
+2016-01-02 09:33:19,686 INFO 	Temp_Room                : 60.584
+2016-01-02 09:33:19,686 INFO 	Temp_Target               : 65.24294
+2016-01-02 09:33:19,732 INFO 	-- Stage 1 engaged --
+2016-01-02 09:33:32,365 INFO -- Away mode enabled --
+2016-01-02 09:33:32,464 INFO -- Away mode enabled --
+2016-01-02 09:33:32,519 INFO -- Away mode enabled --
+2016-01-02 09:33:43,842 INFO -- Away mode enabled --
+2016-01-02 09:33:43,881 INFO -- Away mode enabled --
+2016-01-02 09:33:43,908 INFO -- Away mode enabled --
+2016-01-02 09:33:49,734 INFO 	-- Stage 2 Boost engaged --
+2016-01-02 09:33:55,276 INFO -- Away mode enabled --
+2016-01-02 09:33:55,335 INFO -- Away mode enabled --
+2016-01-02 09:33:55,362 INFO -- Away mode enabled --
+2016-01-02 09:34:06,676 INFO -- Away mode enabled --
+2016-01-02 09:34:06,795 INFO -- Away mode enabled --
+2016-01-02 09:34:06,821 INFO -- Away mode enabled --
+2016-01-02 09:34:18,023 INFO -- Away mode enabled --
+2016-01-02 09:34:18,153 INFO -- Away mode enabled --
+2016-01-02 09:34:18,184 INFO -- Away mode enabled --
+2016-01-02 09:34:19,736 INFO 	-- Stage 3 Boost engaged --
+2016-01-02 09:34:32,707 INFO -- Away mode enabled --
+2016-01-02 09:34:32,739 INFO -- Away mode enabled --
+2016-01-02 09:34:32,766 INFO -- Away mode enabled --
+2016-01-02 09:34:44,233 INFO -- Away mode enabled --
+2016-01-02 09:34:44,279 INFO -- Away mode enabled --
+2016-01-02 09:34:44,305 INFO -- Away mode enabled --
+2016-01-02 09:34:55,737 INFO -- Away mode enabled --
+2016-01-02 09:34:55,819 INFO -- Away mode enabled --
+2016-01-02 09:34:55,845 INFO -- Away mode enabled --
+2016-01-02 09:35:07,326 INFO -- Away mode enabled --
+2016-01-02 09:35:07,381 INFO -- Away mode enabled --
+2016-01-02 09:35:07,424 INFO -- Away mode enabled --
+2016-01-02 09:35:17,789 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-02 10:04:16,737 INFO -------- ODR Check Started --------
+2016-01-02 10:04:18,378 INFO -- Away mode enabled --
+2016-01-02 10:04:18,479 INFO -- Away mode enabled --
+2016-01-02 10:04:18,507 INFO -- Away mode enabled --
+
+2016-01-02 10:04:18,510 INFO ******** [ODR Override Initiated] ********
+2016-01-02 10:04:18,510 INFO 	Requesting_Thermostat    : downstairs
+2016-01-02 10:04:18,510 INFO 	Temp_Differential        : -4.65894
+2016-01-02 10:04:18,510 INFO 	Temp_Room                : 60.584
+2016-01-02 10:04:18,510 INFO 	Temp_Target               : 65.24294
+2016-01-02 10:04:18,532 INFO 	-- Stage 1 engaged --
+2016-01-02 10:04:29,878 INFO -- Away mode enabled --
+2016-01-02 10:04:30,015 INFO -- Away mode enabled --
+2016-01-02 10:04:30,046 INFO -- Away mode enabled --
+2016-01-02 10:04:41,144 INFO -- Away mode enabled --
+2016-01-02 10:04:41,224 INFO -- Away mode enabled --
+2016-01-02 10:04:41,250 INFO -- Away mode enabled --
+2016-01-02 10:04:48,538 INFO 	-- Stage 2 Boost engaged --
+2016-01-02 10:04:52,486 INFO -- Away mode enabled --
+2016-01-02 10:04:52,582 INFO -- Away mode enabled --
+2016-01-02 10:04:52,627 INFO -- Away mode enabled --
+2016-01-02 10:05:03,937 INFO -- Away mode enabled --
+2016-01-02 10:05:04,069 INFO -- Away mode enabled --
+2016-01-02 10:05:04,099 INFO -- Away mode enabled --
+2016-01-02 10:05:15,507 INFO -- Away mode enabled --
+2016-01-02 10:05:15,542 INFO -- Away mode enabled --
+2016-01-02 10:05:15,571 INFO -- Away mode enabled --
+2016-01-02 10:05:18,536 INFO 	-- Stage 3 Boost engaged --
+2016-01-02 10:05:26,884 INFO -- Away mode enabled --
+2016-01-02 10:05:26,980 INFO -- Away mode enabled --
+2016-01-02 10:05:27,025 INFO -- Away mode enabled --
+2016-01-02 10:05:38,371 INFO -- Away mode enabled --
+2016-01-02 10:05:38,443 INFO -- Away mode enabled --
+2016-01-02 10:05:38,476 INFO -- Away mode enabled --
+2016-01-02 10:05:49,678 INFO -- Away mode enabled --
+2016-01-02 10:05:49,799 INFO -- Away mode enabled --
+2016-01-02 10:05:49,836 INFO -- Away mode enabled --
+2016-01-02 10:06:00,946 INFO -- Away mode enabled --
+2016-01-02 10:06:00,976 INFO -- Away mode enabled --
+2016-01-02 10:06:01,005 INFO -- Away mode enabled --
+2016-01-02 10:06:11,302 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-02 10:53:59,510 INFO -------- ODR Check Started --------
+2016-01-02 10:54:01,730 INFO -- Away mode enabled --
+2016-01-02 10:54:01,798 INFO -- Away mode enabled --
+2016-01-02 10:54:01,861 INFO -- Away mode enabled --
+
+2016-01-02 10:54:01,868 INFO ******** [ODR Override Initiated] ********
+2016-01-02 10:54:01,869 INFO 	Requesting_Thermostat    : downstairs
+2016-01-02 10:54:01,869 INFO 	Temp_Differential        : -3.29094
+2016-01-02 10:54:01,869 INFO 	Temp_Room                : 61.952
+2016-01-02 10:54:01,869 INFO 	Temp_Target               : 65.24294
+2016-01-02 10:54:01,940 INFO 	-- Stage 1 engaged --
+2016-01-02 10:54:13,246 INFO -- Away mode enabled --
+2016-01-02 10:54:13,338 INFO -- Away mode enabled --
+2016-01-02 10:54:13,430 INFO -- Away mode enabled --
+2016-01-02 10:54:25,119 INFO -- Away mode enabled --
+2016-01-02 10:54:25,203 INFO -- Away mode enabled --
+2016-01-02 10:54:25,289 INFO -- Away mode enabled --
+2016-01-02 10:54:31,950 INFO 	-- Stage 2 Boost engaged --
+2016-01-02 10:54:36,789 INFO -- Away mode enabled --
+2016-01-02 10:54:36,924 INFO -- Away mode enabled --
+2016-01-02 10:54:37,010 INFO -- Away mode enabled --
+2016-01-02 10:54:48,380 INFO -- Away mode enabled --
+2016-01-02 10:54:48,461 INFO -- Away mode enabled --
+2016-01-02 10:54:48,559 INFO -- Away mode enabled --
+2016-01-02 10:54:59,828 INFO -- Away mode enabled --
+2016-01-02 10:54:59,967 INFO -- Away mode enabled --
+2016-01-02 10:55:00,058 INFO -- Away mode enabled --
+2016-01-02 10:55:01,951 INFO 	-- Stage 3 Boost engaged --
+2016-01-02 10:55:11,467 INFO -- Away mode enabled --
+2016-01-02 10:55:11,592 INFO -- Away mode enabled --
+2016-01-02 10:55:11,677 INFO -- Away mode enabled --
+2016-01-02 10:55:23,108 INFO -- Away mode enabled --
+2016-01-02 10:55:23,168 INFO -- Away mode enabled --
+2016-01-02 10:55:23,219 INFO -- Away mode enabled --
+2016-01-02 10:55:35,367 INFO -- Away mode enabled --
+2016-01-02 10:55:35,493 INFO -- Away mode enabled --
+2016-01-02 10:55:35,578 INFO -- Away mode enabled --
+2016-01-02 10:55:47,092 INFO -- Away mode enabled --
+2016-01-02 10:55:47,209 INFO -- Away mode enabled --
+2016-01-02 10:55:47,298 INFO -- Away mode enabled --
+
+2016-01-02 10:57:45,151 INFO -------- ODR Check Started --------
+2016-01-02 10:57:45,157 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 10:57:45,161 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-02 11:02:03,127 INFO -------- ODR Check Started --------
+2016-01-02 11:02:03,130 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:02:03,131 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-02 11:11:04,325 INFO -------- ODR Check Started --------
+2016-01-02 11:11:04,329 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:11:04,334 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:11:04,336 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:11:14,392 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:11:14,403 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:11:14,411 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:11:24,415 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:11:24,427 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:11:24,440 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:11:34,447 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:11:34,459 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:11:34,471 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:11:44,476 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:11:44,483 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:11:44,490 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:11:54,526 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:11:54,532 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:11:54,539 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:12:04,562 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:12:04,565 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:12:04,571 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:12:14,576 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:12:14,588 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:12:14,598 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:12:24,611 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:12:24,615 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:12:24,618 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+
+2016-01-02 11:13:11,928 INFO -------- ODR Check Started --------
+2016-01-02 11:13:11,970 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:13:11,971 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:13:11,973 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:13:21,980 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:13:21,989 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:13:21,996 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:13:31,999 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:13:32,006 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:13:32,016 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:13:42,017 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:13:42,025 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:13:42,035 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:13:52,032 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:13:52,040 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:13:52,049 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:14:02,046 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:14:02,051 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:14:02,055 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:14:12,056 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:14:12,061 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:14:12,065 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:14:22,069 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:14:22,076 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:14:22,085 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:14:32,086 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:14:32,095 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:14:32,104 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:14:42,104 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:14:42,111 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:14:42,121 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:14:52,115 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:14:52,117 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:14:52,119 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:15:02,121 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:15:02,125 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:15:02,128 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:15:12,135 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:15:12,145 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:15:12,157 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:15:22,157 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:15:22,167 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:15:22,178 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:15:32,173 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:15:32,177 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:15:32,184 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:15:42,184 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:15:42,190 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:15:42,197 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:15:52,201 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:15:52,211 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:15:52,221 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:16:02,223 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:16:02,233 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:16:02,244 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:16:12,244 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:16:12,256 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:16:12,267 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:16:22,266 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:16:22,279 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:16:22,290 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:16:32,289 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:16:32,301 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:16:32,312 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:16:42,312 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:16:42,322 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:16:42,332 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:16:52,329 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:16:52,335 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:16:52,345 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:17:02,341 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:17:02,345 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:17:02,348 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:17:12,417 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:17:12,427 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:17:12,437 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:17:22,438 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:17:22,448 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:17:22,459 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:17:32,454 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:17:32,461 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:17:32,467 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:17:42,473 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:17:42,483 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:17:42,493 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:17:52,493 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:17:52,505 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:17:52,516 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:18:02,515 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:18:02,520 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:18:02,528 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:18:12,533 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:18:12,545 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:18:12,558 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:18:22,555 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:18:22,558 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:18:22,562 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:18:32,625 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:18:32,635 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:18:32,645 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:18:42,647 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:18:42,655 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:18:42,667 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:18:52,665 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:18:52,674 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:18:52,684 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:19:02,684 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:19:02,694 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:19:02,706 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:19:12,704 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:19:12,717 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:19:12,734 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:19:22,730 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:19:22,736 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:19:22,743 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:19:32,749 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:19:32,759 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:19:32,772 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-02 11:19:42,772 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:19:42,782 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:19:42,799 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+
+2016-01-02 11:20:44,667 INFO -------- ODR Check Started --------
+2016-01-02 11:20:44,713 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:20:44,716 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:20:44,720 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+
+2016-01-02 11:21:21,809 INFO -------- ODR Check Started --------
+2016-01-02 11:21:21,835 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:21:21,838 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+2016-01-02 11:21:21,842 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+
+2016-01-02 11:31:43,880 INFO -------- ODR Check Started --------
+2016-01-02 11:31:43,900 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:31:43,904 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+
+2016-01-02 11:40:26,272 INFO -------- ODR Check Started --------
+2016-01-02 11:40:26,309 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:40:56,329 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+
+2016-01-02 11:41:31,066 INFO -------- ODR Check Started --------
+2016-01-02 11:41:31,111 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:42:01,154 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:42:31,216 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:43:01,227 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:43:31,240 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:44:01,315 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:44:31,391 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:45:01,457 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:45:31,469 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:46:01,476 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:46:31,539 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+
+2016-01-02 11:47:25,316 INFO -------- ODR Check Started --------
+2016-01-02 11:47:25,322 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+
+2016-01-02 11:49:23,019 INFO -------- ODR Check Started --------
+2016-01-02 11:49:26,694 INFO -- Away mode enabled --
+2016-01-02 11:49:26,733 INFO -- Away mode enabled --
+2016-01-02 11:49:26,759 INFO -- Away mode enabled --
+
+2016-01-02 11:49:26,763 INFO ******** [ODR Override Initiated] ********
+2016-01-02 11:49:26,763 INFO 	Requesting_Thermostat    : downstairs
+2016-01-02 11:49:26,763 INFO 	Temp_Differential        : -1.74294
+2016-01-02 11:49:26,763 INFO 	Temp_Room                : 63.5
+2016-01-02 11:49:26,763 INFO 	Temp_Target               : 65.24294
+2016-01-02 11:49:26,792 INFO 	-- Stage 1 engaged --
+2016-01-02 11:49:38,051 INFO -- Away mode enabled --
+2016-01-02 11:49:38,171 INFO -- Away mode enabled --
+2016-01-02 11:49:38,206 INFO -- Away mode enabled --
+2016-01-02 11:49:49,555 INFO -- Away mode enabled --
+2016-01-02 11:49:49,582 INFO -- Away mode enabled --
+2016-01-02 11:49:49,608 INFO -- Away mode enabled --
+2016-01-02 11:49:56,795 INFO 	-- Stage 2 Boost engaged --
+2016-01-02 11:50:00,845 INFO -- Away mode enabled --
+2016-01-02 11:50:00,943 INFO -- Away mode enabled --
+2016-01-02 11:50:00,993 INFO -- Away mode enabled --
+2016-01-02 11:50:12,290 INFO -- Away mode enabled --
+2016-01-02 11:50:12,417 INFO -- Away mode enabled --
+2016-01-02 11:50:12,454 INFO -- Away mode enabled --
+2016-01-02 11:50:23,566 INFO -- Away mode enabled --
+2016-01-02 11:50:23,601 INFO -- Away mode enabled --
+2016-01-02 11:50:23,627 INFO -- Away mode enabled --
+2016-01-02 11:50:26,796 INFO 	-- Stage 3 Boost engaged --
+2016-01-02 11:50:34,914 INFO -- Away mode enabled --
+2016-01-02 11:50:34,950 INFO -- Away mode enabled --
+2016-01-02 11:50:34,976 INFO -- Away mode enabled --
+2016-01-02 11:50:49,194 INFO -- Away mode enabled --
+2016-01-02 11:50:49,236 INFO -- Away mode enabled --
+2016-01-02 11:50:49,267 INFO -- Away mode enabled --
+2016-01-02 11:51:00,617 INFO -- Away mode enabled --
+2016-01-02 11:51:00,665 INFO -- Away mode enabled --
+2016-01-02 11:51:00,697 INFO -- Away mode enabled --
+2016-01-02 11:51:12,029 INFO -- Away mode enabled --
+2016-01-02 11:51:12,082 INFO -- Away mode enabled --
+2016-01-02 11:51:12,105 INFO -- Away mode enabled --
+
+2016-01-02 11:54:48,181 INFO -------- ODR Check Started --------
+2016-01-02 11:54:49,664 INFO -- Away mode enabled --
+2016-01-02 11:54:49,697 INFO -- Away mode enabled --
+2016-01-02 11:54:49,726 INFO -- Away mode enabled --
+
+2016-01-02 11:54:49,730 INFO ******** [ODR Override Initiated] ********
+2016-01-02 11:54:49,730 INFO 	Requesting_Thermostat    : downstairs
+2016-01-02 11:54:49,730 INFO 	Temp_Differential        : -1.74294
+2016-01-02 11:54:49,730 INFO 	Temp_Room                : 63.5
+2016-01-02 11:54:49,730 INFO 	Temp_Target               : 65.24294
+2016-01-02 11:54:49,757 INFO 	-- Stage 1 engaged --
+2016-01-02 11:55:00,973 INFO -- Away mode enabled --
+2016-01-02 11:55:01,002 INFO -- Away mode enabled --
+2016-01-02 11:55:01,029 INFO -- Away mode enabled --
+2016-01-02 11:55:12,459 INFO -- Away mode enabled --
+2016-01-02 11:55:12,490 INFO -- Away mode enabled --
+2016-01-02 11:55:12,515 INFO -- Away mode enabled --
+2016-01-02 11:55:19,763 INFO 	-- Stage 2 Boost engaged --
+2016-01-02 11:55:23,805 INFO -- Away mode enabled --
+2016-01-02 11:55:23,881 INFO -- Away mode enabled --
+2016-01-02 11:55:23,930 INFO -- Away mode enabled --
+2016-01-02 11:55:35,299 INFO -- Away mode enabled --
+2016-01-02 11:55:35,338 INFO -- Away mode enabled --
+2016-01-02 11:55:35,377 INFO -- Away mode enabled --
+2016-01-02 11:55:49,763 INFO 	-- Stage 3 Boost engaged --
+2016-01-02 11:55:51,351 INFO -- Away mode enabled --
+2016-01-02 11:55:51,499 INFO -- Away mode enabled --
+2016-01-02 11:55:51,563 INFO -- Away mode enabled --
+2016-01-02 11:56:02,832 INFO -- Away mode enabled --
+2016-01-02 11:56:02,875 INFO -- Away mode enabled --
+2016-01-02 11:56:02,901 INFO -- Away mode enabled --
+2016-01-02 11:56:14,107 INFO -- Away mode enabled --
+2016-01-02 11:56:14,230 INFO -- Away mode enabled --
+2016-01-02 11:56:14,275 INFO -- Away mode enabled --
+2016-01-02 11:56:25,427 INFO -- Away mode enabled --
+2016-01-02 11:56:25,453 INFO -- Away mode enabled --
+2016-01-02 11:56:25,479 INFO -- Away mode enabled --
+2016-01-02 11:56:36,789 INFO -- Away mode enabled --
+2016-01-02 11:56:36,911 INFO -- Away mode enabled --
+2016-01-02 11:56:36,940 INFO -- Away mode enabled --
+
+2016-01-02 11:56:56,417 INFO -------- ODR Check Started --------
+2016-01-02 11:56:56,424 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:57:26,438 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 11:57:26,450 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+
+2016-01-02 12:29:39,492 INFO -------- ODR Check Started --------
+2016-01-02 12:29:39,519 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+
+2016-01-02 12:31:11,302 INFO -------- ODR Check Started --------
+2016-01-02 12:31:11,331 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+
+2016-01-02 12:55:19,650 INFO -------- ODR Check Started --------
+
+2016-01-02 13:03:57,371 INFO -------- ODR Check Started --------
+2016-01-02 13:03:57,391 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+
+2016-01-02 13:10:24,829 INFO -------- ODR Check Started --------
+2016-01-02 13:10:24,865 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:02,276 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:13,313 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:20,003 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:21,509 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:22,911 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:22,943 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:23,566 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:23,719 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:23,927 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:24,019 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:24,131 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:24,219 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:24,253 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:24,380 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:24,576 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:24,607 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:25,017 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:25,414 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:25,598 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:26,049 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:26,082 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:26,788 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:28,176 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:29,043 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:32,163 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:32,341 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:32,621 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:32,668 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:33,273 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:34,562 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:35,542 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:35,773 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:36,365 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:36,559 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:37,082 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:37,335 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:37,395 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:37,427 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:37,494 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:37,617 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:37,644 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:37,660 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:37,812 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:37,887 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:37,930 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:37,947 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:37,997 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:37,999 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:38,015 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:38,030 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:38,046 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:38,161 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:38,186 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:38,242 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:38,243 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:38,244 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:38,244 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:38,259 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:38,358 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:38,368 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:38,417 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:38,423 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:38,431 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:38,447 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:38,512 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:38,513 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:38,529 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:39,398 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:39,401 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:39,403 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:39,473 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:39,473 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:39,482 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:39,490 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:39,530 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:39,545 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:39,615 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:39,624 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:39,676 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:39,677 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:39,688 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:39,688 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:39,694 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:39,697 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:39,763 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:40,167 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:40,176 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:40,200 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:40,211 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:40,318 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:40,348 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:40,351 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:40,430 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:40,467 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:40,506 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:40,555 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:40,608 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:40,660 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:40,664 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:40,839 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:40,867 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:40,875 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:40,996 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:41,046 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:41,174 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:41,180 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:41,240 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:41,296 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:41,364 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:41,420 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:41,430 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:12:41,453 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+
+2016-01-02 13:14:14,131 INFO -------- ODR Check Started --------
+2016-01-02 13:14:14,154 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 13:14:14,161 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+
+2016-01-02 13:17:47,782 INFO -------- ODR Check Started --------
+2016-01-02 13:17:47,802 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+
+2016-01-02 13:31:46,700 INFO -------- ODR Check Started --------
+
+2016-01-02 13:32:27,569 INFO -------- ODR Check Started --------
+2016-01-02 13:32:27,585 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+
+2016-01-02 13:34:59,377 INFO -------- ODR Check Started --------
+2016-01-02 13:34:59,411 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+
+2016-01-02 16:26:56,275 INFO -------- ODR Check Started --------
+2016-01-02 16:26:56,305 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+
+2016-01-02 16:27:31,453 INFO -------- ODR Check Started --------
+2016-01-02 16:27:31,479 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 16:28:01,500 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 16:28:01,519 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+
+2016-01-02 16:30:25,642 INFO -------- ODR Check Started --------
+2016-01-02 16:30:25,653 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 16:30:55,667 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 16:30:55,687 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+
+2016-01-02 16:32:02,414 INFO -------- ODR Check Started --------
+2016-01-02 16:32:02,470 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 16:32:32,490 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 16:32:32,502 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+
+2016-01-02 16:37:13,167 INFO -------- ODR Check Started --------
+2016-01-02 16:37:13,183 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 16:37:43,203 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 16:37:43,214 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+
+2016-01-02 16:38:29,163 INFO -------- ODR Check Started --------
+2016-01-02 16:38:29,211 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 16:38:59,233 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 16:38:59,243 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+
+2016-01-02 16:58:58,668 INFO -------- ODR Check Started --------
+2016-01-02 16:58:58,678 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 16:59:28,730 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-02 16:59:28,740 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+
+2016-01-05 20:23:05,753 INFO -------- ODR Check Started --------
+
+2016-01-05 20:28:36,042 INFO -------- ODR Check Started --------
+
+2016-01-05 20:36:05,983 INFO -------- ODR Check Started --------
+
+2016-01-05 20:40:29,551 INFO -------- ODR Check Started --------
+
+2016-01-05 20:41:22,911 INFO -------- ODR Check Started --------
+
+2016-01-05 20:41:25,440 INFO ******** [ODR Override Initiated] ********
+2016-01-05 20:41:25,440 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-05 20:41:25,440 INFO 	Temp_Differential        : -1.7928
+2016-01-05 20:41:25,440 INFO 	Temp_Room                : 64.508
+2016-01-05 20:41:25,440 INFO 	Temp_Target               : 66.3008
+2016-01-05 20:41:25,493 INFO 	-- Stage 1 engaged --
+
+2016-01-06 14:20:54,667 INFO -------- ODR Check Started --------
+2016-01-06 14:20:54,677 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+
+2016-01-06 14:22:36,197 INFO -------- ODR Check Started --------
+2016-01-06 14:22:36,210 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+
+2016-01-06 14:23:45,717 INFO -------- ODR Check Started --------
+
+2016-01-06 14:52:27,385 INFO -------- ODR Check Started --------
+2016-01-06 14:52:29,177 WARNING --Unable to connect to Nest server. Will retry in 10 minutes.--
+2016-01-06 14:53:00,723 WARNING --Unable to connect to Nest server. Will retry in 10 minutes.--
+2016-01-06 14:53:32,249 WARNING --Unable to connect to Nest server. Will retry in 10 minutes.--
+2016-01-06 14:54:03,808 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+
+2016-01-06 14:55:42,026 INFO -------- ODR Check Started --------
+
+2016-01-06 14:56:24,223 INFO -------- ODR Check Started --------
+2016-01-06 14:56:24,265 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+
+2016-01-06 14:59:14,257 INFO -------- ODR Check Started --------
+2016-01-06 14:59:14,267 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+
+2016-01-06 15:00:28,559 INFO -------- ODR Check Started --------
+2016-01-06 15:00:28,611 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-06 15:00:28,618 WARNING --Unable to connect to Nest server. Will retry in 10 minutes.--
+2016-01-06 15:00:58,654 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-06 15:00:58,676 WARNING --Unable to connect to Nest server. Will retry in 10 minutes.--
+2016-01-06 15:01:28,686 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-06 15:01:28,696 WARNING --Unable to connect to Nest server. Will retry in 10 minutes.--
+2016-01-06 15:01:58,750 WARNING --Unable to connect to Nest server. Aborting current check cycle.--
+2016-01-06 15:01:58,769 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+
+2016-01-06 15:02:52,309 INFO -------- ODR Check Started --------
+2016-01-06 15:02:52,325 WARNING --Unable to connect to Nest server. Will retry in 10 minutes.--
+2016-01-06 15:03:22,378 WARNING --Unable to connect to Nest server. Will retry in 10 minutes.--
+2016-01-06 15:03:52,407 WARNING --Unable to connect to Nest server. Will retry in 10 minutes.--
+2016-01-06 15:04:22,454 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+
+2016-01-06 15:07:33,309 INFO -------- ODR Check Started --------
+2016-01-06 15:07:33,319 WARNING --Unable to connect to Nest server. Will retry in 10 minutes.--
+2016-01-06 15:08:03,325 WARNING --Unable to connect to Nest server. Will retry in 10 minutes.--
+
+2016-01-06 15:10:22,269 INFO -------- ODR Check Started --------
+2016-01-06 15:10:24,302 WARNING --Unable to connect to Nest server. Will retry in 10 minutes.--
+2016-01-06 15:10:55,867 WARNING --Unable to connect to Nest server. Will retry in 10 minutes.--
+2016-01-06 15:11:27,443 WARNING --Unable to connect to Nest server. Will retry in 10 minutes.--
+2016-01-06 15:11:58,990 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+
+2016-01-06 15:12:27,335 INFO -------- ODR Check Started --------
+2016-01-06 15:12:29,118 WARNING --Unable to connect to Nest server. Will retry in 10 minutes.--
+2016-01-06 15:13:00,568 WARNING --Unable to connect to Nest server. Will retry in 10 minutes.--
+2016-01-06 15:13:32,173 WARNING --Unable to connect to Nest server. Will retry in 10 minutes.--
+2016-01-06 15:14:03,683 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+
+2016-01-06 15:14:50,638 INFO -------- ODR Check Started --------
+
+2016-01-06 15:18:33,852 INFO -------- ODR Check Started --------
+
+2016-01-06 15:20:10,118 INFO -------- ODR Check Started --------
+
+2016-01-06 15:22:18,305 INFO -------- ODR Check Started --------
+2016-01-06 15:22:18,318 WARNING --Unable to connect to Nest server. Will retry in 10 minutes.--
+2016-01-06 15:22:48,342 WARNING --Unable to connect to Nest server. Will retry in 10 minutes.--
+2016-01-06 15:23:18,361 WARNING --Unable to connect to Nest server. Will retry in 10 minutes.--
+2016-01-06 15:23:48,385 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+
+2016-01-06 15:26:29,506 INFO -------- ODR Check Started --------
+
+2016-01-06 15:27:07,552 INFO -------- ODR Check Started --------
+
+2016-01-06 15:27:09,611 INFO ******** [ODR Override Initiated] ********
+2016-01-06 15:27:09,611 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-06 15:27:09,611 INFO 	Temp_Differential        : -3.4866
+2016-01-06 15:27:09,611 INFO 	Temp_Room                : 67.514
+2016-01-06 15:27:09,611 INFO 	Temp_Target               : 71.0006
+2016-01-06 15:27:09,733 INFO 	-- Stage 1 engaged --
+2016-01-06 15:28:11,367 WARNING --Unable to connect to Nest server. Will retry in 10 minutes.--
+2016-01-06 15:28:42,996 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-06 15:30:49,522 INFO 	Boost call for Device: master bedroom ended after 0:03:41  H:MM:SS
+
+2016-01-06 15:34:35,482 INFO -------- ODR Check Started --------
+
+2016-01-06 15:34:37,315 INFO ******** [ODR Override Initiated] ********
+2016-01-06 15:34:37,315 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-06 15:34:37,315 INFO 	Temp_Differential        : -2.4858
+2016-01-06 15:34:37,315 INFO 	Temp_Room                : 67.514
+2016-01-06 15:34:37,315 INFO 	Temp_Target               : 69.9998
+2016-01-06 15:34:37,431 INFO 	-- Stage 1 engaged --
+2016-01-06 15:44:45,423 INFO 	Boost call for Device: living room ended after 0:10:09  H:MM:SS
+2016-01-06 15:46:47,217 INFO 	Boost call for Device: master bedroom ended after 0:12:11  H:MM:SS
+
+2016-01-06 15:57:54,121 INFO -------- ODR Check Started --------
+
+2016-01-06 15:57:56,539 INFO ******** [ODR Override Initiated] ********
+2016-01-06 15:57:56,539 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-06 15:57:56,540 INFO 	Temp_Differential        : -2.4858
+2016-01-06 15:57:56,540 INFO 	Temp_Room                : 67.514
+2016-01-06 15:57:56,540 INFO 	Temp_Target               : 69.9998
+2016-01-06 15:57:56,726 INFO 	-- Stage 1 engaged --
+2016-01-06 15:59:58,270 INFO 	Boost call for Device: master bedroom ended after 0:02:04  H:MM:SS
+
+2016-01-06 16:05:09,229 INFO -------- ODR Check Started --------
+
+2016-01-06 16:05:11,572 INFO ******** [ODR Override Initiated] ********
+2016-01-06 16:05:11,572 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-06 16:05:11,572 INFO 	Temp_Differential        : -2.4858
+2016-01-06 16:05:11,572 INFO 	Temp_Room                : 67.514
+2016-01-06 16:05:11,572 INFO 	Temp_Target               : 69.9998
+2016-01-06 16:05:11,819 INFO 	-- Stage 1 engaged --
+2016-01-06 16:06:13,322 INFO 	Boost call for Device: master bedroom ended after 0:01:04  H:MM:SS
+
+2016-01-06 16:10:55,875 INFO -------- ODR Check Started --------
+
+2016-01-06 16:14:42,713 INFO -------- ODR Check Started --------
+
+2016-01-06 16:15:05,096 INFO -------- ODR Check Started --------
+
+2016-01-06 16:15:08,775 INFO ******** [ODR Override Initiated] ********
+2016-01-06 16:15:08,775 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-06 16:15:08,776 INFO 	Temp_Differential        : -1.4868
+2016-01-06 16:15:08,776 INFO 	Temp_Room                : 67.514
+2016-01-06 16:15:08,776 INFO 	Temp_Target               : 69.0008
+2016-01-06 16:15:09,042 INFO 	-- Stage 1 engaged --
+
+2016-01-06 16:24:50,059 INFO -------- ODR Check Started --------
+
+2016-01-06 16:24:52,428 INFO ******** [ODR Override Initiated] ********
+2016-01-06 16:24:52,428 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-06 16:24:52,428 INFO 	Temp_Differential        : -1.4868
+2016-01-06 16:24:52,430 INFO 	Temp_Room                : 67.514
+2016-01-06 16:24:52,430 INFO 	Temp_Target               : 69.0008
+2016-01-06 16:24:52,512 INFO 	-- Stage 1 engaged --
+2016-01-06 16:26:55,865 INFO 	Boost call for Device: master bedroom ended after 0:02:05  H:MM:SS
+2016-01-06 16:26:55,974 INFO 	-- ODR Override Cycle Complete --
+2016-01-06 16:26:55,974 INFO 	-- Total duration:  0:02:05  H:MM:SS --
+
+2016-01-06 16:28:33,236 INFO -------- ODR Check Started --------
+2016-01-06 16:28:33,263 WARNING --Unable to connect to Nest server. Will retry in 60 seconds.--
+2016-01-06 16:29:33,285 WARNING --Unable to connect to Nest server. Will retry in 60 seconds.--
+2016-01-06 16:30:33,303 WARNING --Unable to connect to Nest server. Will retry in 60 seconds.--
+2016-01-06 16:31:33,375 WARNING --Unable to connect to Nest server. Will retry in 60 seconds.--
+
+2016-01-06 16:33:03,990 INFO -------- ODR Check Started --------
+2016-01-06 16:33:04,009 WARNING --Unable to connect to Nest server. Will retry in 60 seconds.--
+2016-01-06 16:33:24,016 WARNING --Unable to connect to Nest server. Will retry in 60 seconds.--
+2016-01-06 16:33:44,025 WARNING --Unable to connect to Nest server. Will retry in 60 seconds.--
+2016-01-06 16:34:04,043 WARNING --Unable to connect to Nest server. Will retry in 60 seconds.--
+2016-01-06 16:34:24,091 WARNING --Unable to connect to Nest server. Will retry in 60 seconds.--
+2016-01-06 16:34:44,131 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-06 16:34:44,140 INFO 	-- ODR Override Cycle Complete --
+2016-01-06 16:34:44,141 INFO 	-- Total duration:  0:01:40  H:MM:SS --
+
+2016-01-06 16:40:26,013 INFO -------- ODR Check Started --------
+2016-01-06 16:40:26,059 WARNING --Unable to connect to Nest server for 0 minutes. Will retry in 60 seconds.--
+2016-01-06 16:41:26,098 WARNING --Unable to connect to Nest server for 1 minutes. Will retry in 60 seconds.--
+
+2016-01-06 16:41:54,986 INFO -------- ODR Check Started --------
+
+2016-01-06 16:42:10,411 INFO -------- ODR Check Started --------
+
+2016-01-06 16:42:14,104 INFO ******** [ODR Override Initiated] ********
+2016-01-06 16:42:14,104 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-06 16:42:14,104 INFO 	Temp_Differential        : -2.4858
+2016-01-06 16:42:14,104 INFO 	Temp_Room                : 67.514
+2016-01-06 16:42:14,104 INFO 	Temp_Target               : 69.9998
+2016-01-06 16:42:14,342 INFO 	-- Stage 1 engaged --
+2016-01-06 16:43:21,381 INFO 	Boost call for Device: master bedroom ended after 0:01:10  H:MM:SS
+2016-01-06 16:43:21,415 INFO 	-- ODR Override Cycle Complete --
+2016-01-06 16:43:21,417 INFO 	-- Total duration:  0:01:11  H:MM:SS --
+
+2016-01-06 21:48:49,460 INFO -------- ODR Check Started --------
+
+2016-01-06 22:06:45,898 INFO -------- ODR Check Started --------
+
+2016-01-06 22:13:12,279 INFO -------- ODR Check Started --------
+2016-01-06 22:13:12,345 WARNING --Unable to connect to Nest server. Will retry in 10 minutes.--
+
+2016-01-06 22:14:50,038 INFO -------- ODR Check Started --------
+
+2016-01-06 22:15:08,660 INFO -------- ODR Check Started --------
+2016-01-06 22:15:08,664 WARNING --Unable to connect to Nest server for 0 minutes. Will retry in 60 seconds.--
+2016-01-06 22:16:08,713 WARNING --Unable to connect to Nest server for 1 minutes. Will retry in 60 seconds.--
+2016-01-06 22:17:08,763 WARNING --Unable to connect to Nest server for 2 minutes. Will retry in 60 seconds.--
+2016-01-06 22:18:08,773 WARNING --Unable to connect to Nest server for 3 minutes. Will retry in 60 seconds.--
+
+2016-01-06 22:25:13,737 INFO -------- ODR Check Started --------
+
+2016-01-07 07:47:25,441 INFO -------- ODR Check Started --------
+
+2016-01-07 07:47:27,687 INFO ******** [ODR Override Initiated] ********
+2016-01-07 07:47:27,687 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-07 07:47:27,687 INFO 	Temp_Differential        : -1.368
+2016-01-07 07:47:27,687 INFO 	Temp_Room                : 66.632
+2016-01-07 07:47:27,687 INFO 	Temp_Target               : 68.0
+2016-01-07 07:47:27,729 INFO 	-- Stage 1 engaged --
+2016-01-07 07:48:51,611 WARNING --Unable to connect to Nest server for 0 minutes. Will retry in 2 minutes.--
+2016-01-07 07:50:53,792 INFO --Nest server connection succeeded--
+2016-01-07 07:50:53,795 WARNING --Unable to connect to Nest server for 0 minutes. Will retry in 2 minutes.--
+2016-01-07 07:51:26,645 WARNING --Unable to connect to Nest server for 0 minutes. Will retry in 2 minutes.--
+2016-01-07 07:52:55,970 INFO --Nest server connection succeeded--
+2016-01-07 07:52:55,973 WARNING --Unable to connect to Nest server for 0 minutes. Will retry in 2 minutes.--
+2016-01-07 07:53:11,668 WARNING --Unable to connect to Nest server for 0 minutes. Will retry in 2 minutes.--
+2016-01-07 07:53:28,802 INFO --Nest server connection succeeded--
+2016-01-07 07:53:28,805 WARNING --Unable to connect to Nest server for 0 minutes. Will retry in 2 minutes.--
+
+2016-01-07 07:56:36,065 INFO -------- ODR Check Started --------
+2016-01-07 07:56:36,069 WARNING --Unable to connect to Nest server for 0 minutes. Will retry in 1 minutes.--
+2016-01-07 07:57:36,094 WARNING --Unable to connect to Nest server for 1 minutes. Will retry in 1 minutes.--
+2016-01-07 07:58:36,101 WARNING --Unable to connect to Nest server for 2 minutes. Will retry in 1 minutes.--
+2016-01-07 07:59:36,148 WARNING --Unable to connect to Nest server for 3 minutes. Will retry in 1 minutes.--
+2016-01-07 08:00:36,178 WARNING --Unable to connect to Nest server for 4 minutes. Will retry in 1 minutes.--
+2016-01-07 08:01:36,193 WARNING --Unable to connect to Nest server for 5 minutes. Will retry in 1 minutes.--
+2016-01-07 08:02:36,210 WARNING --Unable to connect to Nest server for 6 minutes. Will retry in 1 minutes.--
+2016-01-07 08:03:36,279 WARNING --Unable to connect to Nest server for 7 minutes. Will retry in 1 minutes.--
+2016-01-07 08:04:36,285 WARNING --Unable to connect to Nest server for 8 minutes. Will retry in 1 minutes.--
+2016-01-07 08:05:36,345 WARNING --Unable to connect to Nest server for 9 minutes. Will retry in 1 minutes.--
+2016-01-07 08:06:36,352 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-07 08:06:36,352 INFO 	-- ODR Override Cycle Complete --
+2016-01-07 08:06:36,354 INFO 	-- Total duration:  0:10:00  H:MM:SS --
+
+2016-01-08 08:20:55,075 INFO -------- ODR Check Started --------
+
+2016-01-08 08:20:57,494 INFO ******** [ODR Override Initiated] ********
+2016-01-08 08:20:57,494 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-08 08:20:57,494 INFO 	Temp_Differential        : -1.494
+2016-01-08 08:20:57,496 INFO 	Temp_Room                : 66.506
+2016-01-08 08:20:57,496 INFO 	Temp_Target               : 68.0
+2016-01-08 08:20:57,622 INFO 	-- Stage 1Boost engaged --
+
+2016-01-11 09:50:35,470 INFO -------- ODR Check Started --------
+
+2016-01-11 09:50:37,740 INFO ******** [ODR Override Initiated] ********
+2016-01-11 09:50:37,740 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-11 09:50:37,742 INFO 	Temp_Differential        : -1.44
+2016-01-11 09:50:37,742 INFO 	Temp_Room                : 66.56
+2016-01-11 09:50:37,742 INFO 	Temp_Target               : 68.0
+2016-01-11 09:50:37,819 INFO 	-- Stage 1 Boost engaged --
+
+2016-01-11 10:21:44,171 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2016-01-11 10:21:44,171 WARNING 	Requesting_Thermostat    : master bedroom
+2016-01-11 10:21:44,171 WARNING 	Temp_Differential        : -0.45
+2016-01-11 10:21:44,171 WARNING 	Temp_Room                : 67.55
+2016-01-11 10:21:44,171 WARNING 	Temp_Target               : 68.0
+2016-01-11 10:21:44,177 INFO 	Boost call for Device: master bedroom ended after 0:31:08  H:MM:SS
+2016-01-11 10:21:44,190 INFO 	-- ODR Override Cycle Complete --
+2016-01-11 10:21:44,190 INFO 	-- Total duration:  0:31:08  H:MM:SS --
+
+2016-01-11 22:28:42,653 INFO -------- ODR Check Started --------
+
+2016-01-11 22:30:04,375 INFO -------- ODR Check Started --------
+
+2016-01-11 22:30:09,017 INFO ******** [ODR Override Initiated] ********
+2016-01-11 22:30:09,017 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-11 22:30:09,022 INFO 	Temp_Differential        : -1.584
+2016-01-11 22:30:09,023 INFO 	Temp_Room                : 66.416
+2016-01-11 22:30:09,023 INFO 	Temp_Target               : 68.0
+2016-01-11 22:30:09,168 INFO 	-- Stage 1 Boost engaged --
+
+2016-01-11 22:32:58,499 INFO -------- ODR Check Started --------
+
+2016-01-11 22:33:01,821 INFO ******** [ODR Override Initiated] ********
+2016-01-11 22:33:01,821 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-11 22:33:01,821 INFO 	Temp_Differential        : -1.584
+2016-01-11 22:33:01,821 INFO 	Temp_Room                : 66.416
+2016-01-11 22:33:01,822 INFO 	Temp_Target               : 68.0
+2016-01-11 22:33:01,933 INFO 	-- Stage 1 Boost engaged --
+2016-01-11 22:33:31,938 INFO 	-- Stage 2 Boost engaged --
+2016-01-11 22:33:31,938 INFO 	Requesting_Thermostat    : downstairs
+2016-01-11 22:33:31,940 INFO 	Temp_Differential        : 1.3716
+2016-01-11 22:33:31,940 INFO 	Temp_Room                : 69.404
+2016-01-11 22:33:31,940 INFO 	Temp_Target               : 68.0324
+2016-01-11 22:34:01,940 INFO 	-- Stage 3 Boost engaged --
+2016-01-11 22:34:01,941 INFO 	Requesting_Thermostat    : downstairs
+2016-01-11 22:34:01,943 INFO 	Temp_Differential        : 1.3716
+2016-01-11 22:34:01,943 INFO 	Temp_Room                : 69.404
+2016-01-11 22:34:01,943 INFO 	Temp_Target               : 68.0324
+
+2016-01-11 22:37:35,098 INFO -------- ODR Check Started --------
+
+2016-01-11 22:37:38,072 INFO ******** [ODR Override Initiated] ********
+2016-01-11 22:37:38,072 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-11 22:37:38,073 INFO 	Temp_Differential        : -1.584
+2016-01-11 22:37:38,075 INFO 	Temp_Room                : 66.416
+2016-01-11 22:37:38,075 INFO 	Temp_Target               : 68.0
+2016-01-11 22:37:38,259 INFO 	-- Stage 1 Boost engaged --
+2016-01-11 22:38:08,266 INFO 	-- Stage 2 Boost engaged --
+2016-01-11 22:38:08,266 INFO 	Requesting_Thermostat    : downstairs
+2016-01-11 22:38:08,266 INFO 	Temp_Differential        : 1.3716
+2016-01-11 22:38:08,266 INFO 	Temp_Room                : 69.404
+2016-01-11 22:38:08,266 INFO 	Temp_Target               : 68.0324
+2016-01-11 22:38:38,267 INFO 	-- Stage 3 Boost engaged --
+2016-01-11 22:38:38,269 INFO 	Requesting_Thermostat    : downstairs
+2016-01-11 22:38:38,270 INFO 	Temp_Differential        : 1.3716
+2016-01-11 22:38:38,270 INFO 	Temp_Room                : 69.404
+2016-01-11 22:38:38,272 INFO 	Temp_Target               : 68.0324
+
+2016-01-13 08:19:58,523 INFO -------- ODR Check Started --------
+
+2016-01-13 08:20:01,342 INFO ******** [ODR Override Initiated] ********
+2016-01-13 08:20:01,342 INFO 	Requesting_Thermostat    : living room
+2016-01-13 08:20:01,342 INFO 	Temp_Differential        : -2.2968
+2016-01-13 08:20:01,342 INFO 	Temp_Room                : 66.704
+2016-01-13 08:20:01,342 INFO 	Temp_Target              : 69.0008
+
+2016-01-13 08:20:43,638 INFO -------- ODR Check Started --------
+
+2016-01-13 08:20:45,803 INFO ******** [ODR Override Initiated] ********
+2016-01-13 08:20:45,803 INFO 	Requesting_Thermostat    : living room
+2016-01-13 08:20:45,803 INFO 	Temp_Differential        : -2.2968
+2016-01-13 08:20:45,803 INFO 	Temp_Room                : 66.704
+2016-01-13 08:20:45,803 INFO 	Temp_Target              : 69.0008
+2016-01-13 08:20:45,803 INFO 	Temp_Outside             : 23.18
+2016-01-13 08:20:45,960 INFO 	-- Stage 1 Boost engaged --
+2016-01-13 08:21:48,892 INFO 	Boost call for Device: living room ended after 0:01:05  H:MM:SS
+
+2016-01-15 09:33:56,549 INFO -------- ODR Check Started --------
+
+2016-01-15 09:33:58,740 INFO ******** [ODR Override Initiated] ********
+2016-01-15 09:33:58,742 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-15 09:33:58,742 INFO 	Temp_Differential        : -1.278
+2016-01-15 09:33:58,742 INFO 	Temp_Room                : 66.722
+2016-01-15 09:33:58,742 INFO 	Temp_Target              : 68.0
+2016-01-15 09:33:58,743 INFO 	Temp_Outside             : 20.3
+2016-01-15 09:33:58,857 INFO 	-- Stage 1 Boost engaged --
+2016-01-15 09:39:09,499 INFO 	Boost call for Device: living room ended after 0:05:12  H:MM:SS
+2016-01-15 09:39:09,506 INFO 	Boost call continues for Device(s): [u'master bedroom'].
+
+2016-01-15 09:52:36,135 INFO -------- ODR Check Started --------
+
+2016-01-15 09:52:38,217 INFO ******** [ODR Override Initiated] ********
+2016-01-15 09:52:38,217 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-15 09:52:38,217 INFO 	Temp_Differential        : -1.278
+2016-01-15 09:52:38,217 INFO 	Temp_Room                : 66.722
+2016-01-15 09:52:38,217 INFO 	Temp_Target              : 68.0
+2016-01-15 09:52:38,217 INFO 	Temp_Outside             : 21.38
+2016-01-15 09:52:38,220 INFO 	Device: master bedroom has initiated a new boost call and has been added to the queue.
+
+2016-01-15 09:54:19,710 INFO -------- ODR Check Started --------
+
+2016-01-15 09:54:22,127 INFO ******** [ODR Override Initiated] ********
+2016-01-15 09:54:22,127 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-15 09:54:22,127 INFO 	Temp_Differential        : -1.278
+2016-01-15 09:54:22,128 INFO 	Temp_Room                : 66.722
+2016-01-15 09:54:22,128 INFO 	Temp_Target              : 68.0
+2016-01-15 09:54:22,128 INFO 	Temp_Outside             : 22.64
+2016-01-15 09:54:22,131 INFO 	Device: master bedroom has initiated a new boost call and has been added to the queue.
+2016-01-15 09:54:22,180 INFO 	-- Stage 1 Boost engaged --
+2016-01-15 09:55:24,124 INFO 	Device: living room has initiated a new boost call and has been added to the queue.
+2016-01-15 09:59:33,723 INFO 	Boost call for Device: living room ended after 0:05:14  H:MM:SS
+2016-01-15 09:59:33,766 INFO 	Boost call continues for Device(s): [master bedroom].
+
+2016-01-15 10:02:29,164 INFO -------- ODR Check Started --------
+
+2016-01-15 10:02:31,803 INFO ******** [ODR Override Initiated] ********
+2016-01-15 10:02:31,803 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-15 10:02:31,805 INFO 	Temp_Differential        : -1.278
+2016-01-15 10:02:31,805 INFO 	Temp_Room                : 66.722
+2016-01-15 10:02:31,805 INFO 	Temp_Target              : 68.0
+2016-01-15 10:02:31,805 INFO 	Temp_Outside             : 22.64
+2016-01-15 10:02:31,910 INFO 	-- Stage 1 Boost engaged --
+2016-01-15 10:03:34,002 INFO 	Device: living room has initiated a new boost call and has been added to the queue
+2016-01-15 10:04:36,095 INFO 	Boost call for Device: living room ended after 0:02:06  H:MM:SS
+2016-01-15 10:04:36,104 INFO 	Boost call continues for Device(s): [master bedroom]
+
+2016-01-15 10:08:09,174 INFO -------- ODR Check Started --------
+
+2016-01-15 10:08:11,558 INFO ******** [ODR Override Initiated] ********
+2016-01-15 10:08:11,558 INFO 	Requesting_Thermostat    : living room
+2016-01-15 10:08:11,558 INFO 	Temp_Differential        : -1.512
+2016-01-15 10:08:11,559 INFO 	Temp_Room                : 66.488
+2016-01-15 10:08:11,559 INFO 	Temp_Target              : 68.0
+2016-01-15 10:08:11,559 INFO 	Temp_Outside             : 22.64
+
+2016-01-15 10:08:11,618 INFO ******** [ODR Override Initiated] ********
+2016-01-15 10:08:11,618 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-15 10:08:11,618 INFO 	Temp_Differential        : -1.278
+2016-01-15 10:08:11,619 INFO 	Temp_Room                : 66.722
+2016-01-15 10:08:11,619 INFO 	Temp_Target              : 68.0
+2016-01-15 10:08:11,619 INFO 	Temp_Outside             : 22.64
+2016-01-15 10:08:11,766 INFO 	-- Stage 1 Boost engaged --
+2016-01-15 10:10:15,640 INFO 	Boost call for Device: living room ended after 0:02:06  H:MM:SS
+2016-01-15 10:10:15,648 INFO 	Boost call continues for Device(s): [master bedroom]
+
+2016-01-15 10:15:07,278 INFO -------- ODR Check Started --------
+
+2016-01-15 10:15:10,055 INFO ******** [ODR Override Initiated] ********
+2016-01-15 10:15:10,055 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-15 10:15:10,055 INFO 	Temp_Differential        : -1.278
+2016-01-15 10:15:10,055 INFO 	Temp_Room                : 66.722
+2016-01-15 10:15:10,055 INFO 	Temp_Target              : 68.0
+2016-01-15 10:15:10,055 INFO 	Temp_Outside             : 23.72
+2016-01-15 10:15:10,188 INFO 	-- Stage 1 Boost engaged --
+2016-01-15 10:16:12,032 INFO 	Device: living room is requesting a new boost call and has been added to the queue
+2016-01-15 10:21:22,641 INFO 	Boost call for Device: living room ended after 0:06:15  H:MM:SS
+2016-01-15 10:21:22,667 INFO 	Boost call continues for Device(s): [master bedroom]
+
+2016-01-15 10:26:32,743 WARNING *** Temperature Differential Detected But No Call For HEAT ***
+2016-01-15 10:26:32,743 WARNING 	Requesting_Thermostat    : master bedroom
+2016-01-15 10:26:32,744 WARNING 	Temp_Differential        : -0.342
+2016-01-15 10:26:32,744 WARNING 	Temp_Room                : 67.658
+2016-01-15 10:26:32,744 WARNING 	Temp_Target               : 68.0
+2016-01-15 10:26:32,749 INFO 	Boost call for Device: master bedroom ended after 0:11:25  H:MM:SS
+2016-01-15 10:26:32,770 INFO 	-- ODR Override Cycle Complete --
+2016-01-15 10:26:32,770 INFO 	-- Total duration:  0:11:25  H:MM:SS --
+
+2016-01-15 11:51:28,266 INFO -------- ODR Check Started --------
+
+2016-01-15 17:39:14,469 INFO -------- ODR Check Started --------
+
+2016-01-15 17:42:23,750 INFO -------- ODR Check Started --------
+
+2016-01-15 17:46:56,661 INFO -------- ODR Check Started --------
+
+2016-01-15 17:47:43,375 INFO -------- ODR Check Started --------
+
+2016-01-15 17:56:34,446 INFO -------- ODR Check Started --------
+
+2016-01-15 17:59:15,552 INFO -------- ODR Check Started --------
+
+2016-01-15 18:03:06,063 INFO -------- ODR Check Started --------
+
+2016-01-15 18:03:48,013 INFO -------- ODR Check Started --------
+
+2016-01-15 18:03:51,124 INFO ******** [ODR Override Initiated] ********
+2016-01-15 18:03:51,125 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-15 18:03:51,127 INFO 	Temp_Differential        : -2.5758
+2016-01-15 18:03:51,128 INFO 	Temp_Room                : 67.424
+2016-01-15 18:03:51,128 INFO 	Temp_Target              : 69.9998
+2016-01-15 18:03:51,128 INFO 	Temp_Outside             : 27.86
+2016-01-15 18:03:51,378 INFO 	-- Stage 1 Boost engaged --
+
+2016-01-15 18:08:30,778 INFO -------- ODR Check Started --------
+
+2016-01-15 18:08:33,900 INFO ******** [ODR Override Initiated] ********
+2016-01-15 18:08:33,900 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-15 18:08:33,900 INFO 	Temp_Differential        : -1.5768
+2016-01-15 18:08:33,901 INFO 	Temp_Room                : 67.424
+2016-01-15 18:08:33,901 INFO 	Temp_Target              : 69.0008
+2016-01-15 18:08:33,901 INFO 	Temp_Outside             : 27.86
+2016-01-15 18:08:34,013 INFO 	-- Stage 1 Boost engaged --
+
+2016-01-15 18:10:59,581 INFO -------- ODR Check Started --------
+
+2016-01-15 18:11:02,230 INFO ******** [ODR Override Initiated] ********
+2016-01-15 18:11:02,230 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-15 18:11:02,230 INFO 	Temp_Differential        : -2.5758
+2016-01-15 18:11:02,232 INFO 	Temp_Room                : 67.424
+2016-01-15 18:11:02,232 INFO 	Temp_Target              : 69.9998
+2016-01-15 18:11:02,233 INFO 	Temp_Outside             : 27.5
+2016-01-15 18:11:02,430 INFO 	-- Stage 1 Boost engaged --
+2016-01-15 18:13:06,813 INFO 	Boost call for Device: master bedroom ended after 0:02:07  H:MM:SS
+2016-01-15 18:13:06,861 INFO 	-- ODR Override Cycle Complete --
+2016-01-15 18:13:06,864 INFO 	-- Total duration:  0:02:07  H:MM:SS --
+
+2016-01-15 18:14:51,201 INFO -------- ODR Check Started --------
+
+2016-01-15 18:14:53,821 INFO ******** [ODR Override Initiated] ********
+2016-01-15 18:14:53,822 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-15 18:14:53,822 INFO 	Temp_Differential        : -1.5768
+2016-01-15 18:14:53,822 INFO 	Temp_Room                : 67.424
+2016-01-15 18:14:53,822 INFO 	Temp_Target              : 69.0008
+2016-01-15 18:14:53,822 INFO 	Temp_Outside             : 27.5
+2016-01-15 18:14:54,055 INFO 	-- Stage 1 Boost engaged --
+
+2016-01-15 18:16:50,069 INFO -------- ODR Check Started --------
+
+2016-01-15 18:16:52,628 INFO ******** [ODR Override Initiated] ********
+2016-01-15 18:16:52,628 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-15 18:16:52,628 INFO 	Temp_Differential        : -1.5768
+2016-01-15 18:16:52,628 INFO 	Temp_Room                : 67.424
+2016-01-15 18:16:52,628 INFO 	Temp_Target              : 69.0008
+2016-01-15 18:16:52,628 INFO 	Temp_Outside             : 27.5
+2016-01-15 18:16:52,720 INFO 	-- Stage 1 Boost engaged --
+
+2016-01-15 18:20:30,390 INFO -------- ODR Check Started --------
+
+2016-01-15 18:21:31,032 INFO -------- ODR Check Started --------
+
+2016-01-15 18:21:33,641 INFO ******** [ODR Override Initiated] ********
+2016-01-15 18:21:33,642 INFO 	Requesting_Thermostat    : downstairs
+2016-01-15 18:21:33,642 INFO 	Temp_Differential        : -1.6758
+2016-01-15 18:21:33,644 INFO 	Temp_Room                : 68.324
+2016-01-15 18:21:33,644 INFO 	Temp_Target              : 69.9998
+2016-01-15 18:21:33,644 INFO 	Temp_Outside             : 27.5
+2016-01-15 18:21:33,709 INFO 	-- Stage 1 Boost engaged --
+2016-01-15 18:24:40,332 INFO 	Boost call for Device: downstairs ended after 0:03:09  H:MM:SS
+2016-01-15 18:24:40,381 INFO 	-- ODR Override Cycle Complete --
+2016-01-15 18:24:40,381 INFO 	-- Total duration:  0:03:09  H:MM:SS --
+
+2016-01-15 18:24:59,664 INFO -------- ODR Check Started --------
+
+2016-01-15 18:25:02,306 INFO ******** [ODR Override Initiated] ********
+2016-01-15 18:25:02,306 INFO 	Requesting_Thermostat    : downstairs
+2016-01-15 18:25:02,306 INFO 	Temp_Differential        : -1.6758
+2016-01-15 18:25:02,308 INFO 	Temp_Room                : 68.324
+2016-01-15 18:25:02,308 INFO 	Temp_Target              : 69.9998
+2016-01-15 18:25:02,308 INFO 	Temp_Outside             : 27.14
+2016-01-15 18:25:02,391 INFO 	-- Stage 1 Boost engaged --
+2016-01-15 18:25:38,395 INFO 	-- Stage 2 Boost engaged --
+2016-01-15 18:26:14,397 INFO 	-- Stage 3 Boost engaged --
+2016-01-15 18:28:09,736 INFO 	Boost call for Device: downstairs ended after 0:03:10  H:MM:SS
+2016-01-15 18:28:09,801 INFO 	-- ODR Override Cycle Complete --
+2016-01-15 18:28:09,801 INFO 	-- Total duration:  0:03:10  H:MM:SS --
