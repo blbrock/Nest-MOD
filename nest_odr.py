@@ -149,7 +149,7 @@ def ODR_override():
     structure = get_napi()
 
 # Make sure connection with Nest server was established before continuing.
-    while not structure:
+    while not structure.away:
         i = i + 1
         
         if i <= 31 and relay_trigger: # change to 31 after testing
@@ -160,7 +160,7 @@ def ODR_override():
             app_log.warning('--Unable to connect to Nest server for ' + str(i-2) + ' minutes. Will retry in 1 minute.--')
             time.sleep(60) #Change to 60 after testing
             o = ODR_override()
-            if o[1]:
+            if o[1].away:
                 print('--Nest server connection succeeded--')
                 app_log.info('--Nest server connection succeeded--')
 
@@ -265,12 +265,12 @@ def ODR_override():
             pass
         gpio = max(gpio_list)
 
-    if gpio == True:
-        rchk = threading.Timer(delay_rechk, ODR_override)
-        rchk.start()
+        if gpio == True:
+            rchk = threading.Timer(delay_rechk, ODR_override)
+            rchk.start()
 
-    else:
-        rchk = None
+        else:
+            rchk = None
 
     return (gpio, structure, rchk)
 ##    else:
