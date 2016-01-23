@@ -1,0 +1,3 @@
+<b>Outdoor Temperature Reset Override Controller for Munchkin Vision 1 Temperature Sensor</b>
+
+<p>When relay coil is energized, this timer circuit will incrementally increase resistance across the Munchkin ODR temeprature sensor to increase boiler water temperature output. Resistance is incremented at 20 minute intervals until boiler is at maximum output or call for temperature is satisfied. Relay coil is energized by an external source. It is intended to be energized via a GPIO pin on a raspberry pi.

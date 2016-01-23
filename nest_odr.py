@@ -62,12 +62,14 @@ except:
     pass
 
 # define variables
+global relay_trigger
 relay_trigger = False
 stage = 1
+global dev_list
 dev_list = []
 T_start = datetime.datetime.now()
 cur_dir = sys.path[0] + os.sep
-i = 1
+i = 0
 structure = None
 
 # Set up logging handlers
@@ -111,22 +113,62 @@ i_s2 = float(ConfigSectionMap('Parameters')['delay_s2'])
 i_s3 = float(ConfigSectionMap('Parameters')['delay_s3'])
 
 
-my_handler.setFormatter(blnk_formatter)
-app_log.info('')
-my_handler.setFormatter(log_formatter)
-
+##my_handler.setFormatter(blnk_formatter)
+##app_log.info('')
+##my_handler.setFormatter(log_formatter)
+##
 ## remove this after intial testing
-app_log.info("-------- ODR Check Started --------")
+## app_log.info("-------- ODR Check Started --------")
 
 # Get data from nest account
 def get_napi():
+    global structure
+    global stage
+    d = datetime.datetime.now().time()
+    print('napi check @ ' + str(d))
+
     try:
         napi = nest.Nest(username, password)
         structure = napi.structures[0]
+        
+##        ############
+##        if stage > 2:
+##            structure = None
     except:
         structure = None
 
-    return structure
+    return
+def check_connection(i):
+
+    if i <= 29 and relay_trigger: # change to 29 after testing
+        my_handler.setFormatter(blnk_formatter)
+        app_log.info('')
+        my_handler.setFormatter(log_formatter)
+        print('--Unable to connect to Nest server for ' + str(i) + ' minutes. Will retry in 1 minute.--')
+        my_handler.setFormatter(blnk_formatter)
+        app_log.info('')
+        my_handler.setFormatter(log_formatter)
+        app_log.warning('--Unable to connect to Nest server for ' + str(i) + ' minutes. Will retry in 1 minute.--')
+        i = i + 1
+        time.sleep(60) #Change to 60 after testing
+        get_napi()
+        if not structure == None:
+            print('--Nest server connection succeeded--')
+            app_log.info('--Nest server connection succeeded--')
+            i = 0
+
+    elif i > 29: 
+        con_err()
+        sys.exit()
+    else:
+        print('--Unable to connect to Nest server. Will try again on next cycle.--')
+        my_handler.setFormatter(blnk_formatter)
+        app_log.info('')
+        my_handler.setFormatter(log_formatter)
+        app_log.warning('--Unable to connect to Nest server. Will try again on next cycle.--')
+        sys.exit()
+        i = i + 1
+    return (i)
 
 # Reset ODR and exit program if connection to Nest Server cannot be made during boost cycle
 def con_err():
@@ -144,138 +186,121 @@ def con_err():
 # <= 1.25 degrees F of the target temperature for any thermomemter, then relay_trigger is set to 1. HVAC-Stat is also checked to make
 # sure a thermostat is actually calling for heat as an additional check.
 def ODR_override():
-    global i
     gpio_list = []
-    structure = get_napi()
 
 # Make sure connection with Nest server was established before continuing.
-    while not structure.away:
-        i = i + 1
-        
-        if i <= 31 and relay_trigger: # change to 31 after testing
-            my_handler.setFormatter(blnk_formatter)
-            app_log.info('')
-            my_handler.setFormatter(log_formatter)
-            print('--Unable to connect to Nest server for ' + str(i-2) + ' minutes. Will retry in 1 minute.--')
-            app_log.warning('--Unable to connect to Nest server for ' + str(i-2) + ' minutes. Will retry in 1 minute.--')
-            time.sleep(60) #Change to 60 after testing
-            o = ODR_override()
-            if o[1].away:
-                print('--Nest server connection succeeded--')
-                app_log.info('--Nest server connection succeeded--')
 
-        elif i > 31:
-            con_err()
-            sys.exit()
+    Away = structure.away
+    
+    for device in structure.devices:
+        Thermostat = device.where
+        T_room = nest_utils.c_to_f(device.temperature)
+        if Away:
+            T_target = nest_utils.c_to_f(device.away_temperature[0])
+            app_log.info('-- Away mode enabled --')
+            print('-- Away mode enabled --')
         else:
-            print('--Unable to connect to Nest server. Will try again on next cycle.--')
-            app_log.warning('--Unable to connect to Nest server. Will try again on next cycle.--')
-            sys.exit()
-    else:
-        i = 1
-        Away = structure.away
-
-        for device in structure.devices:
-            Thermostat = device.where
-            T_room = nest_utils.c_to_f(device.temperature)
-            if Away:
-                T_target = nest_utils.c_to_f(device.away_temperature[0])
-                app_log.info('-- Away mode enabled --')
-                print('-- Away mode enabled --')
-            else:
-                T_target = nest_utils.c_to_f(device.target)
-                
-            H_stat = device.hvac_heater_state
-            T_diff = T_room - T_target
-            T_outside = nest_utils.c_to_f(structure.weather.current.temperature)
+            T_target = nest_utils.c_to_f(device.target)
+            
+        H_stat = device.hvac_heater_state
+        T_diff = T_room - T_target
+        T_outside = nest_utils.c_to_f(structure.weather.current.temperature)
 
 
-    # Check if thermostat was calling for recovery in previous loop and sets threashold temp to -0.25F to
-    # maintain boost cycle until call for heat on device is satisfied.
-            if Thermostat in dev_list:
-                T_thresh = -0.25
-            else:
-                T_thresh = -1.25 # Adjust this value to increase or decrease the threshold tolerance
-            if float(T_diff) < float(T_thresh) and H_stat == True:
-                if relay_trigger == False:
-                    my_handler.setFormatter(blnk_formatter)
-                    app_log.info('')
-                    my_handler.setFormatter(log_formatter)
-                    app_log.info('******** [ODR Override Initiated] ********')
-                    app_log.info('\tRequesting_Thermostat    : %s' % Thermostat)
-                    app_log.info('\tTemp_Differential        : %s' % str(T_diff))
-                    app_log.info('\tTemp_Room                : %s' % str(T_room))
-                    app_log.info('\tTemp_Target              : %s' % str(T_target))
-                    app_log.info('\tTemp_Outside             : %s' % str(T_outside))
-                    print('\n******** [ODR override initiated] ********')
-                    dev_list.append(Thermostat)
-                gpio = True
-                
-            elif float(T_diff) < float(T_thresh) and H_stat == False:
+# Check if thermostat was calling for recovery in previous loop and sets threashold temp to -0.75F to
+# maintain boost cycle until call for heat on device is satisfied.
+        if Thermostat in dev_list:
+            T_thresh = -0.75
+        else:
+            T_thresh = -1.25 # Adjust this value to increase or decrease the threshold tolerance
+        if float(T_diff) < float(T_thresh) and H_stat == True:
+            if relay_trigger == False:
                 my_handler.setFormatter(blnk_formatter)
                 app_log.info('')
                 my_handler.setFormatter(log_formatter)
-                app_log.warning('*** Temperature Differential Detected But No Call For HEAT ***')
-                app_log.warning('\tRequesting_Thermostat    : %s' % Thermostat)
-                app_log.warning('\tTemp_Differential        : %s' % str(T_diff))
-                app_log.warning('\tTemp_Room                : %s' % str(T_room))
-                app_log.warning('\tTemp_Target               : %s' % str(T_target))
-                gpio = False
-                print('Temperature low but no call for heat')
-            else:
-                gpio = False
-
-    # Add devices calling for boost to list and remove devices no longer calling for boost.            
-            if gpio == True and not Thermostat in dev_list:
+                app_log.info('******** [ODR Override Initiated] ********')
+                app_log.info('\tRequesting_Thermostat    : %s' % Thermostat)
+                app_log.info('\tTemp_Differential        : %s' % str(T_diff))
+                app_log.info('\tTemp_Room                : %s' % str(T_room))
+                app_log.info('\tTemp_Target              : %s' % str(T_target))
+                app_log.info('\tTemp_Outside             : %s' % str(T_outside))
+                print('\n******** [ODR override initiated] ********')
+                print('\tRequesting_Thermostat    : %s' % Thermostat)
                 dev_list.append(Thermostat)
-                app_log.info('\tDevice: ' + Thermostat + ' is requesting a new boost call and has been added to the queue')
-                print('Device: ' + Thermostat + ' is requesting a new boost call and has been added to the queue.')
-            elif gpio == False and Thermostat in dev_list:
-                T_delta = datetime.datetime.now() - T_start
-                m, s = divmod(T_delta.total_seconds(), 60)
-                h, m = divmod(m, 60)
-                disp = "%d:%02d:%02d" % (h, m, s)
-                app_log.info('\tBoost call for Device: ' + Thermostat + ' ended after ' + disp + '  H:MM:SS')
-                print('*** Boost call for Device: ' + Thermostat + ' ended after ' + disp + '  H:MM:SS ***')
-                dev_list.remove(Thermostat)
-                if not dev_list:
-                    print('\nDevice list is empty...\n')
-                    Restore_ODR()
-                else:
-                    app_log.info('\tBoost call continues for Device(s): ' + '[%s]' % ', '.join(map(str, dev_list)))
-                    print('*** Boost call continues for Device(s): [%s]' % ', '.join(map(str, dev_list)) + ' ***')
-                    
-                
-            gpio_list.append(gpio)
-            print 'Thermostat    : %s' % Thermostat
-            print 'Away Status   : %s' % str(Away)
-            print 'T_room        : %s' % str(T_room)
-            print 'T_target      : %s' % str(T_target)
-            print 'HVAC State    : %s' % str(H_stat)
-            print 'T_diff        : %s' % str(T_diff)
-            print 'Device List   : %s' % dev_list
-            print 'T_thresh      : %s' % str(T_thresh)
-            print '\n'
-        try:
-            print 'Pin 13 : %s' % str(GPIO.input(13))
-            print 'Pin 16 : %s' % str(GPIO.input(16))
-            print 'Pin 18 : %s' % str(GPIO.input(18))
-            print '\n'
-        except:
-            pass
-        gpio = max(gpio_list)
-
-        if gpio == True:
-            rchk = threading.Timer(delay_rechk, ODR_override)
-            rchk.start()
+            gpio = True
+            
+##            elif float(T_diff) < float(T_thresh) and H_stat == False:
+##                if relay_trigger == False:
+##                    my_handler.setFormatter(blnk_formatter)
+##                    app_log.info('')
+##                    my_handler.setFormatter(log_formatter)
+##                    app_log.warning('*** Temperature Differential Detected But No Call For HEAT ***')
+##                    app_log.warning('\tRequesting_Thermostat    : %s' % Thermostat)
+##                    app_log.warning('\tTemp_Differential        : %s' % str(T_diff))
+##                    app_log.warning('\tTemp_Room                : %s' % str(T_room))
+##                    app_log.warning('\tTemp_Target               : %s' % str(T_target))
+##                    print('Temperature low but no call for heat')
+##                gpio = False
 
         else:
-            rchk = None
+            gpio = False
 
-    return (gpio, structure, rchk)
-##    else:
-##        structure = None
-##        return structure
+# Add devices calling for boost to list and remove devices no longer calling for boost.
+        if gpio == True and not Thermostat in dev_list:
+            dev_list.append(Thermostat)
+            app_log.info('\tDevice: ' + Thermostat + ' is requesting a new boost call and has been added to the queue')
+            print('Device: ' + Thermostat + ' is requesting a new boost call and has been added to the queue.')
+        elif (not gpio or not H_stat) and Thermostat in dev_list:
+            if not H_stat:
+                app_log.info('*** Nest call for heat on Device: ' + Thermostat + ' has ended. Removing ' + Thermostat + ' from the boost queue')
+                print('\tNest call for heat on Device: ' + Thermostat + ' has ended. Removing ' + Thermostat + ' from the boost queue')   
+            T_delta = datetime.datetime.now() - T_start
+            m, s = divmod(T_delta.total_seconds(), 60)
+            h, m = divmod(m, 60)
+            disp = "%d:%02d:%02d" % (h, m, s)
+            app_log.info('\tBoost call for Device: ' + Thermostat + ' ended after ' + disp + '  H:MM:SS')
+            print('*** Boost call for Device: ' + Thermostat + ' ended after ' + disp + '  H:MM:SS ***')
+            dev_list.remove(Thermostat)
+            if not dev_list:
+                print('\nDevice list is empty...\n')
+                Restore_ODR()
+            else:
+                app_log.info('\tBoost call continues for Device(s): ' + '[%s]' % ', '.join(map(str, dev_list)))
+                print('*** Boost call continues for Device(s): [%s]' % ', '.join(map(str, dev_list)) + ' ***')
+                
+            
+        gpio_list.append(gpio)
+        print 'Thermostat    : %s' % Thermostat
+        print 'Away Status   : %s' % str(Away)
+        print 'T_room        : %s' % str(T_room)
+        print 'T_target      : %s' % str(T_target)
+        print 'HVAC State    : %s' % str(H_stat)
+        print 'T_diff        : %s' % str(T_diff)
+        print 'Device List   : %s' % dev_list
+        print 'T_thresh      : %s' % str(T_thresh)
+        print '\n'
+    try:
+        print 'Pin 13 : %s' % str(GPIO.input(13))
+        print 'Pin 16 : %s' % str(GPIO.input(16))
+        print 'Pin 18 : %s' % str(GPIO.input(18))
+        print '\n'
+    except:
+        pass
+    gpio = max(gpio_list)
+
+    if gpio == True:
+        rchk = threading.Timer(delay_rechk, main)
+        rchk.start()
+
+    else:
+        rchk = None
+        
+    return (gpio, rchk)
+
+### Check if Nest call for heat has ended after boost cycle and terminate boost if true
+##def nest_terminate(dev_list)
+
+
 
 ### Automatically adjusts RH target for living room thermostat to allow HRV to dehumidify according to outside temperature
 def target_humidity(device):
@@ -283,9 +308,9 @@ def target_humidity(device):
 
     if temperature >= 50:
         hum_value = 55
-    elif temperature >= 41:
+    elif temperature >= 35:
         hum_value = 50
-    elif temperature >= 32:
+    elif temperature >= 30:
         hum_value = 45
     elif temperature >= 23:
         hum_value = 40
@@ -310,7 +335,7 @@ def target_humidity(device):
 #           Stage2         On     On      Off
 #           Stage3         On     On      On
 
-def GPIO_trigger(relay_trigger):
+def GPIO_trigger():
     if relay_trigger == True:
 ##        i_s2 = 3600 ## number of seconds to delay initiating stage 2
 ##        i_s3 = 7200 ## number of seconds to delay initiating stage 3
@@ -344,23 +369,37 @@ def GPIO_trigger(relay_trigger):
         return(t1, t2)
         
 def Increment_Temp(pin, state):
-    i = 0
+    i_s = 0
     global stage
     stage = stage + 1
     app_log.info('\t-- Stage ' + str(stage) + ' Boost engaged --')
     print('--Stage ' + str(stage) + ' Boost engaged--')
+    structure = get_napi()
+    if structure == None:
+        app_log.info('\tThermostat data not available at this time')
+    else:
+        for device in structure.devices:
+            if device.where in dev_list:
+                Thermostat = device.where
+                T_room = nest_utils.c_to_f(device.temperature)
+                T_target = nest_utils.c_to_f(device.target)
+                T_diff = T_room - T_target
+                app_log.info('\tRequesting_Thermostat    : %s' % Thermostat)
+                app_log.info('\tTemp_Differential        : %s' % str(T_diff))
+                app_log.info('\tTemp_Room                : %s' % str(T_room))
+                app_log.info('\tTemp_Target              : %s' % str(T_target))
 
 # Set output pins to increment stages
     for p in pin:
-        if state[i] == True:
+        if state[i_s] == True:
             Sname = 'HIGH'
         else:
             Sname = 'LOW'
         try:
-            GPIO.output(p,state[i])
+            GPIO.output(p,state[i_s])
         except:
             pass
-        i = i + 1
+        i_s = i_s + 1
         print('\t--Pin ' + str(p) + ' set - ' + Sname)
 
     return()
@@ -370,7 +409,7 @@ def Restore_ODR():
         rchk.cancel()
         print('recheck cancelled')
     except:
-        rchk = None
+        pass
     try:
         for t in timers:
             t.cancel()
@@ -381,8 +420,7 @@ def Restore_ODR():
         GPIO.cleanup()
     except:
         pass
-##    if not rchk == None:
-##        print('rchk = None')
+
     T_delta = datetime.datetime.now() - T_start
     m, s = divmod(T_delta.total_seconds(), 60)
     h, m = divmod(m, 60)
@@ -392,29 +430,32 @@ def Restore_ODR():
     print('**** ODR Override Cycle Complete ***** \n**** Total duration:  ' + disp + '  H:MM:SS ***\n')
     sys.exit()
 
+
+def main():
+    global i
+    get_napi()
+    while structure == None:
+        i = check_connection(i)
+    odr = ODR_override()
+    relay_trigger = odr[0]
+    rchk = odr[1]
+    return (relay_trigger)
 # PROGRAM STARTS HERE #
-odr = ODR_override()
-try:
-    structure = odr[1]
-except:
-    structure = None
-
-relay_trigger = odr[0]
-structure = odr[1]
-rchk = odr[2]
-
+relay_trigger = main()
 if relay_trigger == True and stage == 1:
-    timers = GPIO_trigger(relay_trigger)
+    timers = GPIO_trigger()
 elif relay_trigger == True and stage > 1:
     print('Boost already initiated, do nothing')
 
 # Set target humidity according to outside temperature
 if set_hum:
     hum_value = target_humidity(structure.devices[0])
+    print('devices[0]: ' + str(structure.devices[0].where))
+    print 'Outside Temp    : %s' % str(nest_utils.c_to_f(structure.weather.current.temperature))
+    print 'Outside Humidity: %s' % str(structure.weather.current.humidity)
+    print 'Humidity Target : %s' % str(hum_value)
 
 #Print additonal information
 print 'GPIO            : %s' % str(relay_trigger)
-print 'Outside Temp    : %s' % str(nest_utils.c_to_f(structure.weather.current.temperature))
-print 'Outside Humidity: %s' % str(structure.weather.current.humidity)
-print 'Humidity Target : %s' % str(hum_value)
+
    

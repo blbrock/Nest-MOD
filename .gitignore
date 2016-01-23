@@ -3,7 +3,6 @@
 #################
 
 *.pydevproject
-.secrets
 .project
 .metadata
 bin/
@@ -215,3 +214,10 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+#Credential files
+.secrets
+
+#Eagele CAD Job Files
+*.job
+*.?#?

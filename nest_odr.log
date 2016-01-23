@@ -1,2 +1,771 @@
 
 2016-01-15 18:44:32,298 INFO -------- ODR Check Started --------
+
+2016-01-19 07:41:44,315 INFO -------- ODR Check Started --------
+2016-01-19 07:41:46,043 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-19 07:42:03,221 INFO -------- ODR Check Started --------
+2016-01-19 07:42:04,944 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-19 07:49:41,296 INFO -------- ODR Check Started --------
+2016-01-19 07:49:43,042 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-19 07:53:33,609 INFO -------- ODR Check Started --------
+2016-01-19 07:53:35,372 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-19 07:54:07,164 INFO -------- ODR Check Started --------
+2016-01-19 07:54:08,987 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-19 07:55:23,187 INFO -------- ODR Check Started --------
+2016-01-19 07:55:25,012 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-19 07:56:36,305 INFO -------- ODR Check Started --------
+2016-01-19 07:56:39,426 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-19 07:57:56,016 INFO -------- ODR Check Started --------
+2016-01-19 07:57:59,128 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-19 08:00:00,440 INFO -------- ODR Check Started --------
+2016-01-19 08:00:19,144 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-19 08:00:48,500 INFO -------- ODR Check Started --------
+2016-01-19 08:00:51,605 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-19 08:01:43,509 INFO -------- ODR Check Started --------
+2016-01-19 08:01:46,628 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-19 08:02:42,654 INFO -------- ODR Check Started --------
+2016-01-19 08:02:44,780 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-19 08:03:59,644 INFO -------- ODR Check Started --------
+
+2016-01-19 08:04:03,232 INFO ******** [ODR Override Initiated] ********
+2016-01-19 08:04:03,232 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-19 08:04:03,232 INFO 	Temp_Differential        : -1.458
+2016-01-19 08:04:03,232 INFO 	Temp_Room                : 66.542
+2016-01-19 08:04:03,232 INFO 	Temp_Target              : 68.0
+2016-01-19 08:04:03,232 INFO 	Temp_Outside             : 21.74
+2016-01-19 08:04:03,289 INFO 	-- Stage 1 Boost engaged --
+2016-01-19 08:04:48,292 INFO 	-- Stage 2 Boost engaged --
+
+2016-01-19 08:05:11,941 WARNING --Unable to connect to Nest server for 0 minutes. Will retry in 1 minute.--
+2016-01-19 08:05:33,292 INFO 	-- Stage 3 Boost engaged --
+
+2016-01-19 08:06:15,506 WARNING --Unable to connect to Nest server for 0 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:07:19,494 WARNING --Unable to connect to Nest server for 0 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:08:21,430 WARNING --Unable to connect to Nest server for 0 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:16:07,641 INFO -------- ODR Check Started --------
+2016-01-19 08:16:08,309 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-19 08:17:15,424 INFO -------- ODR Check Started --------
+2016-01-19 08:17:16,171 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-19 08:24:23,052 INFO -------- ODR Check Started --------
+
+2016-01-19 08:25:13,743 INFO -------- ODR Check Started --------
+2016-01-19 08:25:14,456 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-19 08:26:12,279 INFO -------- ODR Check Started --------
+
+2016-01-19 08:26:14,438 INFO ******** [ODR Override Initiated] ********
+2016-01-19 08:26:14,440 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-19 08:26:14,440 INFO 	Temp_Differential        : -1.404
+2016-01-19 08:26:14,440 INFO 	Temp_Room                : 66.596
+2016-01-19 08:26:14,440 INFO 	Temp_Target              : 68.0
+2016-01-19 08:26:14,440 INFO 	Temp_Outside             : 21.56
+2016-01-19 08:26:14,506 INFO 	-- Stage 1 Boost engaged --
+2016-01-19 08:26:59,510 INFO 	-- Stage 2 Boost engaged --
+
+2016-01-19 08:27:18,954 WARNING --Unable to connect to Nest server for 0 minutes. Will retry in 1 minute.--
+2016-01-19 08:27:44,509 INFO 	-- Stage 3 Boost engaged --
+2016-01-19 08:28:20,869 INFO 	Boost call for Device: master bedroom ended after 0:02:08  H:MM:SS
+2016-01-19 08:28:20,892 INFO 	-- ODR Override Cycle Complete --
+2016-01-19 08:28:20,892 INFO 	-- Total duration:  0:02:08  H:MM:SS --
+
+2016-01-19 08:29:44,375 INFO -------- ODR Check Started --------
+2016-01-19 08:29:46,115 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-19 08:30:22,161 INFO -------- ODR Check Started --------
+2016-01-19 08:30:22,891 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-19 08:30:59,888 INFO -------- ODR Check Started --------
+
+2016-01-19 08:32:04,404 INFO -------- ODR Check Started --------
+
+2016-01-19 08:32:38,194 INFO -------- ODR Check Started --------
+2016-01-19 08:32:38,826 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-19 08:34:25,457 INFO -------- ODR Check Started --------
+
+2016-01-19 08:35:28,605 INFO -------- ODR Check Started --------
+
+2016-01-19 08:35:30,861 INFO ******** [ODR Override Initiated] ********
+2016-01-19 08:35:30,861 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-19 08:35:30,861 INFO 	Temp_Differential        : -1.404
+2016-01-19 08:35:30,861 INFO 	Temp_Room                : 66.596
+2016-01-19 08:35:30,861 INFO 	Temp_Target              : 68.0
+2016-01-19 08:35:30,861 INFO 	Temp_Outside             : 21.92
+2016-01-19 08:35:30,907 INFO 	-- Stage 1 Boost engaged --
+
+2016-01-19 08:35:51,275 WARNING --Unable to connect to Nest server for 0 minutes. Will retry in 1 minute.--
+2016-01-19 08:36:15,911 INFO 	-- Stage 2 Boost engaged --
+
+2016-01-19 08:36:53,392 WARNING --Unable to connect to Nest server for 0 minutes. Will retry in 1 minute.--
+2016-01-19 08:37:00,911 INFO 	-- Stage 3 Boost engaged --
+
+2016-01-19 08:37:14,920 WARNING --Unable to connect to Nest server for 1 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:37:54,913 WARNING --Unable to connect to Nest server for 2 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:38:16,368 WARNING --Unable to connect to Nest server for 3 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:38:55,417 WARNING --Unable to connect to Nest server for 4 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:39:16,813 WARNING --Unable to connect to Nest server for 5 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:39:56,986 WARNING --Unable to connect to Nest server for 6 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:40:18,322 WARNING --Unable to connect to Nest server for 7 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:40:58,729 WARNING --Unable to connect to Nest server for 8 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:41:19,782 WARNING --Unable to connect to Nest server for 9 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:42:00,289 WARNING --Unable to connect to Nest server for 10 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:42:21,288 WARNING --Unable to connect to Nest server for 11 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:43:01,808 WARNING --Unable to connect to Nest server for 12 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:43:22,683 WARNING --Unable to connect to Nest server for 13 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:44:03,326 WARNING --Unable to connect to Nest server for 14 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:44:24,207 WARNING --Unable to connect to Nest server for 15 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:45:09,638 WARNING --Unable to connect to Nest server for 16 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:45:26,102 WARNING --Unable to connect to Nest server for 17 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:46:11,082 WARNING --Unable to connect to Nest server for 18 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:46:27,512 WARNING --Unable to connect to Nest server for 19 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:47:12,651 WARNING --Unable to connect to Nest server for 20 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:47:28,936 WARNING --Unable to connect to Nest server for 21 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:48:14,204 WARNING --Unable to connect to Nest server for 22 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:48:30,434 WARNING --Unable to connect to Nest server for 23 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:49:15,819 WARNING --Unable to connect to Nest server for 24 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:49:31,963 WARNING --Unable to connect to Nest server for 25 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:50:17,464 WARNING --Unable to connect to Nest server for 26 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:50:33,466 WARNING --Unable to connect to Nest server for 27 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:51:22,048 WARNING --Unable to connect to Nest server for 28 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:51:34,891 WARNING --Unable to connect to Nest server for 29 minutes. Will retry in 1 minute.--
+
+2016-01-19 08:52:23,552 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-19 08:52:23,562 INFO 	-- ODR Override Cycle Complete --
+2016-01-19 08:52:23,562 INFO 	-- Total duration:  0:16:54  H:MM:SS --
+
+2016-01-19 08:52:36,285 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-19 08:52:36,289 INFO 	-- ODR Override Cycle Complete --
+2016-01-19 08:52:36,289 INFO 	-- Total duration:  0:17:07  H:MM:SS --
+
+2016-01-19 08:59:12,936 INFO -------- ODR Check Started --------
+
+2016-01-19 08:59:15,611 INFO ******** [ODR Override Initiated] ********
+2016-01-19 08:59:15,611 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-19 08:59:15,611 INFO 	Temp_Differential        : -1.404
+2016-01-19 08:59:15,611 INFO 	Temp_Room                : 66.596
+2016-01-19 08:59:15,611 INFO 	Temp_Target              : 68.0
+2016-01-19 08:59:15,611 INFO 	Temp_Outside             : 22.28
+2016-01-19 08:59:15,651 INFO 	-- Stage 1 Boost engaged --
+
+2016-01-19 13:28:12,437 INFO -------- ODR Check Started --------
+
+2016-01-20 14:15:07,967 INFO -------- ODR Check Started --------
+
+2016-01-20 14:15:54,049 INFO -------- ODR Check Started --------
+
+2016-01-20 14:31:51,256 INFO -------- ODR Check Started --------
+2016-01-20 14:31:53,131 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-20 14:32:30,483 INFO -------- ODR Check Started --------
+2016-01-20 14:32:32,190 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-20 14:33:04,000 INFO -------- ODR Check Started --------
+2016-01-20 14:33:05,729 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-20 14:34:44,851 INFO -------- ODR Check Started --------
+2016-01-20 14:34:48,042 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-20 14:35:14,792 INFO -------- ODR Check Started --------
+2016-01-20 14:35:17,947 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-20 14:35:51,874 INFO -------- ODR Check Started --------
+2016-01-20 14:35:54,957 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-20 14:37:02,773 INFO -------- ODR Check Started --------
+2016-01-20 14:37:05,970 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-20 14:38:00,210 INFO -------- ODR Check Started --------
+
+2016-01-20 14:38:54,193 INFO -------- ODR Check Started --------
+
+2016-01-20 14:43:37,862 INFO -------- ODR Check Started --------
+
+2016-01-20 14:43:41,266 INFO ******** [ODR Override Initiated] ********
+2016-01-20 14:43:41,266 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-20 14:43:41,266 INFO 	Temp_Differential        : -2.4138
+2016-01-20 14:43:41,266 INFO 	Temp_Room                : 67.586
+2016-01-20 14:43:41,266 INFO 	Temp_Target              : 69.9998
+2016-01-20 14:43:41,266 INFO 	Temp_Outside             : 35.96
+
+2016-01-20 14:49:46,253 INFO -------- ODR Check Started --------
+
+2016-01-20 14:49:49,654 INFO ******** [ODR Override Initiated] ********
+2016-01-20 14:49:49,654 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-20 14:49:49,654 INFO 	Temp_Differential        : -3.4146
+2016-01-20 14:49:49,654 INFO 	Temp_Room                : 67.586
+2016-01-20 14:49:49,655 INFO 	Temp_Target              : 71.0006
+2016-01-20 14:49:49,655 INFO 	Temp_Outside             : 35.96
+
+2016-01-20 14:51:10,766 INFO -------- ODR Check Started --------
+
+2016-01-20 14:51:13,851 INFO ******** [ODR Override Initiated] ********
+2016-01-20 14:51:13,851 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-20 14:51:13,851 INFO 	Temp_Differential        : -3.4146
+2016-01-20 14:51:13,851 INFO 	Temp_Room                : 67.586
+2016-01-20 14:51:13,851 INFO 	Temp_Target              : 71.0006
+2016-01-20 14:51:13,851 INFO 	Temp_Outside             : 35.96
+
+2016-01-20 15:04:57,125 INFO -------- ODR Check Started --------
+
+2016-01-20 15:05:22,733 INFO -------- ODR Check Started --------
+
+2016-01-20 15:05:26,323 INFO ******** [ODR Override Initiated] ********
+2016-01-20 15:05:26,325 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-20 15:05:26,325 INFO 	Temp_Differential        : -2.4138
+2016-01-20 15:05:26,325 INFO 	Temp_Room                : 67.586
+2016-01-20 15:05:26,325 INFO 	Temp_Target              : 69.9998
+2016-01-20 15:05:26,325 INFO 	Temp_Outside             : 35.96
+
+2016-01-20 15:05:48,697 INFO ******** [ODR Override Initiated] ********
+2016-01-20 15:05:48,697 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-20 15:05:48,697 INFO 	Temp_Differential        : -2.4138
+2016-01-20 15:05:48,698 INFO 	Temp_Room                : 67.586
+2016-01-20 15:05:48,698 INFO 	Temp_Target              : 69.9998
+2016-01-20 15:05:48,698 INFO 	Temp_Outside             : 35.96
+
+2016-01-20 15:06:11,227 INFO ******** [ODR Override Initiated] ********
+2016-01-20 15:06:11,227 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-20 15:06:11,227 INFO 	Temp_Differential        : -2.4138
+2016-01-20 15:06:11,227 INFO 	Temp_Room                : 67.586
+2016-01-20 15:06:11,229 INFO 	Temp_Target              : 69.9998
+2016-01-20 15:06:11,229 INFO 	Temp_Outside             : 35.96
+
+2016-01-20 15:06:33,361 INFO ******** [ODR Override Initiated] ********
+2016-01-20 15:06:33,361 INFO 	Requesting_Thermostat    : living room
+2016-01-20 15:06:33,361 INFO 	Temp_Differential        : -1.494
+2016-01-20 15:06:33,361 INFO 	Temp_Room                : 66.506
+2016-01-20 15:06:33,361 INFO 	Temp_Target              : 68.0
+2016-01-20 15:06:33,361 INFO 	Temp_Outside             : 35.96
+
+2016-01-20 15:06:33,480 INFO ******** [ODR Override Initiated] ********
+2016-01-20 15:06:33,482 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-20 15:06:33,483 INFO 	Temp_Differential        : -2.4138
+2016-01-20 15:06:33,483 INFO 	Temp_Room                : 67.586
+2016-01-20 15:06:33,483 INFO 	Temp_Target              : 69.9998
+2016-01-20 15:06:33,483 INFO 	Temp_Outside             : 35.96
+
+2016-01-20 15:06:55,680 INFO ******** [ODR Override Initiated] ********
+2016-01-20 15:06:55,680 INFO 	Requesting_Thermostat    : living room
+2016-01-20 15:06:55,680 INFO 	Temp_Differential        : -1.512
+2016-01-20 15:06:55,680 INFO 	Temp_Room                : 66.488
+2016-01-20 15:06:55,680 INFO 	Temp_Target              : 68.0
+2016-01-20 15:06:55,681 INFO 	Temp_Outside             : 35.78
+2016-01-20 15:06:55,877 INFO 	Boost call for Device: master bedroom ended after 0:01:33  H:MM:SS
+2016-01-20 15:06:55,882 INFO 	Boost call continues for Device(s): [master bedroom, master bedroom, living room, master bedroom, living room]
+
+2016-01-20 15:07:18,246 INFO ******** [ODR Override Initiated] ********
+2016-01-20 15:07:18,246 INFO 	Requesting_Thermostat    : living room
+2016-01-20 15:07:18,247 INFO 	Temp_Differential        : -1.512
+2016-01-20 15:07:18,247 INFO 	Temp_Room                : 66.488
+2016-01-20 15:07:18,247 INFO 	Temp_Target              : 68.0
+2016-01-20 15:07:18,249 INFO 	Temp_Outside             : 35.96
+2016-01-20 15:07:18,418 INFO 	Boost call for Device: master bedroom ended after 0:01:55  H:MM:SS
+2016-01-20 15:07:18,434 INFO 	Boost call continues for Device(s): [master bedroom, living room, master bedroom, living room, living room]
+2016-01-20 15:07:39,250 WARNING --Unable to connect to Nest server. Will try again on next cycle.--
+
+2016-01-20 15:17:21,357 INFO -------- ODR Check Started --------
+
+2016-01-20 15:19:36,739 INFO -------- ODR Check Started --------
+
+2016-01-20 15:26:32,436 INFO -------- ODR Check Started --------
+
+2016-01-20 15:28:37,259 INFO -------- ODR Check Started --------
+
+2016-01-20 15:29:11,381 INFO -------- ODR Check Started --------
+
+2016-01-20 15:29:14,451 INFO ******** [ODR Override Initiated] ********
+2016-01-20 15:29:14,453 INFO 	Requesting_Thermostat    : living room
+2016-01-20 15:29:14,453 INFO 	Temp_Differential        : -1.494
+2016-01-20 15:29:14,453 INFO 	Temp_Room                : 66.506
+2016-01-20 15:29:14,453 INFO 	Temp_Target              : 68.0
+2016-01-20 15:29:14,454 INFO 	Temp_Outside             : 35.78
+
+2016-01-20 15:29:36,762 INFO ******** [ODR Override Initiated] ********
+2016-01-20 15:29:36,763 INFO 	Requesting_Thermostat    : living room
+2016-01-20 15:29:36,766 INFO 	Temp_Differential        : -1.512
+2016-01-20 15:29:36,766 INFO 	Temp_Room                : 66.488
+2016-01-20 15:29:36,766 INFO 	Temp_Target              : 68.0
+2016-01-20 15:29:36,766 INFO 	Temp_Outside             : 35.78
+2016-01-20 15:29:59,963 INFO 	Boost call for Device: living room ended after 0:00:48  H:MM:SS
+2016-01-20 15:29:59,974 INFO 	Boost call continues for Device(s): [living room]
+
+2016-01-20 15:33:37,566 INFO -------- ODR Check Started --------
+
+2016-01-20 15:36:17,757 INFO -------- ODR Check Started --------
+
+2016-01-20 15:37:40,923 INFO -------- ODR Check Started --------
+
+2016-01-20 15:37:44,153 INFO ******** [ODR Override Initiated] ********
+2016-01-20 15:37:44,153 INFO 	Requesting_Thermostat    : living room
+2016-01-20 15:37:44,154 INFO 	Temp_Differential        : -1.512
+2016-01-20 15:37:44,154 INFO 	Temp_Room                : 66.488
+2016-01-20 15:37:44,154 INFO 	Temp_Target              : 68.0
+2016-01-20 15:37:44,154 INFO 	Temp_Outside             : 35.78
+
+2016-01-20 15:38:06,558 INFO ******** [ODR Override Initiated] ********
+2016-01-20 15:38:06,558 INFO 	Requesting_Thermostat    : living room
+2016-01-20 15:38:06,558 INFO 	Temp_Differential        : -1.512
+2016-01-20 15:38:06,558 INFO 	Temp_Room                : 66.488
+2016-01-20 15:38:06,559 INFO 	Temp_Target              : 68.0
+2016-01-20 15:38:06,559 INFO 	Temp_Outside             : 35.78
+
+2016-01-20 15:38:29,016 INFO ******** [ODR Override Initiated] ********
+2016-01-20 15:38:29,016 INFO 	Requesting_Thermostat    : living room
+2016-01-20 15:38:29,016 INFO 	Temp_Differential        : -1.512
+2016-01-20 15:38:29,016 INFO 	Temp_Room                : 66.488
+2016-01-20 15:38:29,016 INFO 	Temp_Target              : 68.0
+2016-01-20 15:38:29,016 INFO 	Temp_Outside             : 35.78
+
+2016-01-20 15:38:52,589 INFO ******** [ODR Override Initiated] ********
+2016-01-20 15:38:52,589 INFO 	Requesting_Thermostat    : living room
+2016-01-20 15:38:52,591 INFO 	Temp_Differential        : -1.512
+2016-01-20 15:38:52,591 INFO 	Temp_Room                : 66.488
+2016-01-20 15:38:52,591 INFO 	Temp_Target              : 68.0
+2016-01-20 15:38:52,591 INFO 	Temp_Outside             : 35.78
+2016-01-20 15:39:15,530 INFO 	Boost call for Device: living room ended after 0:01:34  H:MM:SS
+2016-01-20 15:39:15,598 INFO 	Boost call continues for Device(s): [living room, living room, living room]
+
+2016-01-20 15:40:35,960 INFO -------- ODR Check Started --------
+
+2016-01-20 15:40:50,924 INFO -------- ODR Check Started --------
+
+2016-01-20 15:40:53,838 INFO ******** [ODR Override Initiated] ********
+2016-01-20 15:40:53,838 INFO 	Requesting_Thermostat    : living room
+2016-01-20 15:40:53,838 INFO 	Temp_Differential        : -1.512
+2016-01-20 15:40:53,838 INFO 	Temp_Room                : 66.488
+2016-01-20 15:40:53,838 INFO 	Temp_Target              : 68.0
+2016-01-20 15:40:53,839 INFO 	Temp_Outside             : 35.78
+2016-01-20 15:43:10,555 INFO 	Boost call for Device: living room ended after 0:02:19  H:MM:SS
+2016-01-20 15:43:10,582 INFO 	-- ODR Override Cycle Complete --
+2016-01-20 15:43:10,584 INFO 	-- Total duration:  0:02:19  H:MM:SS --
+
+2016-01-20 15:43:24,197 INFO -------- ODR Check Started --------
+
+2016-01-20 15:43:27,184 INFO ******** [ODR Override Initiated] ********
+2016-01-20 15:43:27,186 INFO 	Requesting_Thermostat    : living room
+2016-01-20 15:43:27,187 INFO 	Temp_Differential        : -1.476
+2016-01-20 15:43:27,187 INFO 	Temp_Room                : 66.524
+2016-01-20 15:43:27,188 INFO 	Temp_Target              : 68.0
+2016-01-20 15:43:27,190 INFO 	Temp_Outside             : 35.78
+2016-01-20 15:43:27,601 INFO 	-- Stage 1 Boost engaged --
+2016-01-20 15:44:12,619 INFO 	-- Stage 2 Boost engaged --
+2016-01-20 15:44:57,667 INFO 	-- Stage 3 Boost engaged --
+2016-01-20 15:45:18,894 INFO 	Device: master bedroom is requesting a new boost call and has been added to the queue
+2016-01-20 15:46:04,017 INFO 	Boost call for Device: living room ended after 0:02:39  H:MM:SS
+2016-01-20 15:46:04,053 INFO 	Boost call continues for Device(s): [master bedroom]
+2016-01-20 15:46:26,553 INFO 	Device: living room is requesting a new boost call and has been added to the queue
+2016-01-20 15:46:49,072 INFO 	Boost call for Device: living room ended after 0:03:24  H:MM:SS
+2016-01-20 15:46:49,115 INFO 	Boost call continues for Device(s): [master bedroom]
+2016-01-20 15:47:34,576 INFO 	Boost call for Device: master bedroom ended after 0:04:10  H:MM:SS
+2016-01-20 15:47:34,647 INFO 	-- ODR Override Cycle Complete --
+2016-01-20 15:47:34,648 INFO 	-- Total duration:  0:04:10  H:MM:SS --
+
+2016-01-20 15:50:06,059 INFO -------- ODR Check Started --------
+
+2016-01-20 15:50:09,293 INFO ******** [ODR Override Initiated] ********
+2016-01-20 15:50:09,293 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-20 15:50:09,295 INFO 	Temp_Differential        : -1.4148
+2016-01-20 15:50:09,295 INFO 	Temp_Room                : 67.586
+2016-01-20 15:50:09,295 INFO 	Temp_Target              : 69.0008
+2016-01-20 15:50:09,295 INFO 	Temp_Outside             : 35.78
+2016-01-20 15:50:09,546 INFO 	-- Stage 1 Boost engaged --
+2016-01-20 15:50:54,555 INFO 	-- Stage 2 Boost engaged --
+
+2016-01-20 15:51:15,674 WARNING --Unable to connect to Nest server for -1 minutes. Will retry in 1 minute.--
+2016-01-20 15:51:39,558 INFO 	-- Stage 3 Boost engaged --
+
+2016-01-20 15:52:17,240 WARNING --Unable to connect to Nest server for -1 minutes. Will retry in 1 minute.--
+
+2016-01-20 15:53:18,740 WARNING --Unable to connect to Nest server for -1 minutes. Will retry in 1 minute.--
+
+2016-01-20 15:58:00,075 INFO -------- ODR Check Started --------
+
+2016-01-20 15:58:31,622 INFO -------- ODR Check Started --------
+
+2016-01-20 15:58:35,003 INFO ******** [ODR Override Initiated] ********
+2016-01-20 15:58:35,003 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-20 15:58:35,003 INFO 	Temp_Differential        : -2.4138
+2016-01-20 15:58:35,003 INFO 	Temp_Room                : 67.586
+2016-01-20 15:58:35,003 INFO 	Temp_Target              : 69.9998
+2016-01-20 15:58:35,003 INFO 	Temp_Outside             : 35.6
+2016-01-20 15:58:35,226 INFO 	-- Stage 1 Boost engaged --
+2016-01-20 15:58:57,357 INFO 	Boost call for Device: master bedroom ended after 0:00:25  H:MM:SS
+2016-01-20 15:58:57,408 INFO 	-- ODR Override Cycle Complete --
+2016-01-20 15:58:57,408 INFO 	-- Total duration:  0:00:25  H:MM:SS --
+
+2016-01-20 15:59:41,611 INFO -------- ODR Check Started --------
+
+2016-01-20 15:59:45,069 INFO ******** [ODR Override Initiated] ********
+2016-01-20 15:59:45,071 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-20 15:59:45,072 INFO 	Temp_Differential        : -1.4148
+2016-01-20 15:59:45,072 INFO 	Temp_Room                : 67.586
+2016-01-20 15:59:45,073 INFO 	Temp_Target              : 69.0008
+2016-01-20 15:59:45,073 INFO 	Temp_Outside             : 35.6
+2016-01-20 15:59:45,351 INFO 	-- Stage 1 Boost engaged --
+2016-01-20 16:00:30,365 INFO 	-- Stage 2 Boost engaged --
+2016-01-20 16:01:15,375 INFO 	-- Stage 3 Boost engaged --
+
+2016-01-20 16:03:58,457 INFO -------- ODR Check Started --------
+
+2016-01-20 16:04:01,690 INFO ******** [ODR Override Initiated] ********
+2016-01-20 16:04:01,690 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-20 16:04:01,690 INFO 	Temp_Differential        : -1.4148
+2016-01-20 16:04:01,690 INFO 	Temp_Room                : 67.586
+2016-01-20 16:04:01,690 INFO 	Temp_Target              : 69.0008
+2016-01-20 16:04:01,690 INFO 	Temp_Outside             : 35.6
+2016-01-20 16:04:01,980 INFO 	-- Stage 1 Boost engaged --
+2016-01-20 16:04:47,019 INFO 	-- Stage 2 Boost engaged --
+
+2016-01-20 16:05:08,181 WARNING --Unable to connect to Nest server for 0 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:05:24,694 WARNING --Unable to connect to Nest server for 1 minutes. Will retry in 1 minute.--
+2016-01-20 16:05:32,007 INFO 	-- Stage 3 Boost engaged --
+
+2016-01-20 16:05:41,296 WARNING --Unable to connect to Nest server for 2 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:05:57,835 WARNING --Unable to connect to Nest server for 3 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:06:13,335 WARNING --Unable to connect to Nest server for 4 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:06:30,094 WARNING --Unable to connect to Nest server for 5 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:06:45,581 WARNING --Unable to connect to Nest server for 6 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:07:02,381 WARNING --Unable to connect to Nest server for 7 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:07:17,799 WARNING --Unable to connect to Nest server for 8 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:07:34,348 WARNING --Unable to connect to Nest server for 9 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:07:50,914 WARNING --Unable to connect to Nest server for 10 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:08:06,342 WARNING --Unable to connect to Nest server for 11 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:08:23,183 WARNING --Unable to connect to Nest server for 12 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:08:40,424 WARNING --Unable to connect to Nest server for 13 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:08:55,989 WARNING --Unable to connect to Nest server for 14 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:09:12,588 WARNING --Unable to connect to Nest server for 15 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:09:28,180 WARNING --Unable to connect to Nest server for 16 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:09:44,946 WARNING --Unable to connect to Nest server for 17 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:10:00,482 WARNING --Unable to connect to Nest server for 18 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:10:17,232 WARNING --Unable to connect to Nest server for 19 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:10:33,523 WARNING --Unable to connect to Nest server for 20 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:10:49,096 WARNING --Unable to connect to Nest server for 21 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:11:05,651 WARNING --Unable to connect to Nest server for 22 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:11:21,177 WARNING --Unable to connect to Nest server for 23 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:11:37,723 WARNING --Unable to connect to Nest server for 24 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:11:53,280 WARNING --Unable to connect to Nest server for 25 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:12:08,688 WARNING --Unable to connect to Nest server for 26 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:12:25,345 WARNING --Unable to connect to Nest server for 27 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:12:41,786 WARNING --Unable to connect to Nest server for 28 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:12:57,312 WARNING --Unable to connect to Nest server for 29 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:13:12,842 WARNING --Unable to connect to Nest server for 30 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:13:29,362 WARNING --Unable to connect to Nest server for 31 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:13:44,868 WARNING --Unable to connect to Nest server for 30 minutes. Resetting ODR.--
+2016-01-20 16:13:44,897 INFO 	-- ODR Override Cycle Complete --
+2016-01-20 16:13:44,897 INFO 	-- Total duration:  0:09:46  H:MM:SS --
+
+2016-01-20 16:14:30,888 INFO -------- ODR Check Started --------
+
+2016-01-20 16:14:34,308 INFO ******** [ODR Override Initiated] ********
+2016-01-20 16:14:34,308 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-20 16:14:34,308 INFO 	Temp_Differential        : -1.4148
+2016-01-20 16:14:34,308 INFO 	Temp_Room                : 67.586
+2016-01-20 16:14:34,309 INFO 	Temp_Target              : 69.0008
+2016-01-20 16:14:34,309 INFO 	Temp_Outside             : 35.6
+2016-01-20 16:14:34,496 INFO 	-- Stage 1 Boost engaged --
+
+2016-01-20 16:15:17,729 WARNING --Unable to connect to Nest server for 0 minutes. Will retry in 1 minute.--
+2016-01-20 16:15:19,559 INFO 	-- Stage 2 Boost engaged --
+
+2016-01-20 16:15:37,509 WARNING --Unable to connect to Nest server for 1 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:15:54,842 WARNING --Unable to connect to Nest server for 2 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:16:10,474 WARNING --Unable to connect to Nest server for 3 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:16:25,979 WARNING --Unable to connect to Nest server for 4 minutes. Will retry in 1 minute.--
+2016-01-20 16:16:34,526 INFO 	-- Stage 3 Boost engaged --
+
+2016-01-20 16:16:57,157 WARNING --Unable to connect to Nest server for 5 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:17:12,780 WARNING --Unable to connect to Nest server for 6 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:17:28,299 WARNING --Unable to connect to Nest server for 7 minutes. Will retry in 1 minute.--
+2016-01-20 16:17:45,428 INFO --Nest server connection succeeded--
+
+2016-01-20 16:18:11,832 WARNING --Unable to connect to Nest server for 0 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:18:27,305 WARNING --Unable to connect to Nest server for 1 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:18:44,236 WARNING --Unable to connect to Nest server for 2 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:19:01,736 WARNING --Unable to connect to Nest server for 3 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:19:18,490 WARNING --Unable to connect to Nest server for 4 minutes. Will retry in 1 minute.--
+
+2016-01-20 16:19:34,098 WARNING --Unable to connect to Nest server for 5 minutes. Will retry in 1 minute.--
+2016-01-20 16:19:51,217 INFO --Nest server connection succeeded--
+2016-01-20 16:19:51,911 INFO 	Boost call for Device: master bedroom ended after 0:05:21  H:MM:SS
+2016-01-20 16:19:51,980 INFO 	-- ODR Override Cycle Complete --
+2016-01-20 16:19:51,980 INFO 	-- Total duration:  0:05:21  H:MM:SS --
+
+2016-01-20 18:36:58,921 INFO -------- ODR Check Started --------
+
+2016-01-20 18:41:40,607 INFO -------- ODR Check Started --------
+
+2016-01-20 18:43:34,707 INFO -------- ODR Check Started --------
+
+2016-01-20 18:46:58,359 INFO -------- ODR Check Started --------
+
+2016-01-20 18:50:52,464 INFO -------- ODR Check Started --------
+
+2016-01-20 18:51:15,736 INFO -------- ODR Check Started --------
+
+2016-01-20 18:54:16,711 INFO -------- ODR Check Started --------
+
+2016-01-20 18:54:41,489 INFO -------- ODR Check Started --------
+
+2016-01-20 18:55:43,036 INFO -------- ODR Check Started --------
+
+2016-01-20 18:56:27,763 INFO -------- ODR Check Started --------
+
+2016-01-20 18:57:55,190 INFO -------- ODR Check Started --------
+
+2016-01-20 18:58:38,085 INFO -------- ODR Check Started --------
+
+2016-01-21 08:55:43,249 INFO ******** [ODR Override Initiated] ********
+2016-01-21 08:55:43,249 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-21 08:55:43,249 INFO 	Temp_Differential        : -2.3958
+2016-01-21 08:55:43,250 INFO 	Temp_Room                : 67.604
+2016-01-21 08:55:43,250 INFO 	Temp_Target              : 69.9998
+2016-01-21 08:55:43,250 INFO 	Temp_Outside             : 25.88
+2016-01-21 08:55:43,401 INFO 	-- Stage 1 Boost engaged --
+2016-01-21 08:56:28,411 INFO 	-- Stage 2 Boost engaged --
+2016-01-21 08:57:11,798 INFO 	Boost call for Device: master bedroom ended after 0:01:33  H:MM:SS
+2016-01-21 08:57:11,842 INFO 	-- ODR Override Cycle Complete --
+2016-01-21 08:57:11,842 INFO 	-- Total duration:  0:01:33  H:MM:SS --
+
+2016-01-21 09:04:05,184 INFO ******** [ODR Override Initiated] ********
+2016-01-21 09:04:05,186 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-21 09:04:05,186 INFO 	Temp_Differential        : -1.3968
+2016-01-21 09:04:05,186 INFO 	Temp_Room                : 67.604
+2016-01-21 09:04:05,186 INFO 	Temp_Target              : 69.0008
+2016-01-21 09:04:05,187 INFO 	Temp_Outside             : 25.88
+2016-01-21 09:04:05,326 INFO 	-- Stage 1 Boost engaged --
+2016-01-21 09:04:50,338 INFO 	-- Stage 2 Boost engaged --
+2016-01-21 09:04:50,346 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-21 09:04:50,348 INFO 	Temp_Differential        : -1.3968
+2016-01-21 09:04:50,348 INFO 	Temp_Room                : 67.604
+2016-01-21 09:04:50,348 INFO 	Temp_Target              : 69.0008
+2016-01-21 09:06:05,338 INFO 	-- Stage 3 Boost engaged --
+2016-01-21 09:06:05,411 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-21 09:06:05,411 INFO 	Temp_Differential        : -1.3968
+2016-01-21 09:06:05,411 INFO 	Temp_Room                : 67.604
+2016-01-21 09:06:05,411 INFO 	Temp_Target              : 69.0008
+2016-01-21 09:06:41,158 INFO 	Boost call for Device: master bedroom ended after 0:02:38  H:MM:SS
+2016-01-21 09:06:41,206 INFO 	-- ODR Override Cycle Complete --
+2016-01-21 09:06:41,207 INFO 	-- Total duration:  0:02:38  H:MM:SS --
+
+2016-01-22 12:56:19,329 INFO ******** [ODR Override Initiated] ********
+2016-01-22 12:56:19,331 INFO 	Requesting_Thermostat    : downstairs
+2016-01-22 12:56:19,331 INFO 	Temp_Differential        : -3.1014
+2016-01-22 12:56:19,331 INFO 	Temp_Room                : 70.898
+2016-01-22 12:56:19,331 INFO 	Temp_Target              : 73.9994
+2016-01-22 12:56:19,331 INFO 	Temp_Outside             : 39.74
+2016-01-22 12:56:19,447 INFO 	-- Stage 1 Boost engaged --
+2016-01-22 12:57:04,461 INFO 	-- Stage 2 Boost engaged --
+2016-01-22 12:57:05,944 INFO 	Requesting_Thermostat    : downstairs
+2016-01-22 12:57:05,944 INFO 	Temp_Differential        : -3.1014
+2016-01-22 12:57:05,944 INFO 	Temp_Room                : 70.898
+2016-01-22 12:57:05,944 INFO 	Temp_Target              : 73.9994
+2016-01-22 12:57:26,483 INFO 	Boost call for Device: downstairs ended after 0:01:09  H:MM:SS
+2016-01-22 12:57:26,538 INFO 	-- ODR Override Cycle Complete --
+2016-01-22 12:57:26,538 INFO 	-- Total duration:  0:01:09  H:MM:SS --
+
+2016-01-22 13:07:00,709 INFO ******** [ODR Override Initiated] ********
+2016-01-22 13:07:00,709 INFO 	Requesting_Thermostat    : downstairs
+2016-01-22 13:07:00,709 INFO 	Temp_Differential        : -2.1024
+2016-01-22 13:07:00,710 INFO 	Temp_Room                : 70.898
+2016-01-22 13:07:00,710 INFO 	Temp_Target              : 73.0004
+2016-01-22 13:07:00,710 INFO 	Temp_Outside             : 39.74
+2016-01-22 13:07:00,891 INFO 	-- Stage 1 Boost engaged --
+2016-01-22 13:07:45,898 INFO 	-- Stage 2 Boost engaged --
+2016-01-22 13:07:47,302 INFO 	Requesting_Thermostat    : downstairs
+2016-01-22 13:07:47,303 INFO 	Temp_Differential        : -2.1024
+2016-01-22 13:07:47,303 INFO 	Temp_Room                : 70.898
+2016-01-22 13:07:47,305 INFO 	Temp_Target              : 73.0004
+2016-01-22 13:09:00,898 INFO 	-- Stage 3 Boost engaged --
+
+2016-01-22 13:10:23,266 INFO ******** [ODR Override Initiated] ********
+2016-01-22 13:10:23,266 INFO 	Requesting_Thermostat    : downstairs
+2016-01-22 13:10:23,267 INFO 	Temp_Differential        : -2.1024
+2016-01-22 13:10:23,267 INFO 	Temp_Room                : 70.898
+2016-01-22 13:10:23,269 INFO 	Temp_Target              : 73.0004
+2016-01-22 13:10:23,269 INFO 	Temp_Outside             : 39.74
+2016-01-22 13:10:23,464 INFO 	-- Stage 1 Boost engaged --
+2016-01-22 13:11:08,474 INFO 	-- Stage 2 Boost engaged --
+2016-01-22 13:11:09,875 INFO 	Requesting_Thermostat    : downstairs
+2016-01-22 13:11:09,875 INFO 	Temp_Differential        : -2.1024
+2016-01-22 13:11:09,877 INFO 	Temp_Room                : 70.898
+2016-01-22 13:11:09,877 INFO 	Temp_Target              : 73.0004
+2016-01-22 13:12:23,476 INFO 	-- Stage 3 Boost engaged --
+2016-01-22 13:12:24,884 INFO 	Requesting_Thermostat    : downstairs
+2016-01-22 13:12:24,884 INFO 	Temp_Differential        : -2.1024
+2016-01-22 13:12:24,884 INFO 	Temp_Room                : 70.898
+2016-01-22 13:12:24,884 INFO 	Temp_Target              : 73.0004
+
+
+2016-01-22 13:12:35,746 WARNING --Unable to connect to Nest server for 0 minutes. Will retry in 1 minute.--
+2016-01-22 13:13:37,148 INFO --Nest server connection succeeded--
+2016-01-22 13:14:00,105 INFO 	Nest call for heat on Device: downstairs has ended. Removing downstairs from the boost queue
+2016-01-22 13:14:00,134 INFO 	Boost call for Device: downstairs ended after 0:03:39  H:MM:SS
+2016-01-22 13:14:00,190 INFO 	-- ODR Override Cycle Complete --
+2016-01-22 13:14:00,190 INFO 	-- Total duration:  0:03:39  H:MM:SS --
+
+2016-01-22 13:15:56,266 INFO ******** [ODR Override Initiated] ********
+2016-01-22 13:15:56,266 INFO 	Requesting_Thermostat    : downstairs
+2016-01-22 13:15:56,266 INFO 	Temp_Differential        : -2.1024
+2016-01-22 13:15:56,266 INFO 	Temp_Room                : 70.898
+2016-01-22 13:15:56,266 INFO 	Temp_Target              : 73.0004
+2016-01-22 13:15:56,266 INFO 	Temp_Outside             : 38.12
+2016-01-22 13:15:56,395 INFO 	-- Stage 1 Boost engaged --
+2016-01-22 13:16:41,405 INFO 	-- Stage 2 Boost engaged --
+2016-01-22 13:16:42,845 INFO 	Requesting_Thermostat    : downstairs
+2016-01-22 13:16:42,846 INFO 	Temp_Differential        : -2.1024
+2016-01-22 13:16:42,846 INFO 	Temp_Room                : 70.898
+2016-01-22 13:16:42,848 INFO 	Temp_Target              : 73.0004
+2016-01-22 13:17:56,407 INFO 	-- Stage 3 Boost engaged --
+2016-01-22 13:17:57,897 INFO 	Requesting_Thermostat    : downstairs
+2016-01-22 13:17:57,897 INFO 	Temp_Differential        : 0.8982
+2016-01-22 13:17:57,898 INFO 	Temp_Room                : 70.898
+2016-01-22 13:17:57,898 INFO 	Temp_Target              : 69.9998
+2016-01-22 13:18:10,759 INFO 	Nest call for heat on Device: downstairs has ended. Removing downstairs from the boost queue
+2016-01-22 13:18:10,763 INFO 	Boost call for Device: downstairs ended after 0:02:17  H:MM:SS
+2016-01-22 13:18:10,819 INFO 	-- ODR Override Cycle Complete --
+2016-01-22 13:18:10,819 INFO 	-- Total duration:  0:02:17  H:MM:SS --
+
+2016-01-22 13:18:52,132 INFO ******** [ODR Override Initiated] ********
+2016-01-22 13:18:52,134 INFO 	Requesting_Thermostat    : downstairs
+2016-01-22 13:18:52,134 INFO 	Temp_Differential        : -2.1024
+2016-01-22 13:18:52,134 INFO 	Temp_Room                : 70.898
+2016-01-22 13:18:52,134 INFO 	Temp_Target              : 73.0004
+2016-01-22 13:18:52,134 INFO 	Temp_Outside             : 38.12
+2016-01-22 13:18:52,256 INFO 	-- Stage 1 Boost engaged --
+2016-01-22 13:19:14,582 INFO 	Nest call for heat on Device: downstairs has ended. Removing downstairs from the boost queue
+2016-01-22 13:19:14,615 INFO 	Boost call for Device: downstairs ended after 0:00:24  H:MM:SS
+2016-01-22 13:19:14,664 INFO 	-- ODR Override Cycle Complete --
+2016-01-22 13:19:14,664 INFO 	-- Total duration:  0:00:25  H:MM:SS --
+
+2016-01-22 13:21:55,523 INFO ******** [ODR Override Initiated] ********
+2016-01-22 13:21:55,523 INFO 	Requesting_Thermostat    : downstairs
+2016-01-22 13:21:55,523 INFO 	Temp_Differential        : -2.1024
+2016-01-22 13:21:55,523 INFO 	Temp_Room                : 70.898
+2016-01-22 13:21:55,523 INFO 	Temp_Target              : 73.0004
+2016-01-22 13:21:55,523 INFO 	Temp_Outside             : 38.12
+2016-01-22 13:21:55,707 INFO 	-- Stage 1 Boost engaged --
+2016-01-22 13:22:40,721 INFO 	-- Stage 2 Boost engaged --
+2016-01-22 13:22:42,107 INFO 	Requesting_Thermostat    : downstairs
+2016-01-22 13:22:42,107 INFO 	Temp_Differential        : -2.1024
+2016-01-22 13:22:42,108 INFO 	Temp_Room                : 70.898
+2016-01-22 13:22:42,108 INFO 	Temp_Target              : 73.0004
+2016-01-22 13:23:55,720 INFO 	-- Stage 3 Boost engaged --
+2016-01-22 13:23:56,260 INFO 	Thermostat data not available at this time
+
+
+2016-01-22 13:24:07,266 WARNING --Unable to connect to Nest server for 0 minutes. Will retry in 1 minute.--
+2016-01-22 13:25:09,233 INFO --Nest server connection succeeded--
+
+
+2016-01-22 13:27:44,332 WARNING --Unable to connect to Nest server for 0 minutes. Will retry in 1 minute.--
+2016-01-22 13:28:45,740 INFO --Nest server connection succeeded--
+
+
+2016-01-22 13:31:20,869 WARNING --Unable to connect to Nest server for 0 minutes. Will retry in 1 minute.--
+2016-01-22 13:32:22,365 INFO --Nest server connection succeeded--
+2016-01-22 13:33:53,398 INFO 	Nest call for heat on Device: downstairs has ended. Removing downstairs from the boost queue
+2016-01-22 13:33:53,404 INFO 	Boost call for Device: downstairs ended after 0:12:00  H:MM:SS
+2016-01-22 13:33:53,420 INFO 	-- ODR Override Cycle Complete --
+2016-01-22 13:33:53,420 INFO 	-- Total duration:  0:12:00  H:MM:SS --
+
+2016-01-22 13:45:01,180 INFO ******** [ODR Override Initiated] ********
+2016-01-22 13:45:01,180 INFO 	Requesting_Thermostat    : downstairs
+2016-01-22 13:45:01,180 INFO 	Temp_Differential        : -2.4354
+2016-01-22 13:45:01,180 INFO 	Temp_Room                : 71.564
+2016-01-22 13:45:01,180 INFO 	Temp_Target              : 73.9994
+2016-01-22 13:45:01,180 INFO 	Temp_Outside             : 39.38
+2016-01-22 13:45:01,265 INFO 	-- Stage 1 Boost engaged --
+2016-01-22 13:45:46,270 INFO 	-- Stage 2 Boost engaged --
+2016-01-22 13:45:47,726 INFO 	Requesting_Thermostat    : downstairs
+2016-01-22 13:45:47,726 INFO 	Temp_Differential        : -2.4354
+2016-01-22 13:45:47,726 INFO 	Temp_Room                : 71.564
+2016-01-22 13:45:47,726 INFO 	Temp_Target              : 73.9994
+2016-01-22 13:46:08,063 INFO 	Nest call for heat on Device: downstairs has ended. Removing downstairs from the boost queue
+2016-01-22 13:46:08,072 INFO 	Boost call for Device: downstairs ended after 0:01:10  H:MM:SS
+2016-01-22 13:46:08,108 INFO 	-- ODR Override Cycle Complete --
+2016-01-22 13:46:08,108 INFO 	-- Total duration:  0:01:10  H:MM:SS --
