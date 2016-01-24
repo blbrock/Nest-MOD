@@ -96,10 +96,37 @@ Config.read(sys.path[0] + os.sep + '.secrets')
 
 # Create timing class to bind name with timer object
 class timer(object):
-    def __init__(self, name, timer, stage):
-        self.name = name
-        self.timer = timer
+    def __init__(self, name, stage):
+        self.name = name + '_t' + str(stage)
         self.stage = stage
+        self.t_start = datetime.datetime.now()
+        pList = [13,16,18]
+        if stage == 2:
+            i_s = i_s2
+            sList = [True,True,False]
+        elif stage == 3:
+            i_s = i_s3
+            sList = [True,True,True]
+        else:
+            print 'ERROR:timer.stage is out of range...'    
+        self.timer = threading.Timer(i_s,Increment_Temp,[pList,sList, stage])
+
+##    # Create time stamp for start of boost cycle    
+##    def t_start():
+##        self.t_start = datetime.datetime.now()
+
+##class boost_cycle(object):
+##    def __init__(self, name):
+##        self.name = name
+##        
+##    def t_start():
+##        self.t_start = datetime.datetime.now()
+##
+##    def active():
+##        if self.name in dev_list:
+##            self.active = True
+##        else:
+##            self.active = False
 
 def ConfigSectionMap(section):
     dict1 = {}
@@ -236,7 +263,8 @@ def ODR_override():
                 print('\tRequesting_Thermostat    : %s' % Thermostat)
                 dev_list.append(Thermostat)
             
-                # create timers for thermostat staging            
+                # create timers and boost cycle for thermostat staging
+                
                 create_timers(Thermostat)
             gpio = True
             
@@ -269,7 +297,18 @@ def ODR_override():
             if not H_stat:
                 app_log.info('*** Nest call for heat on Device: ' + Thermostat + ' has ended. Removing ' + Thermostat + ' from the boost queue')
                 print('\tNest call for heat on Device: ' + Thermostat + ' has ended. Removing ' + Thermostat + ' from the boost queue')   
-            T_delta = datetime.datetime.now() - T_start
+
+            # Cancel timers for deleted thermostat
+            for t in timer_list:
+#                t_name = t.name.rsplit('_',1)[0]
+                if t.name.rsplit('_',1)[0] == Thermostat:
+#                if t.name == Thermostat:
+                    t.timer.cancel()
+                    print('timer ' + str(t.name) + ' cancelled.')
+                    if t.stage == 2:
+                        t_start = t.t_start
+
+            T_delta = datetime.datetime.now() - t_start
             m, s = divmod(T_delta.total_seconds(), 60)
             h, m = divmod(m, 60)
             disp = "%d:%02d:%02d" % (h, m, s)
@@ -277,21 +316,13 @@ def ODR_override():
             print('*** Boost call for Device: ' + Thermostat + ' ended after ' + disp + '  H:MM:SS ***')
             dev_list.remove(Thermostat)
 
-            # Cancel timers for deleted thermostat
-            for t in timer_list:
-                t_name = t.name.rsplit('_',1)[0]
-                if t_name == Thermostat:
-                    t.timer.cancel()
-                    print('timer ' + str(t.name) + ' cancelled.')
-
             if not dev_list:
                 print('\nDevice list is empty...\n')
                 Restore_ODR()
             else:
                 app_log.info('\tBoost call continues for Device(s): ' + '[%s]' % ', '.join(map(str, dev_list)))
                 print('*** Boost call continues for Device(s): [%s]' % ', '.join(map(str, dev_list)) + ' ***')
-            
-        
+                   
         gpio_list.append(gpio)
         print 'Thermostat    : %s' % Thermostat
         print 'Away Status   : %s' % str(Away)
@@ -380,24 +411,25 @@ def create_timers(Thermostat):
             pass
     pList = [13,16,18]
     sList = (True,True,False) # 22K + 47K = 69K Resistance
-    t = timer(Thermostat + '_t1', threading.Timer(i_s2,Increment_Temp,[pList,sList, 2]), 2)
+    #t = timer(Thermostat + '_t1', threading.Timer(i_s2,Increment_Temp,[pList,sList, 2]), 2)
+    t = timer(Thermostat, 2)
     t.timer.setName(t.name)
     t.timer.start()
     timer_list.append(t)
 
     pList = [13,16,18]
     sList = [True,True,True]  # Open Circuit (infinite Resistance)
-    t = timer(Thermostat + '_t2', threading.Timer(i_s3,Increment_Temp,[pList,sList, 3]), 3)
+    #t = timer(Thermostat + '_t2', threading.Timer(i_s3,Increment_Temp,[pList,sList, 3]), 3)
+    t = timer(Thermostat, 3)
     t.timer.setName(t.name)
     t.timer.start()
     timer_list.append(t)
-
     return(timer_list)
         
 def Increment_Temp(pin, state, level):
     i_s = 0
     global stage
-
+    global structure
 
 # Set output pins to increment stages
     if level > stage:
@@ -417,7 +449,7 @@ def Increment_Temp(pin, state, level):
         stage = stage + 1
         app_log.info('\t-- Stage ' + str(stage) + ' Boost engaged --')
         print('--Stage ' + str(stage) + ' Boost engaged--')
-        structure = get_napi()
+##        structure = get_napi()
         if structure == None:
             app_log.info('\tThermostat data not available at this time')
         else:

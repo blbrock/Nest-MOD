@@ -991,3 +991,81 @@
 2016-01-24 00:35:25,857 INFO 	Boost call for Device: downstairs ended after 0:04:22  H:MM:SS
 2016-01-24 00:35:26,177 INFO 	-- ODR Override Cycle Complete --
 2016-01-24 00:35:26,177 INFO 	-- Total duration:  0:04:22  H:MM:SS --
+
+2016-01-24 10:26:06,371 INFO ******** [ODR Override Initiated] ********
+2016-01-24 10:26:06,375 INFO 	Requesting_Thermostat    : downstairs
+2016-01-24 10:26:06,375 INFO 	Temp_Differential        : -2.4876
+2016-01-24 10:26:06,375 INFO 	Temp_Room                : 69.512
+2016-01-24 10:26:06,375 INFO 	Temp_Target              : 71.9996
+2016-01-24 10:26:06,375 INFO 	Temp_Outside             : 30.74
+2016-01-24 10:26:06,391 INFO 	-- Stage 1 Boost engaged --
+2016-01-24 10:26:28,467 INFO 	Device: living room is requesting a new boost call and has been added to the queue
+2016-01-24 10:26:50,315 INFO *** Nest call for heat on Device: living room has ended. Removing living room from the boost queue
+2016-01-24 10:26:51,457 INFO 	-- Stage 2 Boost engaged --
+2016-01-24 10:26:52,793 INFO 	Thermostat data not available at this time
+2016-01-24 10:28:06,430 INFO 	-- Stage 3 Boost engaged --
+2016-01-24 10:28:07,871 INFO 	Thermostat data not available at this time
+
+2016-01-24 11:18:28,072 INFO ******** [ODR Override Initiated] ********
+2016-01-24 11:18:28,072 INFO 	Requesting_Thermostat    : downstairs
+2016-01-24 11:18:28,072 INFO 	Temp_Differential        : -2.2824
+2016-01-24 11:18:28,072 INFO 	Temp_Room                : 70.718
+2016-01-24 11:18:28,072 INFO 	Temp_Target              : 73.0004
+2016-01-24 11:18:28,072 INFO 	Temp_Outside             : 34.34
+2016-01-24 11:18:28,088 INFO 	-- Stage 1 Boost engaged --
+2016-01-24 11:19:13,141 INFO 	-- Stage 2 Boost engaged --
+2016-01-24 11:19:17,392 INFO 	Thermostat data not available at this time
+2016-01-24 11:20:28,125 INFO 	-- Stage 3 Boost engaged --
+2016-01-24 11:20:30,421 INFO 	Thermostat data not available at this time
+
+
+2016-01-24 11:21:14,319 WARNING --Unable to connect to Nest server for 0 minutes. Will retry in 1 minute.--
+2016-01-24 11:22:16,585 INFO --Nest server connection succeeded--
+2016-01-24 11:22:17,273 INFO *** Nest call for heat on Device: downstairs has ended. Removing downstairs from the boost queue
+2016-01-24 11:22:17,285 INFO 	Boost call for Device: downstairs ended after 0:03:49  H:MM:SS
+2016-01-24 11:22:17,292 INFO 	-- ODR Override Cycle Complete --
+2016-01-24 11:22:17,292 INFO 	-- Total duration:  0:03:52  H:MM:SS --
+
+2016-01-24 11:23:25,227 INFO ******** [ODR Override Initiated] ********
+2016-01-24 11:23:25,227 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-24 11:23:25,229 INFO 	Temp_Differential        : -2.4678
+2016-01-24 11:23:25,229 INFO 	Temp_Room                : 67.532
+2016-01-24 11:23:25,229 INFO 	Temp_Target              : 69.9998
+2016-01-24 11:23:25,229 INFO 	Temp_Outside             : 34.34
+2016-01-24 11:23:25,252 INFO 	-- Stage 1 Boost engaged --
+2016-01-24 11:24:10,312 INFO 	-- Stage 2 Boost engaged --
+2016-01-24 11:24:12,233 INFO 	Thermostat data not available at this time
+2016-01-24 11:24:34,532 INFO 	Device: downstairs is requesting a new boost call and has been added to the queue
+2016-01-24 11:24:56,846 INFO 	Boost call for Device: downstairs ended after 0:00:22  H:MM:SS
+2016-01-24 11:24:56,862 INFO 	Boost call continues for Device(s): [master bedroom]
+2016-01-24 11:25:25,348 INFO 	-- Stage 3 Boost engaged --
+2016-01-24 11:25:31,714 INFO 	Thermostat data not available at this time
+2016-01-24 11:25:43,592 INFO *** Nest call for heat on Device: master bedroom has ended. Removing master bedroom from the boost queue
+2016-01-24 11:25:43,631 INFO 	Boost call for Device: master bedroom ended after 0:02:18  H:MM:SS
+2016-01-24 11:25:43,660 INFO 	-- ODR Override Cycle Complete --
+2016-01-24 11:25:43,661 INFO 	-- Total duration:  0:02:21  H:MM:SS --
+
+2016-01-24 11:53:34,828 INFO ******** [ODR Override Initiated] ********
+2016-01-24 11:53:34,828 INFO 	Requesting_Thermostat    : downstairs
+2016-01-24 11:53:34,828 INFO 	Temp_Differential        : -2.2824
+2016-01-24 11:53:34,828 INFO 	Temp_Room                : 70.718
+2016-01-24 11:53:34,828 INFO 	Temp_Target              : 73.0004
+2016-01-24 11:53:34,829 INFO 	Temp_Outside             : 35.24
+2016-01-24 11:53:34,848 INFO 	-- Stage 1 Boost engaged --
+2016-01-24 11:53:56,911 INFO 	Device: master bedroom is requesting a new boost call and has been added to the queue
+2016-01-24 11:54:19,953 INFO 	-- Stage 2 Boost engaged --
+2016-01-24 11:54:19,963 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-24 11:54:19,963 INFO 	Temp_Differential        : -2.4678
+2016-01-24 11:54:19,963 INFO 	Temp_Room                : 67.532
+2016-01-24 11:54:19,963 INFO 	Temp_Target              : 69.9998
+2016-01-24 11:54:19,963 INFO 	Requesting_Thermostat    : downstairs
+2016-01-24 11:54:19,963 INFO 	Temp_Differential        : -2.2824
+2016-01-24 11:54:19,963 INFO 	Temp_Room                : 70.718
+2016-01-24 11:54:19,963 INFO 	Temp_Target              : 73.0004
+2016-01-24 11:54:42,355 INFO *** Nest call for heat on Device: downstairs has ended. Removing downstairs from the boost queue
+2016-01-24 11:54:42,384 INFO 	Boost call for Device: downstairs ended after 0:01:07  H:MM:SS
+2016-01-24 11:54:42,394 INFO 	Boost call continues for Device(s): [master bedroom]
+2016-01-24 11:55:27,036 INFO *** Nest call for heat on Device: master bedroom has ended. Removing master bedroom from the boost queue
+2016-01-24 11:55:27,069 INFO 	Boost call for Device: master bedroom ended after 0:01:30  H:MM:SS
+2016-01-24 11:55:27,092 INFO 	-- ODR Override Cycle Complete --
+2016-01-24 11:55:27,092 INFO 	-- Total duration:  0:01:56  H:MM:SS --
