@@ -221,3 +221,7 @@ pip-log.txt
 #Eagele CAD Job Files
 *.job
 *.?#?
+
+#Development Files
+*.old
+*test*
