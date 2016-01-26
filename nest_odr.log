@@ -1069,3 +1069,230 @@
 2016-01-24 11:55:27,069 INFO 	Boost call for Device: master bedroom ended after 0:01:30  H:MM:SS
 2016-01-24 11:55:27,092 INFO 	-- ODR Override Cycle Complete --
 2016-01-24 11:55:27,092 INFO 	-- Total duration:  0:01:56  H:MM:SS --
+
+2016-01-26 12:46:48,697 INFO ******** [ODR Override Initiated] ********
+2016-01-26 12:46:48,700 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-26 12:46:48,700 INFO 	Temp_Differential        : -2.4246
+2016-01-26 12:46:48,700 INFO 	Temp_Room                : 68.576
+2016-01-26 12:46:48,700 INFO 	Temp_Target              : 71.0006
+2016-01-26 12:46:48,700 INFO 	Temp_Outside             : 32.72
+2016-01-26 12:46:48,789 INFO 	-- Stage 1 Boost engaged --
+2016-01-26 12:46:50,128 INFO 	Thermostat data not available at this time
+2016-01-26 12:47:35,230 INFO 	-- Stage 2 Boost engaged --
+2016-01-26 12:47:36,694 INFO 	Thermostat data not available at this time
+2016-01-26 12:48:50,233 INFO 	-- Stage 3 Boost engaged --
+2016-01-26 12:48:52,006 INFO 	Thermostat data not available at this time
+
+2016-01-26 13:11:40,769 INFO ******** [ODR Override Initiated] ********
+2016-01-26 13:11:40,769 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-26 13:11:40,770 INFO 	Temp_Differential        : -2.4246
+2016-01-26 13:11:40,770 INFO 	Temp_Room                : 68.576
+2016-01-26 13:11:40,770 INFO 	Temp_Target              : 71.0006
+2016-01-26 13:11:40,772 INFO 	Temp_Outside             : 34.34
+2016-01-26 13:11:40,835 INFO 	-- Stage 1 Boost engaged --
+2016-01-26 13:11:42,184 INFO 	Thermostat data not available at this time
+2016-01-26 13:12:27,298 INFO 	-- Stage 2 Boost engaged --
+2016-01-26 13:12:28,598 INFO 	Thermostat data not available at this time
+2016-01-26 13:13:42,354 INFO 	-- Stage 3 Boost engaged --
+2016-01-26 13:13:43,802 INFO 	Thermostat data not available at this time
+
+2016-01-26 13:19:05,871 INFO ******** [ODR Override Initiated] ********
+2016-01-26 13:19:05,871 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-26 13:19:05,872 INFO 	Temp_Differential        : -2.4336
+2016-01-26 13:19:05,872 INFO 	Temp_Room                : 69.566
+2016-01-26 13:19:05,872 INFO 	Temp_Target              : 71.9996
+
+2016-01-26 13:24:16,430 INFO ******** [ODR Override Initiated] ********
+2016-01-26 13:24:16,431 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-26 13:24:16,431 INFO 	Temp_Differential        : -2.4336
+2016-01-26 13:24:16,431 INFO 	Temp_Room                : 69.566
+2016-01-26 13:24:16,433 INFO 	Temp_Target              : 71.9996
+2016-01-26 13:24:16,433 INFO 	Temp_Outside             : 34.34
+2016-01-26 13:24:16,477 INFO 	-- Stage 1 Boost engaged --
+2016-01-26 13:24:17,878 INFO 	Thermostat data not available at this time
+2016-01-26 13:25:03,048 INFO 	-- Stage 2 Boost engaged --
+2016-01-26 13:25:04,727 INFO 	Thermostat data not available at this time
+2016-01-26 13:26:18,068 INFO 	-- Stage 3 Boost engaged --
+2016-01-26 13:26:19,528 INFO 	Thermostat data not available at this time
+
+2016-01-26 13:36:36,486 INFO ******** [ODR Override Initiated] ********
+2016-01-26 13:36:36,486 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-26 13:36:36,489 INFO 	Temp_Differential        : -2.4336
+2016-01-26 13:36:36,490 INFO 	Temp_Room                : 69.566
+2016-01-26 13:36:36,490 INFO 	Temp_Target              : 71.9996
+2016-01-26 13:36:36,490 INFO 	Temp_Outside             : 35.24
+2016-01-26 13:36:36,582 INFO 	-- Stage 1 Boost engaged --
+2016-01-26 13:36:38,651 INFO 	Thermostat data not available at this time
+2016-01-26 13:37:23,703 INFO 	-- Stage 2 Boost engaged --
+2016-01-26 13:37:25,802 INFO 	Thermostat data not available at this time
+2016-01-26 13:38:38,772 INFO 	-- Stage 3 Boost engaged --
+2016-01-26 13:38:40,413 INFO 	Thermostat data not available at this time
+
+2016-01-26 13:41:11,671 INFO ******** [ODR Override Initiated] ********
+2016-01-26 13:41:11,671 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-26 13:41:11,671 INFO 	Temp_Differential        : -2.4336
+2016-01-26 13:41:11,671 INFO 	Temp_Room                : 69.566
+2016-01-26 13:41:11,671 INFO 	Temp_Target              : 71.9996
+2016-01-26 13:41:11,671 INFO 	Temp_Outside             : 35.06
+2016-01-26 13:41:11,743 INFO 	-- Stage 1 Boost engaged --
+2016-01-26 13:41:11,753 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-26 13:41:11,753 INFO 	Temp_Differential        : -2.4336
+2016-01-26 13:41:11,753 INFO 	Temp_Room                : 69.566
+2016-01-26 13:41:11,753 INFO 	Temp_Target              : 71.9996
+2016-01-26 13:41:56,869 INFO 	-- Stage 2 Boost engaged --
+2016-01-26 13:41:56,875 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-26 13:41:56,875 INFO 	Temp_Differential        : -2.4336
+2016-01-26 13:41:56,875 INFO 	Temp_Room                : 69.566
+2016-01-26 13:41:56,875 INFO 	Temp_Target              : 71.9996
+2016-01-26 13:41:57,858 INFO 	Device: downstairs is requesting a new boost call and has been added to the queue
+2016-01-26 13:42:20,742 INFO *** Nest call for heat on Device: master bedroom has ended. Removing master bedroom from the boost queue
+2016-01-26 13:42:20,779 INFO 	Boost call for Device: master bedroom ended after 0:01:09  H:MM:SS
+2016-01-26 13:42:20,802 INFO 	Boost call continues for Device(s): [downstairs]
+2016-01-26 13:42:42,910 INFO 	Requesting_Thermostat    : downstairs
+2016-01-26 13:42:42,910 INFO 	Temp_Differential        : -3.4542
+2016-01-26 13:42:42,910 INFO 	Temp_Room                : 71.546
+2016-01-26 13:42:42,911 INFO 	Temp_Target              : 75.0002
+2016-01-26 13:43:57,924 INFO 	-- Stage 3 Boost engaged --
+2016-01-26 13:43:57,937 INFO 	Requesting_Thermostat    : downstairs
+2016-01-26 13:43:57,938 INFO 	Temp_Differential        : -3.4542
+2016-01-26 13:43:57,938 INFO 	Temp_Room                : 71.546
+2016-01-26 13:43:57,938 INFO 	Temp_Target              : 75.0002
+2016-01-26 13:44:35,273 INFO *** Nest call for heat on Device: downstairs has ended. Removing downstairs from the boost queue
+2016-01-26 13:44:35,338 INFO 	Boost call for Device: downstairs ended after 0:02:37  H:MM:SS
+2016-01-26 13:44:35,388 INFO 	-- ODR Override Cycle Complete --
+2016-01-26 13:44:35,390 INFO 	-- Total duration:  0:03:26  H:MM:SS --
+
+2016-01-26 13:47:39,257 INFO ******** [ODR Override Initiated] ********
+2016-01-26 13:47:39,259 INFO 	Requesting_Thermostat    : downstairs
+2016-01-26 13:47:39,259 INFO 	Temp_Differential        : -2.4534
+2016-01-26 13:47:39,259 INFO 	Temp_Room                : 71.546
+2016-01-26 13:47:39,259 INFO 	Temp_Target              : 73.9994
+2016-01-26 13:47:39,259 INFO 	Temp_Outside             : 35.06
+2016-01-26 13:47:39,298 INFO 	-- Stage 1 Boost engaged --
+2016-01-26 13:47:39,302 INFO 	Requesting_Thermostat    : downstairs
+2016-01-26 13:47:39,302 INFO 	Temp_Differential        : -2.4534
+2016-01-26 13:47:39,302 INFO 	Temp_Room                : 71.546
+2016-01-26 13:47:39,302 INFO 	Temp_Target              : 73.9994
+2016-01-26 13:48:23,349 INFO 	Device: master bedroom is requesting a new boost call and has been added to the queue
+2016-01-26 13:48:24,328 INFO 	-- Stage 2 Boost engaged --
+2016-01-26 13:48:24,339 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-26 13:48:24,339 INFO 	Temp_Differential        : -2.4336
+2016-01-26 13:48:24,341 INFO 	Temp_Room                : 69.566
+2016-01-26 13:48:24,341 INFO 	Temp_Target              : 71.9996
+2016-01-26 13:48:24,341 INFO 	Requesting_Thermostat    : downstairs
+2016-01-26 13:48:24,341 INFO 	Temp_Differential        : -2.4534
+2016-01-26 13:48:24,341 INFO 	Temp_Room                : 71.546
+2016-01-26 13:48:24,341 INFO 	Temp_Target              : 73.9994
+2016-01-26 13:48:45,753 INFO *** Nest call for heat on Device: downstairs has ended. Removing downstairs from the boost queue
+2016-01-26 13:49:08,364 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-26 13:49:08,364 INFO 	Temp_Differential        : -2.4336
+2016-01-26 13:49:08,364 INFO 	Temp_Room                : 69.566
+2016-01-26 13:49:08,365 INFO 	Temp_Target              : 71.9996
+2016-01-26 13:49:08,365 INFO 	Requesting_Thermostat    : downstairs
+2016-01-26 13:49:08,365 INFO 	Temp_Differential        : 3.546
+2016-01-26 13:49:08,365 INFO 	Temp_Room                : 71.546
+2016-01-26 13:49:08,367 INFO 	Temp_Target              : 68.0
+2016-01-26 13:49:39,381 INFO 	-- Stage 3 Boost engaged --
+2016-01-26 13:49:39,390 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-26 13:49:39,390 INFO 	Temp_Differential        : -2.4336
+2016-01-26 13:49:39,390 INFO 	Temp_Room                : 69.566
+2016-01-26 13:49:39,391 INFO 	Temp_Target              : 71.9996
+2016-01-26 13:49:39,391 INFO 	Requesting_Thermostat    : downstairs
+2016-01-26 13:49:39,392 INFO 	Temp_Differential        : 3.546
+2016-01-26 13:49:39,392 INFO 	Temp_Room                : 71.546
+2016-01-26 13:49:39,394 INFO 	Temp_Target              : 68.0
+2016-01-26 13:50:23,364 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-26 13:50:23,364 INFO 	Temp_Differential        : -2.4336
+2016-01-26 13:50:23,365 INFO 	Temp_Room                : 69.566
+2016-01-26 13:50:23,365 INFO 	Temp_Target              : 71.9996
+2016-01-26 13:50:23,365 INFO 	Requesting_Thermostat    : downstairs
+2016-01-26 13:50:23,365 INFO 	Temp_Differential        : 3.546
+2016-01-26 13:50:23,365 INFO 	Temp_Room                : 71.546
+2016-01-26 13:50:23,367 INFO 	Temp_Target              : 68.0
+
+2016-01-26 13:52:30,684 INFO ******** [ODR Override Initiated] ********
+2016-01-26 13:52:30,686 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-26 13:52:30,686 INFO 	Temp_Differential        : -2.4336
+2016-01-26 13:52:30,686 INFO 	Temp_Room                : 69.566
+2016-01-26 13:52:30,687 INFO 	Temp_Target              : 71.9996
+2016-01-26 13:52:30,687 INFO 	Temp_Outside             : 35.06
+2016-01-26 13:52:30,753 INFO 	-- Stage 1 Boost engaged --
+2016-01-26 13:52:30,762 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-26 13:52:30,762 INFO 	Temp_Differential        : -2.4336
+2016-01-26 13:52:30,763 INFO 	Temp_Room                : 69.566
+2016-01-26 13:52:30,763 INFO 	Temp_Target              : 71.9996
+2016-01-26 13:53:15,857 INFO 	-- Stage 2 Boost engaged --
+2016-01-26 13:53:15,875 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-26 13:53:15,877 INFO 	Temp_Differential        : -2.4336
+2016-01-26 13:53:15,877 INFO 	Temp_Room                : 69.566
+2016-01-26 13:53:15,878 INFO 	Temp_Target              : 71.9996
+2016-01-26 13:53:16,190 INFO 	Device: downstairs is requesting a new boost call and has been added to the queue
+2016-01-26 13:53:39,243 INFO *** Nest call for heat on Device: master bedroom has ended. Removing master bedroom from the boost queue
+2016-01-26 13:53:39,344 INFO 	-- Calling thermostat queue has changed. Reducing boost to Stage 1 --
+2016-01-26 13:53:39,352 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-26 13:53:39,352 INFO 	Temp_Differential        : 1.566
+2016-01-26 13:53:39,352 INFO 	Temp_Room                : 69.566
+2016-01-26 13:53:39,352 INFO 	Temp_Target              : 68.0
+2016-01-26 13:53:39,354 INFO 	Requesting_Thermostat    : downstairs
+2016-01-26 13:53:39,354 INFO 	Temp_Differential        : -1.4994
+2016-01-26 13:53:39,354 INFO 	Temp_Room                : 72.5
+2016-01-26 13:53:39,354 INFO 	Temp_Target              : 73.9994
+2016-01-26 13:53:39,362 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-26 13:53:39,364 INFO 	Temp_Differential        : 1.566
+2016-01-26 13:53:39,364 INFO 	Temp_Room                : 69.566
+2016-01-26 13:53:39,365 INFO 	Temp_Target              : 68.0
+2016-01-26 13:53:39,365 INFO 	Requesting_Thermostat    : downstairs
+2016-01-26 13:53:39,365 INFO 	Temp_Differential        : -1.4994
+2016-01-26 13:53:39,365 INFO 	Temp_Room                : 72.5
+2016-01-26 13:53:39,365 INFO 	Temp_Target              : 73.9994
+2016-01-26 13:53:39,365 INFO 	Boost call for Device: master bedroom ended after 0:01:08  H:MM:SS
+2016-01-26 13:53:39,415 INFO 	Boost call continues for Device(s): [downstairs]
+2016-01-26 13:54:01,263 INFO 	-- Stage 2 Boost engaged --
+2016-01-26 13:54:01,335 INFO 	Requesting_Thermostat    : downstairs
+2016-01-26 13:54:01,335 INFO 	Temp_Differential        : -1.4994
+2016-01-26 13:54:01,335 INFO 	Temp_Room                : 72.5
+2016-01-26 13:54:01,336 INFO 	Temp_Target              : 73.9994
+2016-01-26 13:55:16,269 INFO 	-- Stage 3 Boost engaged --
+2016-01-26 13:55:16,290 INFO 	Requesting_Thermostat    : downstairs
+2016-01-26 13:55:16,290 INFO 	Temp_Differential        : -1.4994
+2016-01-26 13:55:16,290 INFO 	Temp_Room                : 72.5
+2016-01-26 13:55:16,290 INFO 	Temp_Target              : 73.9994
+2016-01-26 13:55:54,364 INFO 	Device: master bedroom is requesting a new boost call and has been added to the queue
+2016-01-26 13:56:17,642 INFO *** Nest call for heat on Device: downstairs has ended. Removing downstairs from the boost queue
+2016-01-26 13:56:17,671 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-26 13:56:17,673 INFO 	Temp_Differential        : -2.4336
+2016-01-26 13:56:17,673 INFO 	Temp_Room                : 69.566
+2016-01-26 13:56:17,673 INFO 	Temp_Target              : 71.9996
+2016-01-26 13:56:17,674 INFO 	Requesting_Thermostat    : downstairs
+2016-01-26 13:56:17,674 INFO 	Temp_Differential        : 4.5
+2016-01-26 13:56:17,674 INFO 	Temp_Room                : 72.5
+2016-01-26 13:56:17,674 INFO 	Temp_Target              : 68.0
+2016-01-26 13:56:17,726 INFO 	-- Calling thermostat queue has changed. Reducing boost to Stage 1 --
+2016-01-26 13:56:17,742 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-26 13:56:17,743 INFO 	Temp_Differential        : -2.4336
+2016-01-26 13:56:17,743 INFO 	Temp_Room                : 69.566
+2016-01-26 13:56:17,743 INFO 	Temp_Target              : 71.9996
+2016-01-26 13:56:17,744 INFO 	Requesting_Thermostat    : downstairs
+2016-01-26 13:56:17,744 INFO 	Temp_Differential        : 4.5
+2016-01-26 13:56:17,744 INFO 	Temp_Room                : 72.5
+2016-01-26 13:56:17,746 INFO 	Temp_Target              : 68.0
+2016-01-26 13:56:17,746 INFO 	Boost call for Device: downstairs ended after 0:03:01  H:MM:SS
+2016-01-26 13:56:17,766 INFO 	Boost call continues for Device(s): [master bedroom]
+2016-01-26 13:56:39,423 INFO 	-- Stage 2 Boost engaged --
+2016-01-26 13:56:39,437 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-26 13:56:39,438 INFO 	Temp_Differential        : -2.4336
+2016-01-26 13:56:39,438 INFO 	Temp_Room                : 69.566
+2016-01-26 13:56:39,438 INFO 	Temp_Target              : 71.9996
+2016-01-26 13:57:02,614 INFO *** Nest call for heat on Device: master bedroom has ended. Removing master bedroom from the boost queue
+2016-01-26 13:57:02,690 INFO 	-- Calling thermostat queue has changed. Reducing boost to Stage 1 --
+2016-01-26 13:57:02,697 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-26 13:57:02,697 INFO 	Temp_Differential        : 1.566
+2016-01-26 13:57:02,697 INFO 	Temp_Room                : 69.566
+2016-01-26 13:57:02,700 INFO 	Temp_Target              : 68.0
+2016-01-26 13:57:02,713 INFO 	Requesting_Thermostat    : master bedroom
+2016-01-26 13:57:02,714 INFO 	Temp_Differential        : 1.566
+2016-01-26 13:57:02,714 INFO 	Temp_Room                : 69.566
+2016-01-26 13:57:02,714 INFO 	Temp_Target              : 68.0
+2016-01-26 13:57:02,714 INFO 	Boost call for Device: master bedroom ended after 0:01:08  H:MM:SS
+2016-01-26 13:57:02,769 INFO 	-- ODR Override Cycle Complete --
+2016-01-26 13:57:02,769 INFO 	-- Total duration:  0:04:35  H:MM:SS --
