@@ -225,3 +225,4 @@ pip-log.txt
 #Development Files
 *.old
 *test*
+*.log
