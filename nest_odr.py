@@ -280,14 +280,14 @@ def ODR_override():
 
         if gpio == True and not Thermostat in dev_list:
             dev_list.append(Thermostat)
-            app_log.info('\tDevice: ' + Thermostat + ' is requesting a new boost call and has been added to the queue')
+            app_log.info('\t-- Device: ' + Thermostat + ' is requesting a new boost call and has been added to the queue')
             print('Device: ' + Thermostat + ' is requesting a new boost call and has been added to the queue.')
             # create timers for thermostat staging            
             create_timers(Thermostat)
 
         elif (not gpio or not H_stat) and Thermostat in dev_list:
             if not H_stat:
-                app_log.info('*** Nest call for heat on Device: ' + Thermostat + ' has ended. Removing ' + Thermostat + ' from the boost queue')
+                app_log.info('\t-- Nest call for heat on Device: ' + Thermostat + ' has ended. Removing ' + Thermostat + ' from the boost queue')
                 print('\tNest call for heat on Device: ' + Thermostat + ' has ended. Removing ' + Thermostat + ' from the boost queue')   
 
             # Cancel timers for deleted thermostat
@@ -491,10 +491,6 @@ def main():
     return (relay_trigger)
 # PROGRAM STARTS HERE #
 relay_trigger = main()
-##if relay_trigger == True and stage == 1:
-##    timers = GPIO_trigger()
-##elif relay_trigger == True and stage > 1:
-##    print('Boost already initiated, do nothing')
 
 # Set target humidity according to outside temperature
 if set_hum:
