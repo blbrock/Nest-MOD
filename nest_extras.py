@@ -61,23 +61,25 @@ def target_humidity(structure):
     return (hum_value)
 
 # Create temperature log updated each time get_napi() is run
-def data_log(structure):
+def data_log(structure, log_dir):
+    
     if not structure:
         # Import credentials
         import ConfigParser
         Config = ConfigParser.ConfigParser()
-        Config.read(sys.path[0] + os.sep + '.secrets')
+        Config.read(log_dir + '.secrets')
         username = ConfigSectionMap(Config, 'Credentials')['username']
         password = ConfigSectionMap(Config, 'Credentials')['password']
+        log_dir = ConfigSectionMap('Parameters')['log_dir']
         #get structure
         structure = get_napi(username, password)
         
-    if not os.path.isfile(sys.path[0] + os.sep + 'nest_data.log'):
+    if not os.path.isfile(log_dir + 'nest_data.log'):
         header = 'Thermostat,Sample_Time,T_room,T_target,T_diff,Humidity_inside,Humidity_target,T_outside,H_stat,Fan,Away\n'
     else:
         header = None
 
-    log = open(sys.path[0] + os.sep + 'nest_data.log', 'a')
+    log = open(log_dir + 'nest_data.log', 'a')
     if getSize(log) < 10000:
         if header:
             log.write(header)
@@ -227,5 +229,5 @@ def print_data(structure):
 ##    
 ##print_data(None)
 ##
-##print data_log(None)
+##print data_log(None, None)
 

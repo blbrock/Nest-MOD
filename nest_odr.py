@@ -313,7 +313,7 @@ def ODR_override():
     # Write data to log file if option is set
     if data_log:
         try:
-            print data_log(structure)
+            print data_log(structure, log_dir)
         except:
             app_log.error('*** An error occured trying to write to data log ***')
             print '*** An error occured trying to write to data log ***'
@@ -452,16 +452,32 @@ dev_list = []
 timer_list = []
 timer_dict = {}
 T_start = datetime.datetime.now()
-cur_dir = sys.path[0] + os.sep
 i = 0
 pins = [13,16,18]
+
+# Import credentials
+Config = ConfigParser.ConfigParser()
+Config.read(sys.path[0] + os.sep + '.secrets')
+
+username = ConfigSectionMap('Credentials')['username']
+password = ConfigSectionMap('Credentials')['password']
+
+# Import parameters
+set_hum = ConfigSectionMap('Parameters')['set_hum']
+exec (ConfigSectionMap('Parameters')['log_dir']) #creates log_dir variable
+data_log = ConfigSectionMap('Parameters')['log_data']
+delay_rechk = float(ConfigSectionMap('Parameters')['delay_rechk'])
+i_s2 = float(ConfigSectionMap('Parameters')['delay_s2'])
+i_s3 = float(ConfigSectionMap('Parameters')['delay_s3'])
+
+
 
 # Set up logging handlers
 ## log_formatter = logging.Formatter('%(asctime)s %(levelname)s %(funcName)s(%(lineno)d) %(message)s')
 log_formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
 blnk_formatter = logging.Formatter('%(message)s')
 
-logFile = dFile = sys.path[0] + os.sep + 'nest_odr.log'
+logFile = dFile = log_dir + 'nest_odr.log'
 #logfile.flush()
 my_handler = RotatingFileHandler(logFile, mode='a', maxBytes=5*1024*1024, backupCount=5, encoding=None, delay=0)
 my_handler.setFormatter(log_formatter)
@@ -471,19 +487,6 @@ app_log = logging.getLogger('root')
 app_log.setLevel(logging.INFO)
 
 app_log.addHandler(my_handler)
-
-# Import credentials
-Config = ConfigParser.ConfigParser()
-Config.read(sys.path[0] + os.sep + '.secrets')
-
-username = ConfigSectionMap('Credentials')['username']
-password = ConfigSectionMap('Credentials')['password']
-set_hum = ConfigSectionMap('Parameters')['set_hum']
-data_log = ConfigSectionMap('Parameters')['log_data']
-
-delay_rechk = float(ConfigSectionMap('Parameters')['delay_rechk'])
-i_s2 = float(ConfigSectionMap('Parameters')['delay_s2'])
-i_s3 = float(ConfigSectionMap('Parameters')['delay_s3'])
 
 if data_log:
     from nest_extras import data_log
