@@ -217,6 +217,7 @@ pip-log.txt
 
 #Credential files
 .secrets
+*.secrets
 
 #Eagele CAD Job Files
 *.job
