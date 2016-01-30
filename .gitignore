@@ -216,7 +216,7 @@ pip-log.txt
 .mr.developer.cfg
 
 #Credential files
-.secrets.example
+.secrets
 
 #Eagele CAD Job Files
 *.job
