@@ -17,12 +17,6 @@ def ConfigSectionMap(Config, section):
             dict1[option] = None
     return dict1
 
-# get number of lines in a file
-def getSize(fileobject):
-    fileobject.seek(0,2) # move the cursor to the end of the file
-    size = fileobject.tell()
-    return size
-
 def get_napi(username, password): #might want to change these vars to global later
     global structure
     global data
@@ -60,6 +54,7 @@ def target_humidity(structure):
         hum_value = None
     return (hum_value)
 
+<<<<<<< HEAD
 # Create temperature log updated each time get_napi() is run
 def data_log(structure, log_dir):
     
@@ -231,3 +226,8 @@ def print_data(structure):
 ##
 ##print data_log(None, None)
 
+=======
+### Test code
+##hum_value = target_humidity(None)
+##print hum_value
+>>>>>>> parent of 1d6a562... logging enhancements

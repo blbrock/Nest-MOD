@@ -211,6 +211,7 @@ def log_data(thermostats):
             my_handler.setFormatter(blnk_formatter)
             app_log.info('')
             my_handler.setFormatter(log_formatter)
+                 
 
 # Measures the temperature differential between the current room temperature and the target setpoint. If room temperature is
 # <= 1.25 degrees F of the target temperature for any thermomemter, then relay_trigger is set to 1. HVAC-Stat is also checked to make
@@ -262,7 +263,7 @@ def ODR_override():
 
         if gpio == True and not Thermostat in dev_list:
             dev_list.append(Thermostat)
-            app_log.info('\t-- Device: ' + Thermostat + ' is requesting a new boost call and has been added to the queue --')
+            app_log.info('\t-- Device: ' + Thermostat + ' is requesting a new boost call and has been added to the queue')
             print('Device: ' + Thermostat + ' is requesting a new boost call and has been added to the queue.')
 
             # create timers for thermostat staging            
@@ -310,6 +311,7 @@ def ODR_override():
 
     gpio = max(gpio_list)
 
+<<<<<<< HEAD
     # Write data to log file if option is set
     if data_log:
         try:
@@ -318,6 +320,8 @@ def ODR_override():
             app_log.error('*** An error occured trying to write to data log ***')
             print '*** An error occured trying to write to data log ***'
             
+=======
+>>>>>>> parent of 1d6a562... logging enhancements
     if gpio == True:
         rchk = threading.Timer(delay_rechk, main)
         rchk.start()
@@ -488,8 +492,21 @@ app_log.setLevel(logging.INFO)
 
 app_log.addHandler(my_handler)
 
+<<<<<<< HEAD
 if data_log:
     from nest_extras import data_log
+=======
+# Import credentials
+Config = ConfigParser.ConfigParser()
+Config.read(sys.path[0] + os.sep + '.secrets')
+
+username = ConfigSectionMap('Credentials')['username']
+password = ConfigSectionMap('Credentials')['password']
+set_hum = ConfigSectionMap('Parameters')['set_hum']
+delay_rechk = float(ConfigSectionMap('Parameters')['delay_rechk'])
+i_s2 = float(ConfigSectionMap('Parameters')['delay_s2'])
+i_s3 = float(ConfigSectionMap('Parameters')['delay_s3'])
+>>>>>>> parent of 1d6a562... logging enhancements
 
 relay_trigger = main()
 
