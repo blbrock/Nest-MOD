@@ -30,6 +30,12 @@ def get_napi(username, password): #might want to change these vars to global lat
     structure = napi.structures[0]
     return(structure)
 
+# number of lines in text file
+def getSize(fileobject):
+    fileobject.seek(0,2) # move the cursor to the end of the file
+    size = fileobject.tell()
+    return size
+
 ### Automatically adjusts RH target for living room thermostat to allow HRV to dehumidify according to outside temperature
 def target_humidity(structure):
     if not structure:
@@ -54,18 +60,17 @@ def target_humidity(structure):
         hum_value = None
     return (hum_value)
 
-<<<<<<< HEAD
 # Create temperature log updated each time get_napi() is run
 def data_log(structure, log_dir):
     
     if not structure:
         # Import credentials
-        import ConfigParser
         Config = ConfigParser.ConfigParser()
-        Config.read(log_dir + '.secrets')
+        Config.read(sys.path[0] + os.sep + '.secrets')
         username = ConfigSectionMap(Config, 'Credentials')['username']
         password = ConfigSectionMap(Config, 'Credentials')['password']
-        log_dir = ConfigSectionMap('Parameters')['log_dir']
+        exec (ConfigSectionMap(Config, 'Parameters')['log_dir']) #creates log_dir variable
+        data_log = ConfigSectionMap(Config, 'Parameters')['log_data']
         #get structure
         structure = get_napi(username, password)
         
@@ -76,7 +81,7 @@ def data_log(structure, log_dir):
 
     log = open(log_dir + 'nest_data.log', 'a')
     if getSize(log) < 10000:
-        if header:
+        if not header == None:
             log.write(header)
             
         Away = structure.away
@@ -114,11 +119,12 @@ def data_log(structure, log_dir):
 def print_data(structure):
     if not structure:
         # Import credentials
-        import ConfigParser
         Config = ConfigParser.ConfigParser()
         Config.read(sys.path[0] + os.sep + '.secrets')
         username = ConfigSectionMap(Config, 'Credentials')['username']
         password = ConfigSectionMap(Config, 'Credentials')['password']
+        exec (ConfigSectionMap(Config, 'Parameters')['log_dir']) #creates log_dir variable
+
         #get structure
         structure = get_napi(username, password)
         
@@ -225,9 +231,3 @@ def print_data(structure):
 ##print_data(None)
 ##
 ##print data_log(None, None)
-
-=======
-### Test code
-##hum_value = target_humidity(None)
-##print hum_value
->>>>>>> parent of 1d6a562... logging enhancements

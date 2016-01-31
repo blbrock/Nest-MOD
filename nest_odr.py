@@ -311,7 +311,6 @@ def ODR_override():
 
     gpio = max(gpio_list)
 
-<<<<<<< HEAD
     # Write data to log file if option is set
     if data_log:
         try:
@@ -320,8 +319,6 @@ def ODR_override():
             app_log.error('*** An error occured trying to write to data log ***')
             print '*** An error occured trying to write to data log ***'
             
-=======
->>>>>>> parent of 1d6a562... logging enhancements
     if gpio == True:
         rchk = threading.Timer(delay_rechk, main)
         rchk.start()
@@ -474,39 +471,21 @@ delay_rechk = float(ConfigSectionMap('Parameters')['delay_rechk'])
 i_s2 = float(ConfigSectionMap('Parameters')['delay_s2'])
 i_s3 = float(ConfigSectionMap('Parameters')['delay_s3'])
 
-
-
 # Set up logging handlers
 ## log_formatter = logging.Formatter('%(asctime)s %(levelname)s %(funcName)s(%(lineno)d) %(message)s')
 log_formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
 blnk_formatter = logging.Formatter('%(message)s')
 
 logFile = dFile = log_dir + 'nest_odr.log'
-#logfile.flush()
 my_handler = RotatingFileHandler(logFile, mode='a', maxBytes=5*1024*1024, backupCount=5, encoding=None, delay=0)
 my_handler.setFormatter(log_formatter)
 my_handler.setLevel(logging.INFO)
-
 app_log = logging.getLogger('root')
 app_log.setLevel(logging.INFO)
-
 app_log.addHandler(my_handler)
 
-<<<<<<< HEAD
 if data_log:
     from nest_extras import data_log
-=======
-# Import credentials
-Config = ConfigParser.ConfigParser()
-Config.read(sys.path[0] + os.sep + '.secrets')
-
-username = ConfigSectionMap('Credentials')['username']
-password = ConfigSectionMap('Credentials')['password']
-set_hum = ConfigSectionMap('Parameters')['set_hum']
-delay_rechk = float(ConfigSectionMap('Parameters')['delay_rechk'])
-i_s2 = float(ConfigSectionMap('Parameters')['delay_s2'])
-i_s3 = float(ConfigSectionMap('Parameters')['delay_s3'])
->>>>>>> parent of 1d6a562... logging enhancements
 
 relay_trigger = main()
 
