@@ -1,9 +1,13 @@
 # Nest-MOD
-Uses Raspberry pi to create an Outdoor Reset override module for Nest Thermostats
+Nest-MOD is a hardware and software interface to allow Nest Thermostats to work more efficiently with high efficiency
+modulating/condensing boilers and furnaces that incorporate outdoor reset.
+
+![](![hardware image](/images/P1020976.JPG))
 
 Requires python_nest API developed by Jason Kölker:
 https://github.com/jkoelker/python-nest/
 
+# Background
 Modulating/Condensing (mod/con) boilers with Outdoor Reset (ODR) function are among the most energy 
 efficient home heating devices available. However, because mod/con boilers operate at lower output 
 temperatures than conventional boilers and furnaces, they do not work well with advanced programable 
@@ -36,7 +40,7 @@ Frustrated by the lack of support for modulating boilers, I decided to build my 
 a Raspberry pi. The shield and software are designed for a Munchkin boiler but should work (with appropriate 
 modifcation) on any boiler that uses a thermistor to control the ODR curve. 
 
-Features: 
+# Features: 
 
 The software monitors thermostat data and initiates an ODR override cycle when > 1.25F temperature increase 
 is called by any thermostat. Three stages of boost are provided depending on the differential between room 
@@ -48,7 +52,7 @@ reaches < 0.25F, ODR override is canceled and the boiler returns to its default 
 The software tracks all thermostats in a Nest account and adjusts boost stages upward or downward according to 
 the maximum boost level being requested by all thermostats in the account.
 
-Extras:
+# Extras:
 
 1. boost.py - a simple command line program to provide manual boost if needed. Manual boost cycles are logged (see below).
 
@@ -64,7 +68,7 @@ This produces a comma delimited file containing data from thermostats and boost 
 4. Data Graphing:
 In development, comming soon.
 
-Error checking and logging: 
+# Error checking and logging: 
 
 ODR override events and communication failures are logged to nest_odr.log. If the device loses connection with
 the Nest server during an ODR override cycle, it will continue to recheck the connection at 1 minute intervals 
