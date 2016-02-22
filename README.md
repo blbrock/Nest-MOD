@@ -2,7 +2,7 @@
 Nest-MOD is a hardware and software interface to allow Nest Thermostats to work more efficiently with high efficiency
 modulating/condensing boilers and furnaces that incorporate outdoor reset.
 
-![](![hardware image](/images/P1020976.JPG))
+![](![hardware image](/images/open_close.png))
 
 Requires python_nest API developed by Jason Kölker:
 https://github.com/jkoelker/python-nest/
