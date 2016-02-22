@@ -1,7 +1,7 @@
-# Nest-ODR
+# Nest-MOD
 Uses Raspberry pi to create an Outdoor Reset override module for Nest Thermostats
 
-Requires python_nest API developed by Jason Kölker:
+Requires python_nest API developed by Jason KÃ¶lker:
 https://github.com/jkoelker/python-nest/
 
 Modulating/Condensing (mod/con) boilers with Outdoor Reset (ODR) function are among the most energy 
