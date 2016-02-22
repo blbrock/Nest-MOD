@@ -224,6 +224,8 @@ pip-log.txt
 *.?#?
 
 #Development Files
+dev/
+*dev*
 *.old
 *test*
 *.log

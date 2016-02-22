@@ -29,13 +29,12 @@
 import os
 import sys
 import time
-import ConfigParser
 import datetime
-import logging
-from logging.handlers import RotatingFileHandler
 import threading
 import nest
+##import weakref
 from tendo import singleton
+from nest_extras import get_parameters, setup_log_handlers
 from nest import utils as nest_utils
 try:
     import RPi.GPIO as GPIO
@@ -43,52 +42,53 @@ except:
     pass
 # -------------------- Classes ---------------------------
 # --------------------------------------------------------
-
-# Create timing class to bind name with timer object
-class cycle(object):
+class thermostat(object):
+    
     def __init__(self, name):
         self.name = name
-        ##    # Create time stamp for start of boost cycle    
-        self.t_start = datetime.datetime.now()
+        self.active = False
+        self.h_state = None
+        self.stage = 0
+        self.new = False
+        self.t_start = None
+        self.thresh_1 = Thresh_Stage_1
+##        self._items = []
 
-class timer(cycle):
-    def __init__(self, name, stage):
-        super(timer,self).__init__(name)
-#        self.tname = self.name + '_t' + str(stage)
-        self.triggered = False
+    def setactive(self, active):
+        self.active = active
+        return self.active
+
+    def setstage(self, stage):
         self.stage = stage
+        if self.stage > 0 and  self.t_start == None:
+                    self.t_start = datetime.datetime.now()
+        return self.stage, self.t_start
 
-        if stage == 1:
-            i_s = 1
-        elif stage == 2:
-            i_s = i_s2
-        elif stage == 3:
-            i_s = i_s3
-        else:
-            raise 'ERROR:timer.stage is out of range...'    
-        self.timer = threading.Timer(i_s,Increment_Temp,[self.name, self.stage])
-        self.timer.start()
+    def seth_state(self, h_state):
+        self.h_state = h_state
+        return self.h_state
+    
+    def set_new(self, new):
+        self.new = new
+        return self.new
 
-    def settriggered(self, active):
-        self.triggered = active
-        return self.triggered
+    def set_thresh_1(self, thresh):
+        self.thresh_1 = thresh
+        return self.thresh_1
+
+##    @classmethod
+##    def getinstances(cls):
+##        dead = set()
+##        for ref in cls._instances:
+##            obj = ref()
+##            if obj is not None:
+##                yield obj
+##            else:
+##                dead.add(ref)
+##        cls._instances -= dead
 
 # -------------------- Functions -------------------------
 # --------------------------------------------------------
-
-# Define Configuration File
-def ConfigSectionMap(section):
-    dict1 = {}
-    options = Config.options(section)
-    for option in options:
-        try:
-            dict1[option] = Config.get(section, option)
-            if dict1[option] == -1:
-                DebugPrint("skip: %s" % option)
-        except:
-            print("exception on %s!" % option)
-            dict1[option] = None
-    return dict1
 
 # Get data from nest account
 def get_napi():
@@ -96,7 +96,7 @@ def get_napi():
     global data
     structure = None
     data = None
-##    global stage
+##    global Stage
     d = datetime.datetime.now().time()
     print('napi check @ ' + str(d))
 
@@ -111,21 +111,23 @@ def get_napi():
 # Track how long communication with Nest server is down
 def check_connection(i):
 
-    if i <= 29 and relay_trigger: # change to 29 after testing
-        my_handler.setFormatter(blnk_formatter)
-        app_log.info('')
+    if i <= 29 and Stage > 0: # change to 29 after testing
         my_handler.setFormatter(log_formatter)
         print('--Unable to connect to Nest server for ' + str(i) + ' minutes. Will retry in 1 minute.--')
-        my_handler.setFormatter(blnk_formatter)
-        app_log.info('')
         my_handler.setFormatter(log_formatter)
-        app_log.warning('--Unable to connect to Nest server for ' + str(i) + ' minutes. Will retry in 1 minute.--')
+        try:
+            app_log.warning('--Unable to connect to Nest server for ' + str(i) + ' minutes. Will retry in 1 minute.--')
+        except:
+            pass
         i = i + 1
         time.sleep(60) #Change to 60 after testing
         get_napi()
         if not structure == None:
             print('--Nest server connection succeeded--')
-            app_log.info('--Nest server connection succeeded--')
+            try:
+                app_log.info('--Nest server connection succeeded--')
+            except:
+                pass
             i = 0
 
     elif i > 29: 
@@ -134,9 +136,12 @@ def check_connection(i):
     else:
         print('--Unable to connect to Nest server. Will try again on next cycle.--')
         my_handler.setFormatter(blnk_formatter)
-        app_log.info('')
-        my_handler.setFormatter(log_formatter)
-        app_log.warning('--Unable to connect to Nest server. Will try again on next cycle.--')
+        try:
+            app_log.info('')
+            my_handler.setFormatter(log_formatter)
+            app_log.warning('--Unable to connect to Nest server. Will try again on next cycle.--')
+        except:
+            pass
         sys.exit()
         i = i + 1
     return (i)
@@ -145,10 +150,13 @@ def check_connection(i):
 def con_err():
             
     print('--Unable to connect to Nest server for 30 minutes. Resetting ODR.--')
-    my_handler.setFormatter(blnk_formatter)
-    app_log.error('')
-    my_handler.setFormatter(log_formatter)
-    app_log.error('--Unable to connect to Nest server for 30 minutes. Resetting ODR.--')
+    try:
+        my_handler.setFormatter(blnk_formatter)
+        app_log.error('')
+        my_handler.setFormatter(log_formatter)
+        app_log.error('--Unable to connect to Nest server for 30 minutes. Resetting ODR.--')
+    except:
+        pass
     Restore_ODR()
     sys.exit()
     return
@@ -163,14 +171,26 @@ def GPIO_out(pins):
             GPIO.output(p, False)
             print 'Pin ' + str(p) + ' set to OUT'
     except:
-        app_log.error('*** GPIO pins could not be set to OUT ***')
+        try:
+            app_log.error('*** GPIO pins could not be set to OUT ***')
+        except:
+            pass
 
+def set_GPIO(pin, state):
+    try:
+        print ('Trying to set GPIO pin, ' + str(pin) + ' to ' + str(state))
+        GPIO.output(pin,state)
+    except:
+        try:
+            app_log.error('*** GPIO pin: ' + str(pin) + ' could not be set to ' + str(state) + ' ***')    
+        except:
+            pass
+        
 # Make sure GPIO pin states match boost stage
 def GPIO_check(target_states):
     cur_pin_state = []
     try:
         for p in pins:
-            s = GPIO.input(p)
             if s:
                 s = True
             elif not s:
@@ -181,161 +201,163 @@ def GPIO_check(target_states):
         print 'GPIO check successful'
     except:
         if not cur_pin_state == target_states:
-            app_log.error('*** Current GPIO pin states do not match target pin states - Potential hardware malfunction ***')
-
-# Send thermostat and weather data to log file
-def log_data(thermostats):
-    Away = structure.away
-    devices = structure.devices
-    Time_s = structure.weather.current.datetime.strftime('%H:%M:%S')
-
-    for device in devices:
-        Thermostat = device.where
-        if Thermostat in thermostats:
-            T_room = nest_utils.c_to_f(device.temperature)
-            if Away:
-                T_target = nest_utils.c_to_f(device.away_temperature[0])
-                app_log.info('-- Away mode enabled --')
-                print('-- Away mode enabled --')
-            else:
-                T_target = nest_utils.c_to_f(device.target)   
-            H_stat = device.hvac_heater_state
-            T_diff = T_room - T_target
-            T_outside = nest_utils.c_to_f(structure.weather.current.temperature)
-            app_log.info('\tSample Time              : %s' % Time_s)
-            app_log.info('\tRequesting_Thermostat    : %s' % Thermostat)
-            app_log.info('\tTemp_Differential        : %s' % str(T_diff))
-            app_log.info('\tTemp_Room                : %s' % str(T_room))
-            app_log.info('\tTemp_Target              : %s' % str(T_target))
-            app_log.info('\tTemp_Outside             : %s' % str(T_outside))
-            my_handler.setFormatter(blnk_formatter)
-            app_log.info('')
-            my_handler.setFormatter(log_formatter)
+            try:
+                app_log.error('*** Current GPIO pin states do not match target pin states - Potential hardware malfunction ***')
+            except:
+                pass
                  
+def make_therm_objects():
+    global therm_list
+    therm_list = [thermostat(device.where) for device in structure.devices]
+    return therm_list
+
+def get_target_stage():
+    level_list = []
+    for t in therm_list:
+        level_list.append(t.stage)
+    target_stage = int(max(level_list))
+    sum_stage = int(sum(level_list))
+    return target_stage, sum_stage
 
 # Measures the temperature differential between the current room temperature and the target setpoint. If room temperature is
 # <= 1.25 degrees F of the target temperature for any thermomemter, then relay_trigger is set to 1. HVAC-Stat is also checked to make
 # sure a thermostat is actually calling for heat as an additional check.
 def ODR_override():
-    gpio_list = []
 
 # Make sure connection with Nest server was established before continuing.
     Away = structure.away
     
     for device in structure.devices:
-        Thermostat = device.where
+        T_name = device.where
         T_room = nest_utils.c_to_f(device.temperature)
         if Away:
             T_target = nest_utils.c_to_f(device.away_temperature[0])
-            app_log.info('-- Away mode enabled --')
+            try:
+                app_log.info('-- Away mode enabled --')
+            except:
+                pass
             print('-- Away mode enabled --')
         else:
             T_target = nest_utils.c_to_f(device.target)
             
         H_stat = device.hvac_heater_state
         T_diff = T_room - T_target
-        T_outside = nest_utils.c_to_f(structure.weather.current.temperature)         
+        T_outside = nest_utils.c_to_f(structure.weather.current.temperature)
+        for th in therm_list:
+            if th.name == T_name:
+                t = th
+                
+        t.seth_state(H_stat)
 
 # Check if thermostat was calling for recovery in previous loop and sets threashold temp to -0.75F to
 # maintain boost cycle until call for heat on device is satisfied.
-        if Thermostat in dev_list:
-            T_thresh = -0.75
+        if t.active:
+            t.set_thresh_1(-0.75)
+    
+        if float(T_diff) < float(Thresh_Stage_3) and H_stat == True:
+            t.setstage(3)
+        elif float(T_diff) < float(Thresh_Stage_2) and H_stat == True:
+            t.setstage(2)
+        elif float(T_diff) < float(t.thresh_1) and H_stat == True:
+            t.setstage(1)
         else:
-            T_thresh = -1.25 # Adjust this value to increase or decrease the threshold tolerance
-        if float(T_diff) < float(T_thresh) and H_stat == True:
-            if stage == 0:
-                GPIO_out(pins)
-                my_handler.setFormatter(blnk_formatter)
-                app_log.info('')
-                my_handler.setFormatter(log_formatter)
-                app_log.info('******** [ODR Override Initiated] ********')
-                print('\n******** [ODR override initiated] ********')
-                print('\tRequesting_Thermostat    : %s' % Thermostat)
-                dev_list.append(Thermostat)
-            
-                # create timers and boost cycle for thermostat staging
-                create_timers(Thermostat)
-            gpio = True
+            t.setstage(0)
+
+        if t.stage > 0:
+            t.setactive(True)
+##            gpio = True
         else:
-            gpio = False
+            t.setactive(False)
+##            gpio = False
 
-# Add devices calling for boost to list and remove devices no longer calling for boost.
-
-        if gpio == True and not Thermostat in dev_list:
-            dev_list.append(Thermostat)
-            app_log.info('\t-- Device: ' + Thermostat + ' is requesting a new boost call and has been added to the queue')
-            print('Device: ' + Thermostat + ' is requesting a new boost call and has been added to the queue.')
-
-            # create timers for thermostat staging            
-            create_timers(Thermostat)
-
-        elif (not gpio or not H_stat) and Thermostat in dev_list:
-            if not H_stat:
-                app_log.info('\t-- Nest call for heat on Device: ' + Thermostat + ' has ended. Removing ' + Thermostat + ' from the boost queue')
-                print('\tNest call for heat on Device: ' + Thermostat + ' has ended. Removing ' + Thermostat + ' from the boost queue')   
-
-            # Cancel timers for deleted thermostat
-            for t in timer_list[:]:
-                if t.name == Thermostat:
-                    t.timer.cancel()
-                    print('timer ' + str(t.name) + ' cancelled.')
-                    timer_list.remove(t)
-                    t_start = t.t_start
-
-            T_delta = datetime.datetime.now() - t_start
-            m, s = divmod(T_delta.total_seconds(), 60)
-            h, m = divmod(m, 60)
-            disp = "%d:%02d:%02d" % (h, m, s)
-            app_log.info('\tBoost call for Device: ' + Thermostat + ' ended after ' + disp + '  H:MM:SS')
-            print('*** Boost call for Device: ' + Thermostat + ' ended after ' + disp + '  H:MM:SS ***')
-            dev_list.remove(Thermostat)
-
-            if not dev_list:
-                print('\nDevice list is empty...\n')
-                Restore_ODR()
-            else:
-                app_log.info('\tBoost call continues for Device(s): ' + '[%s]' % ', '.join(map(str, dev_list)))
-                print('*** Boost call continues for Device(s): [%s]' % ', '.join(map(str, dev_list)) + ' ***')
-                Increment_Temp(Thermostat, None)
-
-        gpio_list.append(gpio)
-        print 'Thermostat    : %s' % Thermostat
+        print 'Thermostat    : %s' % T_name
         print 'Away Status   : %s' % str(Away)
         print 'T_room        : %s' % str(T_room)
         print 'T_target      : %s' % str(T_target)
         print 'HVAC State    : %s' % str(H_stat)
         print 'T_diff        : %s' % str(T_diff)
+        print 'T_thresh      : %s' % str(t.thresh_1)
         print 'Device List   : %s' % dev_list
-        print 'T_thresh      : %s' % str(T_thresh)
         print '\n'
-
-    gpio = max(gpio_list)
+        
+        update_status(t)
 
     # Write data to log file if option is set
-    if data_log:
-        try:
-            print data_log(structure, log_dir)
-        except:
-            app_log.error('*** An error occured trying to write to data log ***')
-            print '*** An error occured trying to write to data log ***'
-            
-    if gpio == True:
+    if log_data:
+        d_log = data_log(structure, Stage, log_dir, max_log_size)
+        if d_log[1]:
+            try:
+                app_log.warning(d_log[0])
+            except:
+                pass
+        print d_log[0]
+
+    if get_target_stage()[0] > 0:
         rchk = threading.Timer(delay_rechk, main)
         rchk.start()
-
     else:
-        rchk = None                      
-    return (gpio, rchk)
+        rchk = None
 
-# Create 3 boost stage timers whenever a new boost call is detected
-def create_timers(Thermostat):
-    t = timer(Thermostat, 1)
-    timer_list.append(t)
-    t = timer(Thermostat, 2)
-    timer_list.append(t)
-    t = timer(Thermostat, 3)
-    timer_list.append(t)
-    return(timer_list)
+    if dev_list:
+        Increment_Temp()
+
+# Log initaiaton of new boost cycle
+def update_status(t):
+
+    ## Report new boost initiated
+    if t.active and Stage == 0 and not t.name in dev_list:
+        t.set_new(True)
+        my_handler.setFormatter(log_formatter)
+        try:
+            app_log.info('******** [ODR Override Initiated] ********')
+        except:
+            pass
+        print('\n******** [ODR override initiated] ********')
+        print('\tRequesting_Thermostat    : %s' % t.name)
+        GPIO_out(pins)
+
+        dev_list.append(t.name)
+
+# Add devices calling for boost to list and remove devices no longer calling for boost.
+    if t.active and t.h_state == True and not t.name in dev_list:
+        t.set_new(True)
+        dev_list.append(t.name)
+        try:
+            app_log.info('\t-- Device: ' + t.name + ' is requesting a new boost call and has been added to the queue')
+        except:
+            pass
+        print('Device: ' + t.name + ' is requesting a new boost call and has been added to the queue.')
+        report_data(dev_list)
+
+    elif (t.stage == 0 or not t.h_state) and t.name in dev_list:
+        if not t.h_state:
+            try:
+                app_log.info('\t-- Nest call for heat on Device: ' + t.name + ' has ended. Removing ' + t.name + ' from the boost queue')
+            except:
+                pass
+            print('\tNest call for heat on Device: ' + t.name + ' has ended. Removing ' + t.name + ' from the boost queue')   
+
+        T_delta = datetime.datetime.now() - t.t_start
+        m, s = divmod(T_delta.total_seconds(), 60)
+        h, m = divmod(m, 60)
+        disp = "%d:%02d:%02d" % (h, m, s)
+        try:
+            app_log.info('\tBoost call for Device: ' + t.name + ' ended after ' + disp + '  H:MM:SS')
+        except:
+            pass
+        print('*** Boost call for Device: ' + t.name + ' ended after ' + disp + '  H:MM:SS ***')
+        t.setactive(False)
+        dev_list.remove(t.name)
+
+        if not dev_list:
+            print('\nDevice list is empty...\n')
+            Restore_ODR()
+        else:
+            try:
+                app_log.info('\tBoost call continues for Device(s): ' + '[%s]' % ', '.join(map(str, dev_list)))
+            except:
+                pass
+            print('*** Boost call continues for Device(s): [%s]' % ', '.join(map(str, dev_list)) + ' ***')
 
 # Controls GPIO pins 13,16, & 18 on raspberry pi. 
 #
@@ -345,60 +367,92 @@ def create_timers(Thermostat):
 #           Stage3         On     On      On
 
 # Adjust boost stage according to active calls
-def Increment_Temp(name, level):
+def Increment_Temp():
     i_s = 0
-    global stage
-    print 'Running Increment_Temp...'
+    global Stage
+    level_list = []
 
-#    if not level == 1:
-    # Set triggered state of current timer to True
-    for t in timer_list:
-        if t.name == name and t.stage == level:
-            t.settriggered(True)
-    # Get stage values of all timers that have triggered
-    active_list = []
-    for t in timer_list:
-        if t.triggered == True:
-            active_list.append(t.stage)
-    if not active_list:
-        level = 1
-    else:
-        level = max(active_list)
+    level, sum_stage = get_target_stage()
 
-    # Set GPIO pins to target boost level        
-    if level == 1:
-        state = [True, False, False] # 22K Resistance
-    elif level == 2:
-        state = [True, True, False]  # 22K + 47K = 69K Resistance
-    else:
-        state = [True, True, True]  # Infinite Resistance (circuit open)
+# Increase boost stage if cumulative boost call is large
+    if sum_stage > 5:
+        level = 3
 
-    #  Change GPIO pin states on pi to trigger appropriate boost stage and check to make sure pins were set as instructed    
-    if stage <> level:
-        for p in pins:
+    # Set GPIO pins to target boost level
+    if Stage <> level:
+        if level >= 1:
+            set_GPIO(13, True) # 22K Resistance
+        else:
+            set_GPIO(13, False)
+            
+        if level >= 2:
+                set_GPIO(16, True) # 22K + 47K = 69K Resistance
+        else:
+            set_GPIO(16, False)
+            
+        if level == 3:
+            set_GPIO(18,True) # Infinite Resistance (circuit open)
+        else:
+            set_GPIO(18,False)
+
+# Log output
+    if not level == Stage:
+            
+        if level > Stage and Stage > 0:
             try:
-                print ('Trying to set GPIO pin, ' + str(p) + ' to ' + str(state[i_s]))
-                GPIO.output(p,state[i_s])
+                app_log.info('\t-- Calling thermostat queue status has changed. Increasing boost to Stage ' + str(level) + ' --')
             except:
-                app_log.error('*** GPIO pin: ' + str(p) + ' could not be set ' + str(state[i_s]) + '***')        
-            i_s = i_s + 1
+                pass
+            print('\t-- Calling thermostat status has changed. Increasing boost to Stage ' + str(level) + ' --')
+
+        elif level < Stage:
+            try:
+                app_log.info('\t-- Calling thermostat queue status has changed. Reducing boost to Stage ' + str(level) + ' --')
+            except:
+                pass
+            print('\t-- Calling thermostat status has changed. Reducing boost to Stage ' + str(level) + ' --')
+
         try:
-            GPIO_check(state)
+            app_log.info('\t-- Stage ' + str(level) + ' Boost engaged --')
+        except:
+            pass
+        print('--Stage ' + str(level) + ' Boost engaged--')
+
+        report_data(dev_list)
+    Stage = level
+
+# Send thermostat and weather data to log file
+def report_data(thermostats):
+    Away = structure.away
+    devices = structure.devices
+    Time_s = structure.weather.current.datetime.strftime('%H:%M:%S')
+
+    for device in devices:
+        try:
+            Thermostat = device.where
+            if Thermostat in thermostats:
+                T_room = nest_utils.c_to_f(device.temperature)
+                if Away:
+                    T_target = nest_utils.c_to_f(device.away_temperature[0])
+                    app_log.info('-- Away mode enabled --')
+                    print('-- Away mode enabled --')
+                else:
+                    T_target = nest_utils.c_to_f(device.target)   
+                H_stat = device.hvac_heater_state
+                T_diff = T_room - T_target
+                T_outside = nest_utils.c_to_f(structure.weather.current.temperature)
+                app_log.info('\tSample Time              : %s' % Time_s)
+                app_log.info('\tRequesting_Thermostat    : %s' % Thermostat)
+                app_log.info('\tTemp_Differential        : %s' % str(T_diff))
+                app_log.info('\tTemp_Room                : %s' % str(T_room))
+                app_log.info('\tTemp_Target              : %s' % str(T_target))
+                app_log.info('\tTemp_Outside             : %s' % str(T_outside))
+                my_handler.setFormatter(blnk_formatter)
+                app_log.info('')
+                my_handler.setFormatter(log_formatter)
         except:
             pass
 
-# Log output
-    if not level == stage:
-
-        if level > stage:
-            app_log.info('\t-- Stage ' + str(level) + ' Boost engaged --')
-            print('--Stage ' + str(level) + ' Boost engaged--')
-        elif level < stage:
-            app_log.info('\t-- Calling thermostat queue has changed. Reducing boost to Stage ' + str(level) + ' --')
-            print('\t-- Calling thermostat queue has changed. Reducing boost to Stage ' + str(level) + ' --')
-        log_data(dev_list)
-        stage = level
-    return()
 
 # Kill timers, cleanup pins, and exit program            
 def Restore_ODR():
@@ -407,24 +461,23 @@ def Restore_ODR():
         print('recheck cancelled')
     except:
         pass
-    try:
-        for t in timers:
-            t.cancel()
-            print('timer ' + str(t) + ' cancelled.')
-    except:
-        pass
+    
     try:
         GPIO.cleanup()
     except:
         pass
-
-    T_delta = datetime.datetime.now() - T_start
-    m, s = divmod(T_delta.total_seconds(), 60)
-    h, m = divmod(m, 60)
-    disp = "%d:%02d:%02d" % (h, m, s)
-    app_log.info('\t-- ODR Override Cycle Complete --')
-    app_log.info('\t-- Total duration:  ' + disp + '  H:MM:SS --')
-    print('**** ODR Override Cycle Complete ***** \n**** Total duration:  ' + disp + '  H:MM:SS ***\n')
+    try:
+        T_delta = datetime.datetime.now() - T_start
+        m, s = divmod(T_delta.total_seconds(), 60)
+        h, m = divmod(m, 60)
+        disp = "%d:%02d:%02d" % (h, m, s)
+        app_log.info('\t-- ODR Override Cycle Complete --')
+        app_log.info('\t-- Total duration:  ' + disp + '  H:MM:SS --')
+        my_handler.setFormatter(blnk_formatter)
+        app_log.info('')
+        print('**** ODR Override Cycle Complete ***** \n**** Total duration:  ' + disp + '  H:MM:SS ***\n')
+    except:
+        pass
     sys.exit()
     
 def main():
@@ -432,10 +485,10 @@ def main():
     get_napi()
     while structure == None:
         i = check_connection(i)
-    odr = ODR_override()
-    relay_trigger = odr[0]
-    rchk = odr[1]
-    return (relay_trigger)
+    if not therm_list:
+        make_therm_objects()
+        print('Thermostat objects created...')
+    ODR_override()
 
 # ---------------------- PROGRAM STARTS HERE---------------------------- #
 
@@ -444,50 +497,40 @@ me = singleton.SingleInstance()
 
 # define variables
 global structure
-global relay_trigger
+global therm_list
 global dev_list
 global data
 relay_trigger = False
-stage = 0
+Stage = 0
 dev_list = []
-timer_list = []
-timer_dict = {}
+therm_list = []
 T_start = datetime.datetime.now()
 i = 0
 pins = [13,16,18]
 
-# Import credentials
-Config = ConfigParser.ConfigParser()
-Config.read(sys.path[0] + os.sep + '.secrets')
+# Import configuration parameters
+p = get_parameters()
+for key,val in p.items():
+    exec(key + '=val')
 
-username = ConfigSectionMap('Credentials')['username']
-password = ConfigSectionMap('Credentials')['password']
+# set up log file
+# Wrap all logging operation in try statements to prevent lost connection to remote logging directory
+# from causing the program to crash.
+try:
+    log_object = setup_log_handlers(log_dir)
+    app_log = log_object[0]
+    my_handler = log_object[1]
+    log_formatter = log_object[2]
+    blnk_formatter = log_object[3]
 
-# Import parameters
-set_hum = ConfigSectionMap('Parameters')['set_hum']
-exec (ConfigSectionMap('Parameters')['log_dir']) #creates log_dir variable
-data_log = ConfigSectionMap('Parameters')['log_data']
-delay_rechk = float(ConfigSectionMap('Parameters')['delay_rechk'])
-i_s2 = float(ConfigSectionMap('Parameters')['delay_s2'])
-i_s3 = float(ConfigSectionMap('Parameters')['delay_s3'])
+    if log_data:
+        from nest_extras import data_log
+        from subproccess import call
 
-# Set up logging handlers
-## log_formatter = logging.Formatter('%(asctime)s %(levelname)s %(funcName)s(%(lineno)d) %(message)s')
-log_formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
-blnk_formatter = logging.Formatter('%(message)s')
+except:
+    pass
 
-logFile = dFile = log_dir + 'nest_odr.log'
-my_handler = RotatingFileHandler(logFile, mode='a', maxBytes=5*1024*1024, backupCount=5, encoding=None, delay=0)
-my_handler.setFormatter(log_formatter)
-my_handler.setLevel(logging.INFO)
-app_log = logging.getLogger('root')
-app_log.setLevel(logging.INFO)
-app_log.addHandler(my_handler)
-
-if data_log:
-    from nest_extras import data_log
-
-relay_trigger = main()
+main()
 
 # Set target humidity according to outside temperature
 if set_hum:
@@ -497,7 +540,11 @@ if set_hum:
     print 'Outside Humidity: %s' % str(structure.weather.current.humidity)
     print 'Humidity Target : %s' % str(hum_value)
 
-#Print additonal information
-print 'GPIO            : %s' % str(relay_trigger)
-
-   
+# Remove duplicate lines from data log without changing sort order
+if log_data:
+    try:
+        dfile = log_dir + 'nest_data.log'
+        tmpfile = log_dir + 'temp.log'
+        call("awk '!x[$0]++' '%s' > '%s' && mv '%s' '%s'" % (dfile, tmpfile, tmpfile, dfile), shell=True)
+    except:
+        pass
