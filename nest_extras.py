@@ -44,6 +44,7 @@ def get_parameters():
 
     # Import parameters
     set_hum = ConfigSectionMap(Config,'Parameters')['set_hum']
+    max_hum = ConfigSectionMap(Config,'Parameters')['max_hum']
     exec (ConfigSectionMap(Config,'Parameters')['log_dir']) #creates log_dir variable
     max_log_size = ConfigSectionMap(Config,'Parameters')['max_log_size']
     log_data = ConfigSectionMap(Config,'Parameters')['log_data']
@@ -72,7 +73,8 @@ def getSize(fileobject):
     size = fileobject.tell()
     return size
 
-### Automatically adjusts RH target for living room thermostat to allow HRV to dehumidify according to outside temperature
+# Automatically adjusts RH target allow HRV to dehumidify according to outside temperature.
+# NOTE: This sets all thermostats in the structure to the same target humidity. Modify code if this is not desirable.
 def target_humidity(structure):
     if not structure:
         # Import credentials
@@ -85,13 +87,15 @@ def target_humidity(structure):
         structure = get_napi(username, password)
 
     if structure:
-        device = structure.devices[0]
-        temperature = nest_utils.c_to_f(structure.weather.current.temperature)
-        #calculate linear regression of target humidty and round to base 5 integer
-        hum_value = int(5 * round(float((0.55 * temperature) + 31)/5))
+        for device in structure.devices:
+            temperature = nest_utils.c_to_f(structure.weather.current.temperature)
+            #calculate linear regression of target humidty and round to base 5 integer
+            hum_value = int(5 * round(float(((0.55 * temperature) + 31) - 2.5)/5))
+            if hum_value > max_hum:
+                hum_value = max_hum
 
-        if float(hum_value) != device.target_humidity:
-            device.target_humidity = hum_value
+            if float(hum_value) != device.target_humidity:
+                device._set('device', {'target_humidity': float(hum_value)})
     else:
         hum_value = None
     return (hum_value)
@@ -308,6 +312,10 @@ def print_data(structure):
 ##    
 ##st = get_napi(username, password)
 ##print str(st)
+##print ("getting humidity target value...")
+##hum_value = target_humidity(st)
+##print ('hum_value = ' + str(hum_value))
+##print ('max_hum = ' + str(max_hum))
 
 ##sp = calc_setpoint('master bedroom', datetime.now().replace(hour=0, minute=22, second=0, microsecond=0))
 ##sp = calc_setpoint('master bedroom', datetime(2016, 2, 22, 15, 0, 0))
