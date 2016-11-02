@@ -32,7 +32,6 @@ import time
 import datetime
 import threading
 import nest
-##import weakref
 from tendo import singleton
 from nest_extras import get_parameters, setup_log_handlers
 from nest import utils as nest_utils
@@ -52,7 +51,6 @@ class thermostat(object):
         self.new = False
         self.t_start = None
         self.thresh_1 = Thresh_Stage_1
-##        self._items = []
 
     def setactive(self, active):
         self.active = active
@@ -76,17 +74,6 @@ class thermostat(object):
         self.thresh_1 = thresh
         return self.thresh_1
 
-##    @classmethod
-##    def getinstances(cls):
-##        dead = set()
-##        for ref in cls._instances:
-##            obj = ref()
-##            if obj is not None:
-##                yield obj
-##            else:
-##                dead.add(ref)
-##        cls._instances -= dead
-
 # -------------------- Functions -------------------------
 # --------------------------------------------------------
 
@@ -96,7 +83,6 @@ def get_napi():
     global data
     structure = None
     data = None
-##    global Stage
     d = datetime.datetime.now().time()
     print('napi check @ ' + str(d))
 
@@ -125,7 +111,7 @@ def check_connection(i):
         if not structure == None:
             print('--Nest server connection succeeded--')
             try:
-                app_log.info('--Nest server connection succeeded--')
+                app_log.info('\t--Nest server connection succeeded--')
             except:
                 pass
             i = 0
@@ -243,6 +229,7 @@ def ODR_override():
         H_stat = device.hvac_heater_state
         T_diff = T_room - T_target
         T_outside = nest_utils.c_to_f(structure.weather.current.temperature)
+        
         for th in therm_list:
             if th.name == T_name:
                 t = th
@@ -265,20 +252,18 @@ def ODR_override():
 
         if t.stage > 0:
             t.setactive(True)
-##            gpio = True
         else:
             t.setactive(False)
-##            gpio = False
 
-        print 'Thermostat    : %s' % T_name
-        print 'Away Status   : %s' % str(Away)
-        print 'T_room        : %s' % str(T_room)
-        print 'T_target      : %s' % str(T_target)
-        print 'HVAC State    : %s' % str(H_stat)
-        print 'T_diff        : %s' % str(T_diff)
-        print 'T_thresh      : %s' % str(t.thresh_1)
-        print 'Device List   : %s' % dev_list
-        print '\n'
+##        print 'Thermostat    : %s' % T_name
+##        print 'Away Status   : %s' % str(Away)
+##        print 'T_room        : %s' % str(T_room)
+##        print 'T_target      : %s' % str(T_target)
+##        print 'HVAC State    : %s' % str(H_stat)
+##        print 'T_diff        : %s' % str(T_diff)
+##        print 'T_thresh      : %s' % str(t.thresh_1)
+##        print 'Device List   : %s' % dev_list
+##        print '\n'
         
         update_status(t)
 
@@ -312,8 +297,8 @@ def update_status(t):
             app_log.info('******** [ODR Override Initiated] ********')
         except:
             pass
-        print('\n******** [ODR override initiated] ********')
-        print('\tRequesting_Thermostat    : %s' % t.name)
+##        print('\n******** [ODR override initiated] ********')
+##        print('\tRequesting_Thermostat    : %s' % t.name)
         GPIO_out(pins)
 
         dev_list.append(t.name)
@@ -326,7 +311,7 @@ def update_status(t):
             app_log.info('\t-- Device: ' + t.name + ' is requesting a new boost call and has been added to the queue')
         except:
             pass
-        print('Device: ' + t.name + ' is requesting a new boost call and has been added to the queue.')
+##        print('Device: ' + t.name + ' is requesting a new boost call and has been added to the queue.')
         report_data(dev_list)
 
     elif (t.stage == 0 or not t.h_state) and t.name in dev_list:
@@ -335,7 +320,7 @@ def update_status(t):
                 app_log.info('\t-- Nest call for heat on Device: ' + t.name + ' has ended. Removing ' + t.name + ' from the boost queue')
             except:
                 pass
-            print('\tNest call for heat on Device: ' + t.name + ' has ended. Removing ' + t.name + ' from the boost queue')   
+##            print('\tNest call for heat on Device: ' + t.name + ' has ended. Removing ' + t.name + ' from the boost queue')   
 
         T_delta = datetime.datetime.now() - t.t_start
         m, s = divmod(T_delta.total_seconds(), 60)
@@ -345,7 +330,7 @@ def update_status(t):
             app_log.info('\tBoost call for Device: ' + t.name + ' ended after ' + disp + '  H:MM:SS')
         except:
             pass
-        print('*** Boost call for Device: ' + t.name + ' ended after ' + disp + '  H:MM:SS ***')
+##        print('*** Boost call for Device: ' + t.name + ' ended after ' + disp + '  H:MM:SS ***')
         t.setactive(False)
         dev_list.remove(t.name)
 
@@ -403,20 +388,20 @@ def Increment_Temp():
                 app_log.info('\t-- Calling thermostat queue status has changed. Increasing boost to Stage ' + str(level) + ' --')
             except:
                 pass
-            print('\t-- Calling thermostat status has changed. Increasing boost to Stage ' + str(level) + ' --')
+##            print('\t-- Calling thermostat status has changed. Increasing boost to Stage ' + str(level) + ' --')
 
         elif level < Stage:
             try:
                 app_log.info('\t-- Calling thermostat queue status has changed. Reducing boost to Stage ' + str(level) + ' --')
             except:
                 pass
-            print('\t-- Calling thermostat status has changed. Reducing boost to Stage ' + str(level) + ' --')
+##            print('\t-- Calling thermostat status has changed. Reducing boost to Stage ' + str(level) + ' --')
 
         try:
             app_log.info('\t-- Stage ' + str(level) + ' Boost engaged --')
         except:
             pass
-        print('--Stage ' + str(level) + ' Boost engaged--')
+##        print('--Stage ' + str(level) + ' Boost engaged--')
 
         report_data(dev_list)
     Stage = level
@@ -435,7 +420,7 @@ def report_data(thermostats):
                 if Away:
                     T_target = nest_utils.c_to_f(device.away_temperature[0])
                     app_log.info('-- Away mode enabled --')
-                    print('-- Away mode enabled --')
+##                    print('-- Away mode enabled --')
                 else:
                     T_target = nest_utils.c_to_f(device.target)   
                 H_stat = device.hvac_heater_state
@@ -536,9 +521,9 @@ main()
 if set_hum:
     from nest_extras import target_humidity
     hum_value = target_humidity(structure)
-    print 'Outside Temp    : %s' % str(nest_utils.c_to_f(structure.weather.current.temperature))
-    print 'Outside Humidity: %s' % str(structure.weather.current.humidity)
-    print 'Humidity Target : %s' % str(hum_value)
+##    print 'Outside Temp    : %s' % str(nest_utils.c_to_f(structure.weather.current.temperature))
+##    print 'Outside Humidity: %s' % str(structure.weather.current.humidity)
+##    print 'Humidity Target : %s' % str(hum_value)
 
 # Remove duplicate lines from data log without changing sort order
 if log_data:

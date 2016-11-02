@@ -22,7 +22,6 @@ def ConfigSectionMap(Config, section):
 
 # Set up logging handlers
 def setup_log_handlers(log_dir):
-    ## log_formatter = logging.Formatter('%(asctime)s %(levelname)s %(funcName)s(%(lineno)d) %(message)s')
     log_formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
     blnk_formatter = logging.Formatter('%(message)s')
 
@@ -101,9 +100,9 @@ def calc_setpoint(thermostat, time):
     # This dictionary holds setpoint times and temps. key:[[weekday morning time, temp],[weekday evening time, temp],
     # [weekend morning time, temp], weekend evening time, temp]]
     setpoints = {
-        'master bedroom': [['08:00', 68],['17:45', 63.428],['08:00', 66.2],['19:00', 63]],
-        'living room': [['07:15', 66.2],['19:45', 61.7],['07:00', 66],['19:00', 62]],
-        'downstairs': [['09:00', 68],['22:00', 66.632],['08:15', 68],['22:30', 66]]
+        'master bedroom': [['08:00', 68],['17:45', 62.6],['08:00', 66.2],['19:00', 62.6]],
+        'living room': [['07:15', 66.2],['19:45', 61.7],['07:00', 66],['19:00', 61.7]],
+        'downstairs': [['09:30', 68],['22:00', 66.632],['08:15', 68],['22:30', 66.632]]
         }
     time = dt = datetime.strptime(time, '%Y-%m-%d %H:%M:%S')
     s = setpoints[thermostat]
