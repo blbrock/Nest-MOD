@@ -100,39 +100,44 @@ def target_humidity(structure):
         hum_value = None
     return (hum_value)
 
-def calc_setpoint(thermostat, time):
-    # This dictionary holds setpoint times and temps. key:[[weekday morning time, temp],[weekday evening time, temp],
-    # [weekend morning time, temp], weekend evening time, temp]]
-    setpoints = {
-        'master bedroom': [['08:00', 68],['17:45', 62.6],['08:00', 66.2],['19:00', 62.6]],
-        'living room': [['07:15', 66.2],['19:45', 61.7],['07:00', 66],['19:00', 61.7]],
-        'downstairs': [['09:30', 68],['22:00', 66.632],['08:15', 68],['22:30', 66.632]]
-        }
-    time = dt = datetime.strptime(time, '%Y-%m-%d %H:%M:%S')
-    s = setpoints[thermostat]
-    for item in s:
-        time_i = item[0].rsplit(':',1)
-        hour_i = int(time_i[0])
-        minute_i = int(time_i[1])
-        # convert set times to datetime object with today's date
-        item[0] = time.replace(hour=hour_i, minute=minute_i, second=0, microsecond=0)
-        
-    if time.weekday() < 4:
-        if time >= s[0][0] and time < s[1][0]:
-            setpoint = s[0][1]
-        elif time >= s[1][0] or time < s[0][0]:
-            setpoint = s[1][1]
-    elif time.weekday() > 4 or (time.weekday() == 4 and time >= s[3][0]):
-        if time >= s[2][0] and time < s[3][0]:
-            setpoint = s[2][1]
-        elif time >= s[3][0] or time < s[2][0]:
-            setpoint = s[3][1]
-    elif time.weekday() == 4 and time < s[3][0]:
-        if time >= s[0][0] and time < s[1][0]:
-            setpoint = s[0][1]
-        else:
-            setpoint = s[1][1]
-        
+## Create schedule atttibute
+## Creates a list of setpoint lists.  Setpoint lists formatted as [weekday, setpoint_num, time(seconds), temp(C), type]
+
+def get_schedule(device):
+    dev_sched = device._nest_api._cache[0]['schedule'][device._device['serial_number']]
+    schedule = []
+    setpoint = []
+    for day in dev_sched['days']:
+        for n in range(10):
+            try:
+                sp = dev_sched['days'][str(day)][str(n)]
+                if sp['entry_type'] == 'setpoint':
+                    setpoint = [int(day), n, sp['time'], sp['temp'], sp['type']]
+                    schedule.append(setpoint)
+                    setpoint = []
+            except: pass
+            
+    return schedule
+
+def calc_setpoint(thermostat):
+    now = datetime.now()
+    seconds = (now - now.replace(hour=0, minute=0, second=0, microsecond=0)).total_seconds()
+    day = datetime.today().weekday()
+    dev_sched = get_schedule(thermostat)
+    day_sched = [x for x in dev_sched if x[0] == day]
+    sp_first = 0
+    sp_last = len(day_sched) - 1
+    for sp in day_sched:
+       # sp_next = None
+        sp_next = day_sched.index(sp) + 1
+        if sp_next <= sp_last:
+            if seconds >= sp[2] and seconds < day_sched[sp_next][2]:
+                setpoint = sp[3]
+        elif seconds < day_sched[sp_first][2] or seconds >= day_sched[sp_last][2]:
+            setpoint = day_sched[sp_last][3]
+
+    setpoint = round(nest_utils.c_to_f(setpoint), 0)
+    print("Setpoint: %s" %(setpoint))
     return setpoint
     
 # Create temperature log updated each time get_napi() is run
@@ -159,7 +164,7 @@ def data_log(structure, stage, log_dir, max_log_size):
             log.write(header)
             
         Away = structure.away
-        Time_s = structure.weather.current.datetime.strftime('%Y-%m-%d %H:%M:%S')
+#        Time_s = structure.weather.current.datetime.strftime('%Y-%m-%d %H:%M:%S')
         for device in structure.devices:
             Thermostat = device.where
             T_room = nest_utils.c_to_f(device.temperature)
@@ -176,7 +181,7 @@ def data_log(structure, stage, log_dir, max_log_size):
             hum_value = device.target_humidity
             humidity = device.humidity
             fan = device.fan
-            T_setpoint = calc_setpoint(Thermostat, Time_s)
+            T_setpoint = calc_setpoint(Thermostat)
             v_list = [Thermostat,Time_s,T_room,T_target,T_diff,humidity,hum_value,T_outside,H_stat,fan,Away,stage,T_setpoint]
             line = ''
             for v in v_list:
