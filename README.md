@@ -15,7 +15,7 @@ and learning thermostats (e.g. Nest) that offer energy savings by programming ni
 setbacks or when homes are not occupied. Mod/con boilers with ODR adjust their heat output to compensate 
 for outdoor temperatures by dialing back heat ouput during warm weather and increasing output when it is 
 cold. A properly tuned mod/con ODR boiler will produce just enough heat to compensate for the building's 
-heat loss and therefore run at lower output for longer output for longer periods of time.
+heat loss and therefore run at lower temperatures for periods of time compared to a conventional system.
 
 Because of their lower operating temperatures, mod/con ODR boilers can take many hours to recover from a 
 temperature setback, if they recover at all. This is particularly true for radiant floor heating systems 
@@ -66,7 +66,9 @@ Data from nest thermostats may optionally be logged to a file by setting options
 This produces a comma delimited file containing data from thermostats and boost conditions. his feature does not require the pi to function.
 
 4. Data Graphing:
-In development, comming soon.
+When executed, plot_nest.py will produce a graph of data for the past week for all thermostats.  This program has only been tested in a Windows PC environment and may need additional software, configuration, or modifiction to work on other platforms.
+
+![](/images/temp_plot.png "Example Temperature Plot")
 
 # Error checking and logging: 
 
