@@ -1,10 +1,7 @@
-import os
-import sys
-import ConfigParser
+#!/usr/bin/env python
+import os, sys, ConfigParser, logging, nest
 from datetime import datetime
-import logging
 from logging.handlers import RotatingFileHandler
-import nest
 from nest import utils as nest_utils
 
 def ConfigSectionMap(Config, section):
@@ -54,18 +51,19 @@ def get_parameters():
     Thresh_Stage_3 = ConfigSectionMap(Config,'Parameters')['thresh_stage_3']
     return locals()
 
-def get_napi(username, password): #might want to change these vars to global later
+def get_napi(username, password):
     global structure
     global data
     structure = None
+    data = None
+    d = datetime.now().time()
+    print('napi check @ ' + str(d))
     try:
         napi = nest.Nest(username, password)
         structure = napi.structures[0]
     except:
         structure = None
-    napi = nest.Nest(username, password)
-    structure = napi.structures[0]
-    return(structure)
+    return(structure, data)
 
 # number of lines in text file
 def getSize(fileobject):
@@ -75,7 +73,7 @@ def getSize(fileobject):
 
 # Automatically adjusts RH target allow HRV to dehumidify according to outside temperature.
 # NOTE: This sets all thermostats in the structure to the same target humidity. Modify code if this is not desirable.
-def target_humidity(structure):
+def target_humidity(structure, max_hum):
     if not structure:
         # Import credentials
         import ConfigParser
@@ -84,7 +82,7 @@ def target_humidity(structure):
         username = ConfigSectionMap(Config, 'Credentials')['username']
         password = ConfigSectionMap(Config, 'Credentials')['password']
         #get structure
-        structure = get_napi(username, password)
+        structure = get_napi(username, password)[0]
 
     if structure:
         for device in structure.devices:
@@ -137,19 +135,23 @@ def calc_setpoint(thermostat):
             setpoint = day_sched[sp_last][3]
 
     setpoint = round(nest_utils.c_to_f(setpoint), 0)
-    print("Setpoint: %s" %(setpoint))
+#    print("Setpoint: %s" %(setpoint))
     return setpoint
     
 # Create temperature log updated each time get_napi() is run
+#def data_log(napi, stage, log_dir, max_log_size):
 def data_log(structure, stage, log_dir, max_log_size):
-    
+##    try:
+##        structure = napi.structures[0]
+##    except:
+##        structure = None
     if not structure:
         p = get_parameters()
         for key,val in p.items():
             exec(key + '=val')
 
         #get structure
-        structure = get_napi(username, password)
+        structure = get_napi(username, password)[0]
         
     if not os.path.isfile(log_dir + 'nest_data.log'):
         header = 'Thermostat,Sample_Time,T_room,T_target,T_diff,Humidity_inside,Humidity_target,T_outside,H_stat,Fan,Away,Stage, T_setpoint\n'
@@ -164,7 +166,7 @@ def data_log(structure, stage, log_dir, max_log_size):
             log.write(header)
             
         Away = structure.away
-#        Time_s = structure.weather.current.datetime.strftime('%Y-%m-%d %H:%M:%S')
+        Time_s = structure.weather.current.datetime.strftime('%Y-%m-%d %H:%M:%S')
         for device in structure.devices:
             Thermostat = device.where
             T_room = nest_utils.c_to_f(device.temperature)
@@ -181,7 +183,8 @@ def data_log(structure, stage, log_dir, max_log_size):
             hum_value = device.target_humidity
             humidity = device.humidity
             fan = device.fan
-            T_setpoint = calc_setpoint(Thermostat)
+            #######
+            T_setpoint = calc_setpoint(device)
             v_list = [Thermostat,Time_s,T_room,T_target,T_diff,humidity,hum_value,T_outside,H_stat,fan,Away,stage,T_setpoint]
             line = ''
             for v in v_list:
@@ -204,7 +207,7 @@ def print_data(structure):
             exec(key + '=val')
             
         #get structure
-        structure = get_napi(username, password)
+        structure = get_napi(username, password)[0]
         
     print 'Structure %s' % structure.name
     print '    Away: %s' % structure.away

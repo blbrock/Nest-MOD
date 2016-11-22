@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
 # nest_odr.py -- a python interface to the Nest thermometer to provide
@@ -26,14 +27,9 @@
 #
 # Note: nest-odr requires python-nest developed by Jason Kölker, https://github.com/jkoelker/python-nest/
 
-import os
-import sys
-import time
-import datetime
-import threading
-import nest
+import os, sys, time, datetime, threading, nest
 from tendo import singleton
-from nest_extras import get_parameters, setup_log_handlers
+from nest_extras import get_napi, get_parameters, setup_log_handlers
 from nest import utils as nest_utils
 try:
     import RPi.GPIO as GPIO
@@ -77,37 +73,20 @@ class thermostat(object):
 # -------------------- Functions -------------------------
 # --------------------------------------------------------
 
-# Get data from nest account
-def get_napi():
-    global structure
-    global data
-    structure = None
-    data = None
-    d = datetime.datetime.now().time()
-    print('napi check @ ' + str(d))
-
-    try:
-        napi = nest.Nest(username, password)
-        structure = napi.structures[0]
-    except:
-        structure = None
-
-    return (structure, data)
-
 # Track how long communication with Nest server is down
 def check_connection(i):
 
-    if i <= 29 and Stage > 0: # change to 29 after testing
+    if i <= 39 and Stage > 0: # check for 30 minutes
         my_handler.setFormatter(log_formatter)
-        print('--Unable to connect to Nest server for ' + str(i) + ' minutes. Will retry in 1 minute.--')
+        print('--Unable to connect to Nest server for ' + str(i) + ' minutes. Will retry in 1.5 minute.--')
         my_handler.setFormatter(log_formatter)
         try:
-            app_log.warning('--Unable to connect to Nest server for ' + str(i) + ' minutes. Will retry in 1 minute.--')
+            app_log.warning('--Unable to connect to Nest server for ' + str(i) + ' minutes. Will retry in 1.5 minute.--')
         except:
             pass
         i = i + 1
-        time.sleep(60) #Change to 60 after testing
-        get_napi()
+        time.sleep(90) #Changed to 90 to avoid too many requests error
+        get_napi(username, password)
         if not structure == None:
             print('--Nest server connection succeeded--')
             try:
@@ -270,6 +249,7 @@ def ODR_override():
     # Write data to log file if option is set
     if log_data:
         d_log = data_log(structure, Stage, log_dir, max_log_size)
+        #d_log = data_log(napi, Stage, log_dir, max_log_size)
         if d_log[1]:
             try:
                 app_log.warning(d_log[0])
@@ -467,7 +447,8 @@ def Restore_ODR():
     
 def main():
     global i
-    get_napi()
+    global structure
+    structure = get_napi(username, password)[0]
     while structure == None:
         i = check_connection(i)
     if not therm_list:
@@ -497,6 +478,7 @@ pins = [13,16,18]
 p = get_parameters()
 for key,val in p.items():
     exec(key + '=val')
+#    print ("key: " + str(key) + ", val: " + str(val))
 
 # set up log file
 # Wrap all logging operation in try statements to prevent lost connection to remote logging directory
@@ -520,7 +502,7 @@ main()
 # Set target humidity according to outside temperature
 if set_hum:
     from nest_extras import target_humidity
-    hum_value = target_humidity(structure)
+    hum_value = target_humidity(structure, max_hum)
 ##    print 'Outside Temp    : %s' % str(nest_utils.c_to_f(structure.weather.current.temperature))
 ##    print 'Outside Humidity: %s' % str(structure.weather.current.humidity)
 ##    print 'Humidity Target : %s' % str(hum_value)
