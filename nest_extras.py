@@ -61,7 +61,8 @@ def get_napi(username, password):
     try:
         napi = nest.Nest(username, password)
         structure = napi.structures[0]
-    except:
+    except Exception,e:
+        print str(e)
         structure = None
     return(structure, data)
 
@@ -314,10 +315,16 @@ def print_data(structure):
 ##print data_log(None, None, None, 0)
 
 # Import configuration parameters
+##import time
 ##p = get_parameters()
 ##for key,val in p.items():
 ##    exec(key + '=val')
-##    
+##for i in range(500):
+###    napi = nest.Nest(username, password)
+##    structure = get_napi(username, password)[0]
+###    target_humidity(structure, 35)
+##    time.sleep(1)
+##    print (structure)
 ##st = get_napi(username, password)
 ##print str(st)
 ##print ("getting humidity target value...")
