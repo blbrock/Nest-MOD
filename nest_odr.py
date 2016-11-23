@@ -29,7 +29,7 @@
 
 import os, sys, time, datetime, threading, nest
 from tendo import singleton
-from nest_extras import get_napi, get_parameters, setup_log_handlers
+from nest_extras import get_napi, get_parameters, data_log, setup_log_handlers
 from nest import utils as nest_utils
 try:
     import RPi.GPIO as GPIO
