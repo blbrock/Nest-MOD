@@ -75,17 +75,17 @@ class thermostat(object):
 
 # Track how long communication with Nest server is down
 def check_connection(i):
-
-    if i <= 39 and Stage > 0: # check for 30 minutes
+    max_time = 15
+    if i <= max_time - 1 and Stage > 0:
         my_handler.setFormatter(log_formatter)
-        print('--Unable to connect to Nest server for ' + str(i) + ' minutes. Will retry in 1.5 minute.--')
+        print('--Unable to connect to Nest server for ' + str(i) + ' minutes. Will retry in 1 minute.--')
         my_handler.setFormatter(log_formatter)
         try:
-            app_log.warning('--Unable to connect to Nest server for ' + str(i) + ' minutes. Will retry in 1.5 minute.--')
+            app_log.warning('--Unable to connect to Nest server for ' + str(i) + ' minutes. Will retry in 1 minute.--')
         except:
             pass
         i = i + 1
-        time.sleep(90) #Changed to 90 to avoid too many requests error
+        time.sleep(60)
         get_napi(username, password)
         if not structure == None:
             print('--Nest server connection succeeded--')
@@ -95,7 +95,7 @@ def check_connection(i):
                 pass
             i = 0
 
-    elif i > 29: 
+    elif i > max_time - 1: 
         con_err()
         sys.exit()
     else:
@@ -114,12 +114,12 @@ def check_connection(i):
 # Reset ODR and exit program if connection to Nest Server cannot be made during boost cycle
 def con_err():
             
-    print('--Unable to connect to Nest server for 30 minutes. Resetting ODR.--')
+    print('--Unable to connect to Nest server for ' + str(max_time) + ' minutes. Resetting ODR.--')
     try:
         my_handler.setFormatter(blnk_formatter)
         app_log.error('')
         my_handler.setFormatter(log_formatter)
-        app_log.error('--Unable to connect to Nest server for 30 minutes. Resetting ODR.--')
+        app_log.error('--Unable to connect to Nest server for ' + str(max_time) + ' minutes. Resetting ODR.--')
     except:
         pass
     Restore_ODR()
